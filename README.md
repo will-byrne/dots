@@ -3,16 +3,16 @@
   <br>
   <br>
   <div>
-    <a href="https://github.com/will-byrne/nixdots/issues">
-        <img src="https://img.shields.io/github/issues/will-byrne/nixdots?color=fab387&labelColor=303446&style=for-the-badge">
+    <a href="https://github.com/will-byrne/dots/issues">
+        <img src="https://img.shields.io/github/issues/will-byrne/dots?color=fab387&labelColor=303446&style=for-the-badge">
     </a>
-    <a href="https://github.com/will-byrne/nixdots/stargazers">
-        <img src="https://img.shields.io/github/stars/will-byrne/nixdots?color=ca9ee6&labelColor=303446&style=for-the-badge">
+    <a href="https://github.com/will-byrne/dots/stargazers">
+        <img src="https://img.shields.io/github/stars/will-byrne/dots?color=ca9ee6&labelColor=303446&style=for-the-badge">
     </a>
-    <a href="https://github.com/will-byrne/nixdots/">
-        <img src="https://img.shields.io/github/repo-size/will-byrne/nixdots?color=ea999c&labelColor=303446&style=for-the-badge">
+    <a href="https://github.com/will-byrne/dots/">
+        <img src="https://img.shields.io/github/repo-size/will-byrne/dots?color=ea999c&labelColor=303446&style=for-the-badge">
     </a>
-    <a href="https://github.com/will-byrne/nixdots/blob/master/LICENSE">
+    <a href="https://github.com/will-byrne/dots/blob/master/LICENSE">
         <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=ca9ee6&colorA=313244&colorB=cba6f7"/>
     </a>
     <br>
@@ -25,7 +25,7 @@
 ❄️ NixOS dotfiles ❄️
 </h1>
 </div>
-<h2 align="center">My NixOS system configuration. Feel free to explore!</h2>
+<h2 align="center">My NixOS system configuration. Based on Redyfs, go checkout their link below!</h2>
 
 ## Special thanks to:
 
