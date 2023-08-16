@@ -12,5 +12,8 @@
     musescore
     zoom
     cider
+    imv
+    osu-lazer-bin
+    krita
   ];
 }

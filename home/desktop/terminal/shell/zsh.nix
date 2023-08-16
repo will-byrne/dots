@@ -112,7 +112,7 @@
     '';
 
     shellAliases = {
-      bad = "appimage-run ~/Downloads/BadlionClient";
+      #bad = "appimage-run ~/Downloads/BadlionClient";
       c = "nvim";
       cp = "cp -i";
       f = "neofetch --sixel $HOME/.config/neofetch/images/nixos.png";
@@ -122,8 +122,10 @@
       guc="git clean -xdf";
       grep = "grep --color=auto";
       ll = "ls -l";
-      ls = "exa";
-      la = "exa -a";
+      ls = "exa --icons";
+      la = "exa --icons -la";
+      lt = "exa --icons -T";
+      lta = "exa --icons -Ta";
       mv = "mv -i";
       rip = "rip -i";
       rebuild = "cd ~/flake && doas nixos-rebuild switch --flake .#desktop --impure";

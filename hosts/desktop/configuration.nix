@@ -236,6 +236,10 @@
       driSupport32Bit = true;
       # extraPackages = with pkgs; [nvidia-vaapi-driver];
     };
+    opentabletdriver = {
+      enable = true;
+      daemon.enable = true;
+    };
   };
 
   # Configure keymap in X11
