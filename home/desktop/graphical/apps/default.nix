@@ -15,5 +15,6 @@
     imv
     osu-lazer-bin
     krita
+    yacreader
   ];
 }
