@@ -162,6 +162,8 @@
       epps="cd ~/git/enhanced-preprints-server";
       eppi="cd ~/git/enhanced-preprints-import";
       oops="fuck";
+      koboldai="nix run github:nixified-ai/flake#koboldai-nvidia";
+      invokeai="nix run github:nixified-ai/flake#invokeai-nvidia -- --web";
     };
 
     oh-my-zsh = {

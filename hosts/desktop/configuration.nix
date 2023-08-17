@@ -226,6 +226,9 @@
   };
 
   hardware = {
+    bluetooth = {
+      enable = true;
+    };
     nvidia = {
       #open = true;
       modesetting.enable = true;

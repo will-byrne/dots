@@ -49,7 +49,7 @@ in {
         kb_rules = "";
 
         follow_mouse = 1;
-        repeat_delay = 160;
+        repeat_delay = 200;
         repeat_rate = 25;
         numlock_by_default = 1;
         accel_profile = "flat";
