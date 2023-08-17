@@ -129,6 +129,7 @@
   # Enables services
   services.logmein-hamachi.enable = false;
   services.flatpak.enable = true;
+  services.blueman.enable = true;
 
   # Enable programs
   programs = {

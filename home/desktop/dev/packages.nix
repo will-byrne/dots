@@ -96,11 +96,11 @@
 
     # Gaming
     # gnutls
-    minecraft
+    # minecraft
     # libpulseaudio
 
     # Others
-    spotify
+    # spotify
     # obsidian
     pavucontrol
   ];
