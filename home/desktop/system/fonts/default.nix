@@ -24,7 +24,6 @@
     powerline-symbols
     material-design-icons
     # helvetica-neue-lt-std
-    nur.repos.sagikazarmark.sf-pro
     (nerdfonts.override {fonts = ["IBMPlexMono" "CascadiaCode" "FiraCode" "JetBrainsMono"];})
   ];
 }

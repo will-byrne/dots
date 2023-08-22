@@ -56,17 +56,6 @@
     (import ../../overlays/ryan-mono-bin.nix)
   ];
 
-  nixpkgs.config.packageOverrides = pkgs: {
-    # integrates nur within Home-Manager
-    nur =
-      import
-      (builtins.fetchTarball {
-        url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
-        sha256 = "sha256:1v9vblnm0yq5gq6ydca0a23fd196vk023mymsydyb858i4m8vn5h";
-      })
-      {inherit pkgs;};
-  };
-
   nixpkgs.config.allowUnfreePredicate = pkg: true;
 
   fonts.fontconfig.enable = true;
