@@ -5,14 +5,14 @@
   ...
 }: {
   home.packages = with pkgs; [btop];
-  home.file.".config/btop/themes/macchiato.conf".text = import ./machiatto.nix;
+  home.file.".config/btop/themes/macchiato.theme".text = import ./machiatto.nix;
 
   xdg.configFile."btop/btop.conf".text = ''
         #? Config file for btop v. 1.2.13
 
     #* Name of a btop++/bpytop/bashtop formatted ".theme" file, "Default" and "TTY" for builtin themes.
     #* Themes should be placed in "../share/btop/themes" relative to binary or "$HOME/.config/btop/themes"
-    color_theme = "/home/luna/.config/btop/themes/catppuccin-macchiato.theme"
+    color_theme = "/home/luna/.config/btop/themes/macchiato.theme"
 
     #* If the theme set background should be shown, set to False if you want terminal background transparency.
     theme_background = True
