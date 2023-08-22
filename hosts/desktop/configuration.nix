@@ -35,42 +35,6 @@
         useOSProber = true;
         gfxmodeEfi = "1440×600";
         configurationLimit = 3;
-        #theme = pkgs.fetchFromGitHub {
-        #  owner = "shvchk";
-        #  repo = "fallout-grub-theme";
-        #  rev = "80734103d0b48d724f0928e8082b6755bd3b2078";
-        #  sha256 = "sha256-7kvLfD6Nz4cEMrmCA9yq4enyqVyqiTkVZV5y4RyUatU=";
-        #};
-
-        #   theme =
-        #     pkgs.fetchFromGitHub
-        #     {
-        #       owner = "semimqmo";
-        #       repo = "sekiro_grub_theme";
-        #       rev = "1affe05f7257b72b69404cfc0a60e88aa19f54a6";
-        #       sha256 = "02gdihkd2w33qy86vs8g0pfljp919ah9c13cj4bh9fvvzm5zjfn1";
-        #     }
-        #     + "/Sekiro";
-        # };
-
-        # theme = pkgs.fetchFromGitHub
-        #   {
-        #     owner = "Lxtharia";
-        #     repo = "minegrub-theme";
-        #     rev = "193b3a7c3d432f8c6af10adfb465b781091f56b3";
-        #     sha256 = "1bvkfmjzbk7pfisvmyw5gjmcqj9dab7gwd5nmvi8gs4vk72bl2ap";
-        #   };
-
-        #   theme =
-        #     pkgs.fetchFromGitHub
-        #     {
-        #       owner = "Patato777";
-        #       repo = "dotfiles";
-        #       rev = "d6f96fa59327a936d335f01a7295815250f96ff7";
-        #       sha256 = "18mra67kd20bld5zxlvb89ik8psr2pj0v9iaizqpd485sywgqwiq";
-        #     }
-        #     + "/grub/themes/virtuaverse";
-        # };
       };
     };
   };
@@ -117,15 +81,7 @@
     desktopManager.mate.enable = true;
   };
   systemd.services."display-manager".after = [ "network-online.target" "systemd-resolved.service" ];
-  # services.xserver.enable = true;
-  # services.xserver.displayManager.gdm.enable = true;
-  # services.xserver.displayManager.gdm.wayland = true;
-  # services.xserver.windowManager.awesome.enable = true;
-  # services.xserver.desktopManager.mate.enable = true;
-  # services.xserver.windowManager.i3.enable = true;
-  # services.xserver.windowManager.bspwm.enable = true;
-  # services.xserver.desktopManager.gnome.enable = true;
-  
+ 
   # Enables services
   services.logmein-hamachi.enable = false;
   services.flatpak.enable = true;
@@ -174,9 +130,6 @@
         serif = ["CaskaydiaCove Nerd Font Mono"];
         sansSerif = ["CaskaydiaCove Nerd Font Mono"];
         monospace = ["CaskaydiaCove Nerd Font Mono"];
-        # serif = ["Times, Noto Serif"];
-        # sansSerif = ["Helvetica Neue LT Std, Helvetica, Noto Sans"];
-        # monospace = ["Courier Prime, Courier, Noto Sans Mono"];
       };
     };
   };
@@ -195,16 +148,6 @@
   # Enables virtualization for virt-manager and virtual box
   virtualisation = {
     libvirtd.enable = true;
-    # virtualbox = {
-    #   host = {
-    #     enable = true;
-    #     enableExtensionPack = true;
-    #   };
-    #   guest = {
-    #     enable = true;
-    #     x11 = true;
-    #   };
-    # };
   };
   # users.extraGroups.vboxusers.members = ["user-with-access-to-virtualbox"];
 
@@ -231,14 +174,12 @@
       enable = true;
     };
     nvidia = {
-      #open = true;
       modesetting.enable = true;
       nvidiaSettings = true;
     };
     opengl = {
       enable = true;
       driSupport32Bit = true;
-      # extraPackages = with pkgs; [nvidia-vaapi-driver];
     };
     opentabletdriver = {
       enable = true;
@@ -255,9 +196,6 @@
       mouse = {
         accelProfile = "flat";
       };
-      # touchpad = {
-      #   accelProfile = "flat";
-      # };
     };
   };
 
@@ -277,7 +215,6 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     wireplumber.enable = true;
-    #jack.enable = true;
   };
 
   users = {
