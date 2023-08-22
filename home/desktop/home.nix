@@ -30,7 +30,6 @@
   # Imports
   imports = [
     ./dev
-    ./pkgs
     ./system
     ./themes
     ./services
