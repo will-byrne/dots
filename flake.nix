@@ -1,5 +1,5 @@
 {
-  description = "Redyf's NixOS config for desktop and laptop";
+  description = "Luna's NixOS config for desktop and laptop";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
