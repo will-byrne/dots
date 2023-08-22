@@ -74,7 +74,6 @@
     # Rice
     lf # CLI file manager written in GO
     swww # Cool wallpapers/gifs transitions
-    dunst # Notifications for your system
     # sxhkd # BSPWM keybindings
     bemenu # Dmenu for wayland
     cmatrix
