@@ -7,7 +7,6 @@
     hyprland.url = "github:hyprwm/Hyprland";
     waybar-hyprland.url = "github:hyprwm/hyprland";
     xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
-    nur.url = "github:nix-community/NUR";
     nix-colors.url = "github:misterio77/nix-colors";
     ryan-mono.url = "github:ryanccn/ryan-mono";
 
