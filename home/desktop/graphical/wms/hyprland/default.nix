@@ -240,7 +240,7 @@ in {
 
         "SUPER,RETURN,exec, kitty"
         ",Print,exec,~/.config/hypr/scripts/screenshot.sh"
-        "SUPER $mainnMod SHIFT,space,exec,bemenu-run"
+        "SUPER $mainnMod SHIFT,space,exec,bemenu-run -i -l 20 --fb \"##24273a\" --ff \"##8bd5ca\" --nb \"##24273a\" --nf \"##f4dbd6\" --tb \"##24273a\" --hb \"##24273a\" --tf \"##c6a0f6\" --hf \"##8aadf4\" --nf \"##f4dbd6\" --af \"##f4dbd6\" --ab \"##24273a\""
         "SUPER,space,exec,wofi --show drun -I -s ~/.config/wofi/style.css DP-5"
         # "SUPER SHIFT,V,exec,~/.config/eww/fool_moon/bar/scripts/widgets toggle-clip"
         # "SUPER SHIFT,C,exec,~/.config/hypr/scripts/wallpaper_picker"

@@ -171,9 +171,9 @@
     fontconfig = {
       enable = true;
       defaultFonts = {
-        serif = ["SF Pro"];
-        sansSerif = ["SF Pro"];
-        monospace = ["SF Pro"];
+        serif = ["CaskaydiaCove Nerd Font Mono"];
+        sansSerif = ["CaskaydiaCove Nerd Font Mono"];
+        monospace = ["CaskaydiaCove Nerd Font Mono"];
         # serif = ["Times, Noto Serif"];
         # sansSerif = ["Helvetica Neue LT Std, Helvetica, Noto Sans"];
         # monospace = ["Courier Prime, Courier, Noto Sans Mono"];
