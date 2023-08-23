@@ -39,7 +39,7 @@
     libnotify
     zig
     # img2pdf # Convert images to pdf
-    # lazygit # Amazing CLI git tool
+    lazygit # Amazing CLI git tool
     ripgrep
     findutils
     # flameshot

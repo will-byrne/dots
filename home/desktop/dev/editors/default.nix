@@ -3,6 +3,5 @@ _: {
     ./nvim
     ./vscode
     ./webstorm
-    #./helix
   ];
 }

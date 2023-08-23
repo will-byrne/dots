@@ -33,8 +33,14 @@
         device = "nodev";
         efiSupport = true;
         useOSProber = true;
-        gfxmodeEfi = "1440×600";
+        gfxmodeEfi = "1280x720x32";
         configurationLimit = 3;
+        theme = pkgs.fetchFromGitHub {
+          owner = "catppuccin";
+          repo = "grub";
+          rev = "803c5df0e83aba61668777bb96d90ab8f6847106";
+          sha256 = "sha256-/bSolCta8GCZ4lP0u5NVqYQ9Y3ZooYCNdTwORNvR7M0=";
+        } + "/src/catppuccin-macchiato-grub-theme";
       };
     };
   };
