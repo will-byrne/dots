@@ -3,9 +3,9 @@
 timeout=3
 
 # if dbus-monitor is not running, start it
-if ! pgrep -x "dbus-monitor" >/dev/null; then
-    $HOME/.config/waybar/scripts/getnotification.sh &
-fi
+#if ! pgrep -x "dbus-monitor" >/dev/null; then
+#    $HOME/.config/waybar/scripts/getnotification.sh &
+#fi
 
 while true; do
     dunststatus=$(dunstctl is-paused)
