@@ -18,7 +18,7 @@
       "on-click": "playerctl play-pause"
     },
     "custom/background": {
-      "format": "🖼",
+      "format": "<span font='14'>🖼</span>",
       "on-click": "sh ~/.config/waybar/scripts/wall-paper.sh",
       "on-click-right": "notify-send -t 1 'swww' '1' & ~/flake/home/desktop/graphical/wms/hyprland/scripts/wall"
     },
@@ -40,7 +40,7 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "format": " {:%H:%M} ",
+        "format": " {:%H:%M} <span font='14'></span>",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
