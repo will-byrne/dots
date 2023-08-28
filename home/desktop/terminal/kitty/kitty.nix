@@ -372,7 +372,7 @@
   #: values set top, horizontal and bottom. Four values set top, right,
   #: bottom and left.
 
-  window_padding_width 4
+  window_padding_width 12
 
   #: The window padding (in pts) (blank area between the text and the
   #: window border). A single value sets all four sides. Two values set
@@ -1275,16 +1275,7 @@
 
   # BEGIN_KITTY_THEME
   # include current-theme.conf
-  include themes/lunar.conf
-  # include dark-decay.conf
-  # include oxocarbon.conf
-  # include mocha.conf
-  # include decayce.conf
-  # include tokyodark.conf
-  # include tokyonight_night.conf
-  # include tokyonight_storm.conf
-  # include ohlucy.conf
-  # include nightfox_kitty.conf
-  # include challenger-deep.conf
+  #include themes/lunar.conf
+  include themes/macchiato.conf
   # END_KITTY_THEME
 ''

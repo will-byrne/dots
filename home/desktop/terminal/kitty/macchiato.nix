@@ -1,9 +1,10 @@
+''
 # vim:ft=kitty
 
 ## name:     Catppuccin Kitty Macchiato
 ## author:   Catppuccin Org
 ## license:  MIT
-## upstream: https://github.com/catppuccin/kitty/blob/main/macchiato.conf
+## upstream: https://github.com/catppuccin/kitty/blob/main/themes/macchiato.conf
 ## blurb:    Soothing pastel theme for the high-spirited!
 
 
@@ -78,3 +79,4 @@ color14 #8BD5CA
 # white
 color7  #B8C0E0
 color15 #A5ADCB
+''
