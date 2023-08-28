@@ -23,16 +23,19 @@
       "on-click-right": "notify-send -t 1 'swww' '1' & ~/flake/home/desktop/graphical/wms/hyprland/scripts/wall"
     },
     "wlr/workspaces": {
-        "format": "{icon}",
-        "on-click": "activate",
-        "format-icons": {
-          "urgent": "",
-          "active": "",
-          "default": ""
-        },
-        "sort-by-number": true,
-        "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1"
+      "active-only": false,
+      "all-outputs": false,
+      "disable-scroll": false,
+      "format": "{icon}",
+      "on-click": "activate",
+      "format-icons": {
+        "urgent": "",
+        "active": "",
+        "default": ""
+      },
+      "sort-by-number": true,
+      "on-scroll-up": "hyprctl dispatch workspace e+1",
+      "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
     "tray": {
         // "icon-size": 21,
