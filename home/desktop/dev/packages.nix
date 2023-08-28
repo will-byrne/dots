@@ -102,5 +102,6 @@
     # spotify
     # obsidian
     pavucontrol
+    pamixer
   ];
 }
