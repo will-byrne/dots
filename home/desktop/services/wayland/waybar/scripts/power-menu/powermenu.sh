@@ -14,7 +14,7 @@ dir="/home/luna/.config/waybar/scripts/power-menu/"
 theme='style-1.rasi'
 
 # CMDs
-uptime="$(uptime -p | sed -e 's/up //g')"
+uptime="$(uptime | sed -e 's/up //g')"
 host=$(hostname)
 
 # Options

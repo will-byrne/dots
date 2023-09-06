@@ -59,6 +59,7 @@ tooltip {
 #network,
 #pulseaudio,
 #custom-background,
+#custom-power,
 #custom-playerlabel,
 #tray {
     min-width: 100px;
@@ -87,6 +88,11 @@ tooltip {
     background-color: @flamingo;
 }
 
+#custom-power {
+    color: @base;
+    background-color: @red;
+}
+
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
@@ -94,7 +100,7 @@ tooltip {
 
 #clock {
     color: @base;
-    background-color: @red;
+    background-color: @peach;
 }
 
 #cpu {

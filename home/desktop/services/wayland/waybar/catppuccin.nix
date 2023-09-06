@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces"], 
     "modules-center": ["custom/playerlabel"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "clock", "custom/background", "tray"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "clock", "custom/background", "custom/power", "tray"],
     // Modules configuration 
     "custom/playerlabel": {
       "format": "<span>󰎈 {} </span>",
@@ -21,6 +21,10 @@
       "format": "<span font='14'>🖼</span>",
       "on-click": "sh ~/.config/waybar/scripts/wall-paper.sh",
       "on-click-right": "notify-send -t 1 'swww' '1' & ~/flake/home/desktop/graphical/wms/hyprland/scripts/wall"
+    },
+    "custom/power": {
+      "format": "<span font='14'>⏻</span>",
+      "on-click": "sh ~/.config/waybar/scripts/wofi-power.sh",
     },
     "wlr/workspaces": {
       "active-only": false,
@@ -39,7 +43,7 @@
     },
     "tray": {
         // "icon-size": 21,
-        "spacing": 10,
+        "spacing": 10
     },
     "clock": {
         // "timezone": "America/New_York",
