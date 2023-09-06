@@ -34,8 +34,8 @@
         "default": ""
       },
       "sort-by-number": true,
-      "on-scroll-up": "hyprctl dispatch workspace e+1",
-      "on-scroll-down": "hyprctl dispatch workspace e-1"
+      "on-scroll-down": "hyprctl dispatch workspace e+1",
+      "on-scroll-up": "hyprctl dispatch workspace e-1"
     },
     "tray": {
         // "icon-size": 21,
