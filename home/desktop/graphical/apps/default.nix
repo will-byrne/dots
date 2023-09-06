@@ -7,7 +7,7 @@
   home.packages = with pkgs; [ 
     slack
     musescore
-    zoom
+    zoom-us
     cider
     imv
     osu-lazer-bin
