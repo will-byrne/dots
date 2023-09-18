@@ -1,9 +1,4 @@
 {
-  inputs,
-  config,
-  pkgs,
-  osConfig,
-  lib,
   ...
 }: let
   primary_accent = "cba6f7";
@@ -235,6 +230,7 @@ in {
         #"SUPER,e,exec,emacsclient -c -a 'emacs'"
 
         "SUPER,RETURN,exec, kitty"
+        "SUPER,E,exec, neovide -- -u '~/.local/share/lunarvim/lvim/init.lua'"
         ",Print,exec,~/.config/hypr/scripts/screenshot.sh"
         "SUPER $mainnMod SHIFT,space,exec,bemenu-run -i -l 20 --fb \"##24273a\" --ff \"##8bd5ca\" --nb \"##24273a\" --nf \"##f4dbd6\" --tb \"##24273a\" --hb \"##24273a\" --tf \"##c6a0f6\" --hf \"##8aadf4\" --nf \"##f4dbd6\" --af \"##f4dbd6\" --ab \"##24273a\""
         "SUPER,space,exec,wofi --show drun -I -s ~/.config/wofi/style.css DP-5"

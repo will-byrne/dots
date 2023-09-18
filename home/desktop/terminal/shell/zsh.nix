@@ -129,10 +129,13 @@
       mv = "mv -i";
       rip = "rip -i";
       rebuild = "cd ~/flake && doas nixos-rebuild switch --flake .#desktop --impure";
-      vi = "lvim";
+      #vi = "lvim";
+      vi = "neovide -- -u '~/.local/share/lunarvim/lvim/init.lua'";
       wget = "wget -q --show-progress --progress=bar:force:noscroll";
       open = "xdg-open";
+      flake = "cd ~/flake";
       dps = "docker ps";
+      wdps = "watch 'docker ps'";
       dsp = "docker system prune -a";
       dspf = "docker system prune -af";
       dkill = "docker kill $(docker ps -q)";
@@ -161,6 +164,7 @@
       eppc="cd ~/git/enhanced-preprints-client";
       epps="cd ~/git/enhanced-preprints-server";
       eppi="cd ~/git/enhanced-preprints-import";
+      eppe2e="cd ~/git/enhanced-preprints-e2e";
       oops="fuck";
       gpb="git branch --merged | egrep -v '(^\*|master|main|dev)' | xargs git branch -d";
       koboldai="nix run github:nixified-ai/flake#koboldai-nvidia";
