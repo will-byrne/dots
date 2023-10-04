@@ -11,7 +11,7 @@
     # Useful utils
     fd # A simple, fast and user-friendly alternative to find
     jq # A lightweight and flexible command-line JSON processor
-    exa # Replacement for ls in rust
+    eza # Replacement for ls in rust
     fzf # Fuzzy finder
     zoxide # Improved cd command
     rm-improved # Replacement for rm with focus on safety, ergonomics and performance
@@ -77,6 +77,7 @@
     # sxhkd # BSPWM keybindings
     bemenu # Dmenu for wayland
     cmatrix
+    cbonsai
     # polybar # Bar i use on X11
     nitrogen # Wallpaper utility for X11
     # picom-next # Compositor for X11

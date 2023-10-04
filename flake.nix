@@ -2,9 +2,10 @@
   description = "Luna's NixOS config for desktop and laptop";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/d680ded26da5cf104dd2735a51e88d2d8f487b4d";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     utils.url = "github:gytis-ivaskevicius/flake-utils-plus";
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland/a0cf89029263decba29b0f4216b38576f4418335";
     waybar-hyprland.url = "github:hyprwm/hyprland";
     xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
     nix-colors.url = "github:misterio77/nix-colors";
@@ -25,6 +26,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-unstable,
     hyprland,
     home-manager,
     utils,
@@ -38,6 +40,10 @@
               inputs
               hyprland
               ;
+            nixpkgs-unstable = import nixpkgs-unstable {
+              system = "x86_64-linux";
+              config.allowUnfree = true;
+            };
           };
           modules = [
             ./hosts/desktop/configuration.nix
@@ -46,7 +52,13 @@
               home-manager = {
                 useUserPackages = true;
                 useGlobalPkgs = false;
-                extraSpecialArgs = {inherit inputs;};
+                extraSpecialArgs = {
+                  inherit inputs;
+                  nixpkgs-unstable = import nixpkgs-unstable {
+                    system = "x86_64-linux";
+                    config.allowUnfree = true;
+                  };
+                };
                 users.luna = ./home/desktop/home.nix;
               };
             }

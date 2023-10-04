@@ -8,5 +8,6 @@ _: {
     ./ranger
     ./neofetch
     ./extras
+    ./cool-retro-term
   ];
 }

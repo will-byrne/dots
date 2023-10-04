@@ -101,12 +101,12 @@
        zstyle ':fzf-tab:complete:kill:argument-rest' fzf-preview 'ps --pid=$word -o cmd --no-headers -w -w'
        zstyle ':fzf-tab:complete:kill:argument-rest' fzf-flags '--preview-window=down:3:wrap'
        zstyle ':fzf-tab:complete:kill:*' popup-pad 0 3
-       zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+       zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
        zstyle ':fzf-tab:complete:cd:*' popup-pad 30 0
        zstyle ':fzf-tab:*' switch-group ',' '.'
        zstyle ":completion:*:git-checkout:*" sort false
        zstyle ':completion:*' file-sort modification
-       zstyle ':completion:*:exa' sort false
+       zstyle ':completion:*:eza' sort false
        zstyle ':completion:files' sort false
 
     '';
@@ -122,10 +122,10 @@
       guc="git clean -xdf";
       grep = "grep --color=auto";
       ll = "ls -l";
-      ls = "exa --icons";
-      la = "exa --icons -la";
-      lt = "exa --icons -T";
-      lta = "exa --icons -Ta";
+      ls = "eza --icons";
+      la = "eza --icons -la";
+      lt = "eza --icons -T";
+      lta = "eza --icons -Ta";
       mv = "mv -i";
       rip = "rip -i";
       rebuild = "cd ~/flake && doas nixos-rebuild switch --flake .#desktop --impure";
@@ -142,6 +142,7 @@
       drm = "docker rm $(docker ps -a -q)";
       drmi = "docker rmi $(docker images -q)";
       dcu = "docker compose up";
+      dcuw = "docker compose up --wait";
       dcud = "docker compose up -d";
       dcd = "docker compose down";
       docker-compose = "docker compose";
