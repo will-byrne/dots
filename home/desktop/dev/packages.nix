@@ -60,7 +60,7 @@
     # Browser, vc, pdf
     discord
     zathura # PDF viewer
-    firefox
+    firefox-wayland
     wpsoffice # MS office alternative for linux
     google-chrome
     joplin-desktop # Note taking

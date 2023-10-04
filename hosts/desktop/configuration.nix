@@ -87,7 +87,7 @@
     desktopManager.mate.enable = true;
   };
   systemd.services."display-manager".after = [ "network-online.target" "systemd-resolved.service" ];
- 
+
   # Enables services
   services.logmein-hamachi.enable = false;
   services.flatpak.enable = true;
