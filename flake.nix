@@ -3,11 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/d680ded26da5cf104dd2735a51e88d2d8f487b4d";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     utils.url = "github:gytis-ivaskevicius/flake-utils-plus";
     hyprland.url = "github:hyprwm/Hyprland/a0cf89029263decba29b0f4216b38576f4418335";
-    waybar-hyprland.url = "github:hyprwm/hyprland";
-    xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
+    waybar-hyprland.url = "github:hyprwm/hyprland/a0cf89029263decba29b0f4216b38576f4418335";
+    xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland/57a3a41ba6b358109e4fc25c6a4706b5f7d93c6b";
     nix-colors.url = "github:misterio77/nix-colors";
     ryan-mono.url = "github:ryanccn/ryan-mono";
 
