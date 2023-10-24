@@ -1,5 +1,5 @@
 {pkgs, nixpkgs-unstable, ...}: {
-  home.packages = with pkgs; [
+  home.packages = [
     # NPM packages
     pkgs.nodejs
     pkgs.node2nix

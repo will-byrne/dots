@@ -170,6 +170,7 @@
       gpb="git branch --merged | egrep -v '(^\*|master|main|dev)' | xargs git branch -d";
       koboldai="nix run github:nixified-ai/flake#koboldai-nvidia";
       invokeai="nix run github:nixified-ai/flake#invokeai-nvidia -- --web";
+      hlt="cbonsai -S";
     };
 
     oh-my-zsh = {

@@ -8,6 +8,7 @@
   prev,
   inputs,
   packages,
+  nixpkgs-unstable,
   ...
 }: {
   imports = [
@@ -174,6 +175,11 @@
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
   };
+
+#  services.hardware.openrgb = {
+#    enable = true;
+#    package = nixpkgs-unstable.openrgb-with-all-plugins;
+#  };
 
   hardware = {
     bluetooth = {
