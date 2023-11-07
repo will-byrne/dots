@@ -65,7 +65,7 @@
     pkgs.zathura # PDF viewer
     pkgs.firefox-wayland
     pkgs.wpsoffice # MS office alternative for linux
-    pkgs.google-chrome
+    nixpkgs-unstable.google-chrome
     pkgs.joplin-desktop # Note taking
     # davinci-resolve # Video editor
     # notion-app-enhanced
@@ -82,7 +82,7 @@
     pkgs.cmatrix
     pkgs.cbonsai
     # polybar # Bar i use on X11
-    pkgs.nitrogen # Wallpaper utility for X11
+    # pkgs.nitrogen # Wallpaper utility for X11
     # picom-next # Compositor for X11
     # eww-wayland # Cool widgets for wayland
     pkgs.lxappearance # Gui software to change icons/themes
