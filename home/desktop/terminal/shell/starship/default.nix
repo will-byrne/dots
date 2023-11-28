@@ -25,7 +25,7 @@
         palette = "catppuccin_${flavour}";
         git_commit = {commit_hash_length = 5;};
         line_break.disabled = false;
-
+        aws.disabled = true;
         lua.symbol = "[](blue) ";
         python.symbol = "[](blue) ";
         nix_shell.symbol = "[](blue) ";
