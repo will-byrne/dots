@@ -6,7 +6,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces"], 
+    "modules-left": ["hyprland/workspaces"], 
     "modules-center": ["custom/playerlabel"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "clock", "custom/background", "custom/power", "tray"],
     // Modules configuration 
@@ -26,7 +26,7 @@
       "format": "<span font='14'>⏻</span>",
       "on-click": "sh ~/.config/waybar/scripts/wofi-power.sh",
     },
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
       "active-only": false,
       "all-outputs": false,
       "disable-scroll": false,
