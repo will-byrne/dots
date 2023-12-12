@@ -31,7 +31,6 @@
       "all-outputs": false,
       "disable-scroll": false,
       "format": "{icon}",
-      "on-click": "activate",
       "format-icons": {
         "urgent": "",
         "active": "",

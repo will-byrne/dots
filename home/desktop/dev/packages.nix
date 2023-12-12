@@ -18,6 +18,7 @@
     pkgs.rm-improved # Replacement for rm with focus on safety, ergonomics and performance
     nixpkgs-unstable.zoom-us
     nixpkgs-unstable.immersed-vr
+    pkgs.pipes
 
     # System Utils
     pkgs.mpd
