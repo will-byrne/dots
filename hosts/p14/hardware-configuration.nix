@@ -9,8 +9,14 @@
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [ "amdgpu" ];
   boot.kernelModules = [ "kvm-amd" ];
+    boot.kernelParams = [
+      "acpi_backlight=native"
+      "amd_pstate=guided"
+      "amdgpu"
+      "iommu=soft"
+  ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =

@@ -6,13 +6,15 @@
     lunarvim
     btop
     google-chrome
+    kdePackages.dolphin
+    vscode
 
     # files
     xfce.thunar
     xfce.thunar-volman
     xfce.tumbler
     ffmpegthumbnailer
-    vscode
+
     # safety
     mullvad-vpn
     bitwarden

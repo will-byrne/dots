@@ -2,10 +2,6 @@
 {
   gtk = {
     enable = true;
-    theme = {
-      name = "Tokyonight-Dark-BL";
-      package = pkgs.tokyonight-gtk-theme;
-    };
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;

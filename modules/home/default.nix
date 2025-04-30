@@ -24,6 +24,8 @@
 
   programs.home-manager.enable = true;
   
-  catppuccin.flavor = "macchiato";
-  catppuccin.enable = true;
+  catppuccin = {
+    enable = true;
+    flavor = "macchiato";
+  };
 }

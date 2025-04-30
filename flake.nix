@@ -28,7 +28,7 @@
                 useUserPackages = true;
                 users.luna.imports = [
                   ./modules/home
-                  catppuccin.homeManagerModules.catppuccin
+                  catppuccin.homeModules.catppuccin
                 ];
                 extraSpecialArgs = { inherit inputs; };
               };

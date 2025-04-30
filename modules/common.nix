@@ -40,6 +40,29 @@
 
   system.stateVersion = "25.05"; # Did you read the comment?
 
+  # AMD GPU
+  hardware.graphics = {
+     extraPackages = with pkgs; [
+      vaapiVdpau
+
+      rocmPackages.clr
+      rocmPackages.clr.icd
+
+      amdvlk
+    ];
+    extraPackages32 = with pkgs; [ driversi686Linux.amdvlk ];
+  };
+
+  environment.variables = {
+    "VDPAU_DRIVER" = "radeonsi";
+    "LIBVA_DRIVER_NAME" = "radeonsi";
+  };
+
+  # Most software has the HIP libraries hard-coded. Workaround:
+  systemd.tmpfiles.rules = [
+    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
+  ];
+
   environment = {
     shells = [ pkgs.bashInteractive ];
     systemPackages = with pkgs; [
