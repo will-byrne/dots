@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -67,10 +67,10 @@
       export PATH
     '';
 
-    initContent = ''
+    initContent = lib.mkBefore ''
+      source ~/p10k.zsh
       zstyle ':completion:*' list-colors "''${(s.:.)LS_COLORS}"
     '';
-    initExtraFirst = "source ~/p10k.zsh";
 
     history = {
       size = 1000000;
