@@ -1,4 +1,4 @@
-{
+{ catppuccin, ... }:{
   imports = [
     ./desktop
     ./programs
@@ -11,7 +11,7 @@
       EDITOR = "nvim";
       SHELL = "zsh";
     };
-    stateVersion = "24.11";
+    stateVersion = "25.05";
   };
 
   nix.gc = {
@@ -23,4 +23,7 @@
   services.udiskie.enable = true;
 
   programs.home-manager.enable = true;
+  
+  catppuccin.flavor = "macchiato";
+  catppuccin.enable = true;
 }

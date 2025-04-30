@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    catppuccin.url = "github:catppuccin/nix";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -10,7 +11,7 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, home-manager, ... }:
+    inputs@{ nixpkgs, catppuccin, home-manager, ... }:
     {
       nixosConfigurations = {
         p14 = nixpkgs.lib.nixosSystem {
@@ -19,12 +20,16 @@
           modules = [
             ./hosts/p14
             ./modules
+            catppuccin.nixosModules.catppuccin
             home-manager.nixosModules.home-manager
             {
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.luna = import ./modules/home;
+                users.luna.imports = [
+                  ./modules/home
+                  catppuccin.homeManagerModules.catppuccin
+                ];
                 extraSpecialArgs = { inherit inputs; };
               };
             }

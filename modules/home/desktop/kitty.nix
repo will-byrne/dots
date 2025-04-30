@@ -10,6 +10,6 @@
       font_size = "9.0";
       window_padding_width = 25;
     };
-    themeFile = "Catppuccin-Macchiato";
+    #themeFile = "Catppuccin-Macchiato";
   };
 }
