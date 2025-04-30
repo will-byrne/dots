@@ -24,11 +24,9 @@ in {
     xwayland = {
       enable = true;
     };
-    enableNvidiaPatches = true;
     settings = {
       # "$mainMod" = "SUPER";
       monitor = [
-        "DP-5, 3840x1600@120,0x0,1"
         ",preferred,auto,auto"
       ];
 

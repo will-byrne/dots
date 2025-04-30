@@ -10,7 +10,7 @@
   home = {
     username = "luna";
     homeDirectory = "/home/luna";
-    stateVersion = "22.11";
+    stateVersion = "24.11";
   };
 
   # This value determines the Home Manager release that your
@@ -35,23 +35,6 @@
     ./services
     ./terminal
     ./graphical
-  ];
-
-  # Overlays
-  nixpkgs.overlays = [
-    (self: super: {
-      discord = super.discord.overrideAttrs (
-        _: {
-          src = builtins.fetchTarball {
-            url = "https://discord.com/api/download?platform=linux&format=tar.gz";
-          };
-        }
-      );
-    })
-    # (import (builtins.fetchTarball {
-    #   url = "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
-    # }))
-    (import ../../overlays/firefox-overlay.nix)
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: true;
