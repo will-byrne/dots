@@ -128,7 +128,7 @@
         "$mainMod, T, exec, $terminal"
         "$mainMod, E, exec, $guiFM"
         "$mainMod SHIFT, E, exec, $terminal -e $tuiFM"
-        "$mainMod, C, exec, code --ozone-platform-hint=wayland --disable-extensions"
+        "$mainMod, C, exec, code --ozone-platform-hint=wayland"
         #"$mainMod SHIFT, C, exec, code --ozone-platform-hint=wayland --disable-extensions" setup lunarvim
         "$mainMod, F, exec, $browser"
         "$mainMod SHIFT, F, exec, google-chrome-stable"
