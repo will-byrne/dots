@@ -10,6 +10,8 @@
     vscode
     eza
     thefuck
+    glfw
+    discord
 
     # files
     xfce.thunar

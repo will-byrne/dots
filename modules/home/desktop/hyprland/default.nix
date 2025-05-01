@@ -141,8 +141,8 @@
         "$mainMod SHIFT, P, exec, pavucontrol"  
         ", XF86AudioMicMute , exec, pamixer --default-source -t" # mute mic
         ", XF86AudioMute , exec, pamixer -t" # mute sound
-        ", XF86AudioLowerVolume , exec, playerctl volume 0.05-" 
-        "$mainMod, F8 , exec, playerctl volume 0.05+"
+        ", XF86AudioLowerVolume , exec, pamixer -d 5" 
+        ", XF86AudioRaiseVolume , exec, pamixer -i 5"
         "$mainMod, F9 , exec, playerctl play-pause"
         "$mainMod, F10, exec, playerctl previous"
         "$mainMod, F11, exec, playerctl next"

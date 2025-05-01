@@ -4,6 +4,7 @@
     enable = true;
     syntaxHighlighting.enable = true;
     autosuggestion.enable  = true;
+
     oh-my-zsh = {
       enable = true;
       plugins = [
@@ -15,25 +16,6 @@
 
     plugins = [
       {
-        name = "zsh-autosuggestions";
-        src = pkgs.fetchFromGitHub {
-          owner = "zsh-users";
-          repo = "zsh-autosuggestions";
-          rev = "v0.7.1";
-          sha256 = "0z6i9wjjklb4lvr7zjhbphibsyx51psv50gm07mbb0kj9058j6kc";
-        };
-      }
-      {
-        # will source zsh-autosuggestions.plugin.zsh
-        name = "zsh-syntax-highlighting";
-        src = pkgs.fetchFromGitHub {
-          owner = "zsh-users";
-          repo = "zsh-syntax-highlighting";
-          rev = "v0.8.0";
-          sha256 = "0z6i9wjjklb4lvr7zjhbphibsyx51psv50gm07mbb0kj9058j6kc";
-        };
-      }
-      {
         name = "zsh-256color";
         src = pkgs.fetchFromGitHub {
           owner = "chrisiscool";
@@ -42,11 +24,6 @@
           sha256 = "0z6i9wjjklb4lvr7zjhbphibsyx51psv50gm07mbb0kj9058j6kc";
         };
       }
-      # {
-      #   name = "powerlevel10k-config";
-      #   src = "./";
-      #   file = "p10k.zsh";
-      # }
       {
         name = "zsh-powerlevel10k";
         src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/";
@@ -62,24 +39,13 @@
       LS_COLORS = "$(${pkgs.vivid}/bin/vivid generate catppuccin-macchiato)";
     };
 
-    envExtra = ''
-      path+=("$HOME/bin")
-      path+=("$HOME/.local/share/go/bin")
-      export PATH
-    '';
-
     initContent = lib.mkBefore ''
       source ~/p10k.zsh
-      zstyle ':completion:*' list-colors "''${(s.:.)LS_COLORS}"
     '';
 
     history = {
       size = 1000000;
       save = 1000000;
-      ignorePatterns = [
-        "cd ..*"
-        "ls"
-      ];
       extended = true;
       ignoreDups = true;
     };
