@@ -3,6 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 {
   config,
+  catppuccin,
   pkgs,
   final,
   prev,
@@ -27,11 +28,11 @@
       timeout = 10;
       efi = {
         canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot/efi";
+        efiSysMountPoint = "/boot/EFI";
       };
       grub = {
         enable = true;
-        device = "nodev";
+        device = "/dev/disk/by-uuid/2E72-1675";
         efiSupport = true;
         useOSProber = true;
         gfxmodeEfi = "1280x720x32";
@@ -74,20 +75,6 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
-
-  # Enable the X11 windowing system.
-  services.xserver = {
-    enable = true;
-    displayManager = {
-      gdm = {
-        enable = true;
-        wayland = true;
-      };
-      defaultSession = "hyprland";
-    };
-    desktopManager.mate.enable = true;
-  };
-  systemd.services."display-manager".after = [ "network-online.target" "systemd-resolved.service" ];
 
   # Enables services
   services.logmein-hamachi.enable = false;
@@ -184,8 +171,9 @@
     };
   };
 
-  # Configure keymap in X11
+  # Configure X11
   services.xserver = {
+    enable = true;
     layout = "gb";
     xkbVariant = "";
     libinput = {
@@ -246,6 +234,15 @@
     playerctl
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
+    fprintd
+    catppuccin-cursors.macchiatoLight
+    (catppuccin-sddm.override {
+      flavor = "macchiato";
+      font  = "Noto Sans";
+      fontSize = "9";
+      background = "${./wallpaper.png}";
+      loginBackground = true;
+    })
   ];
 
   environment.sessionVariables.DEFAULT_BROWSER = "${pkgs.google-chrome}/bin/google-chrome-stable";

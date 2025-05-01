@@ -4,7 +4,7 @@
     ./dunst.nix
     ./foot.nix
     ./fuzzel.nix
-    ./gammastep.nix
+    #./gammastep.nix
     ./gtk.nix
     ./hyprland
     ./kitty.nix

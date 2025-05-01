@@ -27,5 +27,7 @@
   catppuccin = {
     enable = true;
     flavor = "macchiato";
+    waybar.enable = false;
+    vscode.enable = true;
   };
 }

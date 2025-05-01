@@ -8,6 +8,8 @@
     google-chrome
     kdePackages.dolphin
     vscode
+    eza
+    thefuck
 
     # files
     xfce.thunar

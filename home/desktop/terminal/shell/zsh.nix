@@ -4,6 +4,10 @@
   lib,
   ...
 }: {
+  programs.thefuck = {
+    enable = true;
+    enableZshIntegration = true;
+  };
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";
