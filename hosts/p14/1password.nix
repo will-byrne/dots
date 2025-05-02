@@ -7,4 +7,4 @@
     # require enabling PolKit integration on some desktop environments (e.g. Plasma).
     polkitPolicyOwners = [ "luna" ];
   };
-};
+}

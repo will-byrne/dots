@@ -12,6 +12,10 @@ dev stuff:
     Webstorm
     RustRover
     markdown writer for blog?
+image tools:
+  gimp
+  comfyui
+
 btop theme (kind of working but catppuccin/nix does not seem to be creating the theme file)
 remove old configs:
   remove old ./home folder

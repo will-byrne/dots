@@ -1,5 +1,6 @@
 {
   imports = [
+    ./1password.nix
     ./catppuccin.nix
     ./hardware-configuration.nix
     ./users.nix
