@@ -243,6 +243,8 @@
       background = "${./wallpaper.png}";
       loginBackground = true;
     })
+    bluez
+    bluez-tools
   ];
 
   environment.sessionVariables.DEFAULT_BROWSER = "${pkgs.google-chrome}/bin/google-chrome-stable";

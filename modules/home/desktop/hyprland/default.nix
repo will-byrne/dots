@@ -150,6 +150,10 @@
         "$mainMod ALT, M, exec, $terminal -e rmpc"
         "$mainMod, Y, exec, ytmpv" # play yt video with mpd
 
+        # Brightness control
+        ", XF86MonBrightnessUp, exec, brightnessctl set +15%"
+        ", XF86MonBrightnessDown, exec, brightnessctl set 15%-" 
+
         # Screenshot bindings
         "$mainMod ALT, S, exec, grim - | tee ~/pictures/sc/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
         "$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | tee ~/pictures/sc/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
