@@ -1,7 +1,16 @@
-bluetooth 
+bluetooth
 waybar
-dev stuff
-btop theme
-remove old configs
-
+music player (Cider?)
+dev stuff:
+  rust
+  ts
+  java?
+  IDEs:
+    vscode - extensions
+    Webstorm
+    RustRover
+btop theme (kind of working but catppuccin/nix does not seem to be creating the theme file)
+remove old configs:
+  remove old ./home folder
+  go over the whole rep removing uneccesary things
 organise programs/common.nix

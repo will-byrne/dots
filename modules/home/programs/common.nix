@@ -4,7 +4,6 @@
     # packages that don't need configuration
     gargoyle
     lunarvim
-    btop
     google-chrome
     kdePackages.dolphin
     vscode
@@ -14,6 +13,7 @@
     discord
     unimatrix
     cbonsai
+    btop
 
     # files
     xfce.thunar
