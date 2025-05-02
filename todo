@@ -1,5 +1,7 @@
 bluetooth 
 waybar
 dev stuff
+btop theme
+remove old configs
 
 organise programs/common.nix
