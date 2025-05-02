@@ -14,7 +14,7 @@
         "mpdscribble"
       ];
 
-      monitor = [ ",preferred,auto,auto" ];
+      monitor = [ ",preferred,auto,1" ];
 
       input = {
         kb_layout = "gb";
