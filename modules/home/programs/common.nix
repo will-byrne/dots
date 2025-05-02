@@ -12,7 +12,6 @@
     thefuck
     glfw
     discord
-    steam
 
     # files
     xfce.thunar
