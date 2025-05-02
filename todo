@@ -2,7 +2,4 @@ bluetooth
 waybar
 dev stuff
 
-unimatrix
-ponysay
-cowsay
-fortune
+organise programs/common.nix

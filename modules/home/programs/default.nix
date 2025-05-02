@@ -4,6 +4,7 @@
     ./common.nix
     ./direnv.nix
     ./email.nix
+    ./fortune.nix
     ./gaming.nix
     ./git.nix
     ./imv.nix

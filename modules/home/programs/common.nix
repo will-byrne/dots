@@ -12,6 +12,8 @@
     thefuck
     glfw
     discord
+    unimatrix
+    cbonsai
 
     # files
     xfce.thunar
