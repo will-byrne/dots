@@ -18,6 +18,7 @@
       "iommu=soft"
   ];
   boot.extraModulePackages = [ ];
+  #boot.resumeDevice = "/dev/disk/by-partlabel/Swap";
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/3b69a8e7-b48c-4290-a0e1-e1a132df795f";

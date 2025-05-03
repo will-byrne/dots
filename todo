@@ -1,7 +1,10 @@
 bluetooth
 dunst
-rofi
-waybar
+waybar:
+  bluetooth module
+  styling
+  termperature
+  weather?
 music player (Cider?)
 dev stuff:
   rust

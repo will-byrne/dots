@@ -29,5 +29,6 @@
     waybar.enable = false;
     vscode.enable = true;
     btop.enable = true;
+    fuzzel.enable = true;
   };
 }
