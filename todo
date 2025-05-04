@@ -1,9 +1,5 @@
 bluetooth
 dunst
-waybar:
-  bluetooth module
-  styling
-  weather?
 music player (Cider?)
 dev stuff:
   rust

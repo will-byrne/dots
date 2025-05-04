@@ -63,6 +63,7 @@ tooltip {
 #custom-pacman,
 #network,
 #bluetooth,
+#backlight,
 #temperature,
 #workspaces,
 #tray,
@@ -82,12 +83,9 @@ tooltip {
 }
 
 #backlight {
-  border-radius: 7px 0px 0px 7px;
-  background: #1a1b26;
-  opacity: 1.0;
-  padding: 0px 7px;
-  margin-top: 5px;
-  margin-bottom: 6px;
+  color: #91d7e3;
+  border-radius: 7px 7px 7px 7px;
+  margin-right: 5px;
 }
 
 #pulseaudio {
@@ -142,6 +140,7 @@ tooltip {
 /* } */
 
 #window {
+  color: #f5bde6;
   border-radius: 7px;
   margin-left: 10px;
   margin-right: 60px;

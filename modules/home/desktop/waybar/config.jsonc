@@ -8,7 +8,7 @@
     "height": 30,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["battery", "cpu", "temperature", "memory", "pulseaudio","pulseaudio#microphone", "clock", "tray"],
+    "modules-right": ["battery", "cpu", "temperature", "memory", "backlight", "network", "bluetooth", "pulseaudio","pulseaudio#microphone", "clock", "tray"],
     "hyprland/window": {
         "format": "{}"
     },
@@ -39,18 +39,20 @@
       "interval": 1,
       "format": "  {}%"
     },
+    
 
     "clock": {
-        "format": "󰃰  {:%a, %b %e %H:%M }",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        "format": "󰃰  {:%a, %b%e %H:%M }",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
     },
 
     "backlight": {
       "device": "intel_backlight",
+      "rotate": 0,
       "format": "{icon} {percent}%",
-      "format-icons": ["", "", ""],
-      "on-scroll-up": "brightnessctl set 1%+",
-      "on-scroll-down": "brightnessctl set 1%-",
+      "format-icons": ["", "", "", "", "", "", "", "", ""],
+      // "on-scroll-up": "brightnessctl set 1%+",
+      // "on-scroll-down": "brightnessctl set 1%-",
       "min-length": 6
     },
 
@@ -64,6 +66,7 @@
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
     "pulseaudio": {
@@ -140,7 +143,6 @@
       "format": "{stateIcon} {artist} - {title}",
       "format-disconnected": "Disconnected ",
       "format-stopped": "{stateIcon} {artist} - {title}",
-      "format-stopped": "",
       "format-empty": "",
       "interval": 1,
       "on-click": "mpc toggle",
@@ -159,7 +161,5 @@
       },
       "tooltip-format": "MPD (connected)",
       "tooltip-format-disconnected": "MPD (disconnected)"
-    },
-
-    
+    }
 }
