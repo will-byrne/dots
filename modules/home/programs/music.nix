@@ -22,7 +22,6 @@
     ncmpcpp
     rmpc
     deadbeef
-    nicotine-plus
     puddletag
     asunder
   ];
