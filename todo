@@ -1,6 +1,4 @@
-bluetooth
 dunst
-music player (Cider?)
 dev stuff:
   rust
   ts
@@ -13,6 +11,10 @@ dev stuff:
 image tools:
   gimp
   comfyui
+thunderbird
+beeper?
+dropbox:
+  only if can specify whitelist of files
 
 btop theme (kind of working but catppuccin/nix does not seem to be creating the theme file)
 remove old configs:

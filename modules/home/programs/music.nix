@@ -3,7 +3,7 @@
   services = {
     mpd = {
       enable = true;
-      musicDirectory = "/mnt/media/music";
+      musicDirectory = "/home/luna/music";
       extraConfig = ''
         audio_output {
           type "pipewire"
@@ -19,9 +19,11 @@
   home.packages = with pkgs; [
     mpc
     mpdscribble
+    ncmpcpp
     rmpc
     deadbeef
     nicotine-plus
     puddletag
+    asunder
   ];
 }
