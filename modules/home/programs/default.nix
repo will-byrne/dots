@@ -2,6 +2,7 @@
   imports = [
     ./browser.nix
     ./common.nix
+    ./dev.nix
     ./direnv.nix
     ./email.nix
     ./fortune.nix
