@@ -58,6 +58,7 @@ tooltip {
 #window,
 #clock,
 #battery,
+#disk,
 #mpris,
 #pulseaudio,
 #custom-pacman,
@@ -115,8 +116,13 @@ tooltip {
 
 #memory {
   color: #94e2d5;
+}
+
+#disk {
+  color: #c6a0f6;
   border-radius: 0px 7px 7px 0px;
   margin-right: 5px;
+  padding-top: 4px;
 }
 
 #tray {
@@ -198,7 +204,7 @@ tooltip {
 
 #mpris.paused {
   color: #c0caf5;
-  border-bottom: 2px solid @yellow;
+  border-bottom: 2px solid yellow;
 }
 
 #mpd {
@@ -210,5 +216,5 @@ tooltip {
 
 #mpd.paused {
   color: #c0caf5;
-  border-bottom: 2px solid @yellow;
+  border-bottom: 2px solid yellow;
 }

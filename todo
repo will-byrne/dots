@@ -1,3 +1,4 @@
+waybar colours
 dunst
 dev stuff:
   rust
@@ -15,6 +16,7 @@ thunderbird
 beeper?
 dropbox:
   only if can specify whitelist of files
+catppuccin startpage
 
 btop theme (kind of working but catppuccin/nix does not seem to be creating the theme file)
 remove old configs:

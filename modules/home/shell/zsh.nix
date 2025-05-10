@@ -41,6 +41,7 @@
 
     initContent = lib.mkBefore ''
       source ~/p10k.zsh
+      eval $(thefuck --alias)
     '';
 
     history = {
@@ -69,7 +70,7 @@
       dcuw = "docker compose up --wait";
       dcud = "docker compose up -d";
       dcd = "docker compose down";
-      dcdvr = "docker compose down --volumes --remove-orphans'";
+      dcdvr = "docker compose down --volumes --remove-orphans";
       docker-compose = "docker compose";
       oops = "fuck";
       umatrix = "unimatrix -a -f -s 95";
@@ -88,6 +89,7 @@
       lunalordwatch="while true ; do lunalord;  sleep 30 ; done";
       lunalovelesswatch="while true ; do lunaloveless;  sleep 30 ; done";
       starwars = "telnet towel.blinkenlights.nl";
+      rwb = "pkill waybar && hyprctl dispatch exec waybar";
     };
 
     profileExtra = ''

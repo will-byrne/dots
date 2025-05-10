@@ -6,7 +6,6 @@
     lunarvim
     google-chrome
     kdePackages.dolphin
-    vscode
     eza
     thefuck
     glfw
