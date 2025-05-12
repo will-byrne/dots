@@ -1,18 +1,11 @@
-waybar colours
 dunst
 dev stuff:
   rust
-  ts
   java?
-  IDEs:
-    vscode - extensions
-    Webstorm
-    RustRover
-    markdown writer for blog?
 image tools:
-  gimp
   comfyui
-thunderbird
+thunderbird:
+  need to setup protonmail
 beeper?
 dropbox:
   only if can specify whitelist of files
