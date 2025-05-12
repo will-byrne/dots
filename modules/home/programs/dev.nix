@@ -4,6 +4,7 @@
     # IDES
     jetbrains.webstorm
     jetbrains.rust-rover
+    lunarvim
     neovide
     zed-editor-fhs
     vscode

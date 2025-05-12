@@ -3,7 +3,6 @@
   home.packages = with pkgs; [
     # packages that don't need configuration
     gargoyle
-    lunarvim
     google-chrome
     kdePackages.dolphin
     eza
