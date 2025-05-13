@@ -12,5 +12,6 @@
     # Languages
     bun
     nodejs_23
+    rustup
   ];
 }

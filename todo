@@ -2,7 +2,8 @@
 [x] musescore:
   [] other music apps?
 [] dev stuff:
-  [] rust
+  [x] rust:
+    [] toolchain
   [] java?
 [] image tools:
   [] comfyui
@@ -14,7 +15,7 @@
   [] try mistreal
 [] catppuccin startpage
 
-[] btop theme (kind of working but catppuccin/nix does not seem to be creating the theme file)
+[x] btop theme (kind of working but catppuccin/nix does not seem to be creating the theme file)
 [] remove old configs:
   [] remove old ./home folder
   [] go over the whole rep removing uneccesary things

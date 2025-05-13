@@ -1,6 +1,7 @@
 {
   imports = [
     ./browser.nix
+    ./btop/btop.nix
     ./common.nix
     ./dev.nix
     ./direnv.nix

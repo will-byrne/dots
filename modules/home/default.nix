@@ -28,7 +28,7 @@
     flavor = "macchiato";
     waybar.enable = false;
     vscode.enable = true;
-    btop.enable = true;
+    btop.enable = false;
     fuzzel.enable = true;
   };
 }
