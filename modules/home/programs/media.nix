@@ -13,6 +13,7 @@
     koreader
     kdePackages.kdenlive
     audacity
+    musescore
     reaper
     gimp
     qbittorrent

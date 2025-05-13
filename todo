@@ -1,18 +1,21 @@
-dunst
-dev stuff:
-  rust
-  java?
-image tools:
-  comfyui
-thunderbird:
-  need to setup protonmail
-beeper?
-dropbox:
-  only if can specify whitelist of files
-catppuccin startpage
+[] dunst
+[x] musescore:
+  [] other music apps?
+[] dev stuff:
+  [] rust
+  [] java?
+[] image tools:
+  [] comfyui
+[x] thunderbird:
+  [] need to setup protonmail
+[] beeper?
+[x] dropbox:
+  [x] only if can specify whitelist of files (can but its not great, use website for now)
+  [] try mistreal
+[] catppuccin startpage
 
-btop theme (kind of working but catppuccin/nix does not seem to be creating the theme file)
-remove old configs:
-  remove old ./home folder
-  go over the whole rep removing uneccesary things
-organise programs/common.nix
+[] btop theme (kind of working but catppuccin/nix does not seem to be creating the theme file)
+[] remove old configs:
+  [] remove old ./home folder
+  [] go over the whole rep removing uneccesary things
+[] organise programs/common.nix
