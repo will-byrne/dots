@@ -63,6 +63,7 @@
     "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
   ];
 
+  # home-manager.backupFileExtension = "backup";
   environment = {
     shells = [ pkgs.bashInteractive ];
     systemPackages = with pkgs; [
