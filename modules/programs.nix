@@ -6,6 +6,6 @@
       xwayland.enable = true;
     };
     zsh.enable = true;
-    java.enable = true;
+    # java.enable = true;
   };
 }
