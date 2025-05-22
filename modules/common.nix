@@ -40,15 +40,13 @@
 
   system.stateVersion = "25.05"; # Did you read the comment?
 
-  hardware.opengl = {
-      enable = true;
-      driSupport32Bit = true;
-    };
   # AMD GPU
+  hardware.amdgpu.amdvlk.enable = true;
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
     extraPackages = with pkgs; [
+      mesa
       vaapiVdpau
 
       rocmPackages.clr
@@ -62,6 +60,13 @@
   environment.variables = {
     "VDPAU_DRIVER" = "radeonsi";
     "LIBVA_DRIVER_NAME" = "radeonsi";
+    LD_LIBRARY_PATH = with pkgs; lib.makeLibraryPath [
+      libGL
+      xorg.libXrandr
+      xorg.libXinerama
+      xorg.libXcursor
+      xorg.libXi
+    ];
   };
 
   # Most software has the HIP libraries hard-coded. Workaround:
@@ -69,10 +74,14 @@
     "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
   ];
 
+  systemd.packages = with pkgs; [ lact ];
+  systemd.services.lactd.wantedBy = ["multi-user.target"];
+
   # home-manager.backupFileExtension = "backup";
   environment = {
     shells = [ pkgs.bashInteractive ];
     systemPackages = with pkgs; [
+      lact
       vim
       wget
       curl
