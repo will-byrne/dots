@@ -12,6 +12,8 @@
     unimatrix
     cbonsai
     btop
+    signal-desktop
+    immersed
 
     # files
     xfce.thunar

@@ -16,6 +16,7 @@
     nodejs_22
     rustup
     maven
+
     # openjdk
     jdk17
     libglvnd

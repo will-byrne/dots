@@ -53,6 +53,8 @@
       rocmPackages.clr.icd
 
       amdvlk
+
+      libva
     ];
     extraPackages32 = with pkgs; [ driversi686Linux.amdvlk ];
   };
