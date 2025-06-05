@@ -10,7 +10,6 @@
       plugins = [
         "git"
         "sudo"
-        "thefuck"
       ];
     };
 
@@ -41,7 +40,7 @@
 
     initContent = lib.mkBefore ''
       source ~/p10k.zsh
-      eval $(thefuck --alias)
+      eval "$(pay-respects zsh --alias)"
     '';
 
     history = {

@@ -6,7 +6,8 @@
     google-chrome
     kdePackages.dolphin
     eza
-    thefuck
+    pay-respects
+    baobab
     glfw
     discord
     unimatrix
