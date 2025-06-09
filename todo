@@ -5,7 +5,7 @@
   [] other music apps?
 [] dev stuff:
   [x] rust:
-    [] toolchain
+    [x] toolchain: use flakes in folder for "nix develop"
   [] java?
 [] image tools:
   [] comfyui
