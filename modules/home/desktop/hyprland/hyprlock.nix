@@ -44,7 +44,7 @@
         # DATE
         {
           monitor = "";
-          text = ''cmd[update:43200000] $(date +"%A, %d %B %Y")'';
+          text = ''cmd[update:43200000] date +"%A, %d %B %Y"'';
           color = "$text";
           font_size = 25;
           font_family = "JetBrainsMono Nerd Font";
@@ -72,7 +72,7 @@
         monitor = "";
         path = "$HOME/.face";
         size = 100;
-        border_color = "rgb(c6a0f6)";
+        border_color = "$accent";
         position = "0, 75";
         halign = "center";
         valign = "center";
@@ -86,13 +86,13 @@
         dots_size = 0.2;
         dots_spacing = 0.2;
         dots_center = true;
-        outer_color = "rgb(c6a0f6)";
+        outer_color = "$accent";
         inner_color = "$surface0";
         font_color = "$text";
         fade_on_empty = false;
-        placeholder_text = ''<span foreground="##$textAlpha"><i>󰌾 Logged in as </i><span foreground="##c6a0f6">$USER</span></span>'';
+        placeholder_text = ''<span foreground="##$textAlpha"><i>󰌾 Logged in as </i><span foreground="##$accentAlpha">$USER</span></span>'';
         hide_input = false;
-        check_color = "rgb(c6a0f6)";
+        check_color = "$accent";
         fail_color = "$red";
         fail_text = ''<i>$FAIL <b>($ATTEMPTS)</b></i>'';
         capslock_color = "$yellow";

@@ -3,6 +3,7 @@
   imports = [
     ./hyprpaper.nix
     ./hyprlock.nix
+    ./hypridle.nix
     ];
 
   wayland.windowManager.hyprland = {
@@ -121,6 +122,7 @@
         "$mainMod, Q, killactive,"
         "$mainMod, W, togglefloating"
         "$mainMod, G, togglegroup"
+        "$mainMod, L, exec, hyprlock"
         "ALT SHIFT, return, fullscreen"
         #"$mainMod, L, exec, swaylock"
         "$mainMod, backspace, exec, logout"
