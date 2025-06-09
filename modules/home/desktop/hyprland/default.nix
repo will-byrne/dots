@@ -124,7 +124,6 @@
         "$mainMod, G, togglegroup"
         "$mainMod, L, exec, hyprlock"
         "ALT SHIFT, return, fullscreen"
-        #"$mainMod, L, exec, swaylock"
         "$mainMod, backspace, exec, logout"
         "$mainMod, P, pseudo,"
         "$mainMod, U, togglesplit,"
