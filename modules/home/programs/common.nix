@@ -15,6 +15,7 @@
     btop
     signal-desktop
     immersed
+    nix-index
 
     # files
     xfce.thunar

@@ -1,6 +1,9 @@
 { pkgs, ... }:
 {
-  imports = [ ./hyprpaper.nix ];
+  imports = [
+    ./hyprpaper.nix
+    ./hyprlock.nix
+    ];
 
   wayland.windowManager.hyprland = {
     enable = true;
