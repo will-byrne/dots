@@ -48,6 +48,7 @@
       save = 1000000;
       extended = true;
       ignoreDups = true;
+      ignorePatterns = [ "cd *" "steam-run *" ];
     };
 
     shellAliases = {
