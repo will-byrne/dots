@@ -6,7 +6,7 @@
 [] dev stuff:
   [x] rust:
     [x] toolchain: use flakes in folder for "nix develop"
-  [] java?
+  [x] java?
 [] image tools:
   [] comfyui
 [x] thunderbird:
