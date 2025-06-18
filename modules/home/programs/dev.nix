@@ -11,9 +11,9 @@
     vscode
 
     # Languages
-    bun
-    nodejs_22
-    rustup
+    #bun
+    #nodejs_22
+    #rustup
 
     # openjdk
     # jdk17
