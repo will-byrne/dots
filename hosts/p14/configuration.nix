@@ -236,7 +236,7 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
     fprintd
-    catppuccin-cursors.macchiatoLight
+    catppuccin-cursors.macchiatoPink
     (catppuccin-sddm.override {
       flavor = "macchiato";
       font  = "Noto Sans";

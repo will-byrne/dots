@@ -99,11 +99,14 @@
       env = [
         "XCURSOR_SIZE,24"
         "XCURSOR_THEME,Adwaita"
-        "GTK_THEME,Tokyonight-Dark-BL-LB"
+        "GTK_THEME,catppuccin-macchiato-pink-standard+normal"
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
         "GDK_BACKEND,wayland,x11,*"
+        "TERMINAL,kitty"
+        "EDITOR,lvim"
+        "SHELL,zsh"
       ];
 
       windowrule = [ ];

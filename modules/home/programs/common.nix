@@ -4,7 +4,6 @@
     # packages that don't need configuration
     gargoyle
     google-chrome
-    kdePackages.dolphin
     eza
     pay-respects
     baobab
@@ -18,7 +17,6 @@
     nix-index
 
     # files
-    xfce.thunar
     xfce.thunar-volman
     xfce.tumbler
     ffmpegthumbnailer
