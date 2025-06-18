@@ -2,13 +2,6 @@
 {
   gtk = {
     enable = true;
-    catppuccin = {
-      enable = true;
-      flavor = "macchiato";
-      accent = "pink";
-      size = "standard";
-      tweaks = [ "normal" ];
-    };
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.catppuccin-papirus-folders.override {

@@ -30,5 +30,12 @@
     vscode.enable = true;
     btop.enable = false;
     fuzzel.enable = true;
+    gtk = {
+      enable = true;
+      flavor = "macchiato";
+      accent = "pink";
+      size = "standard";
+      tweaks = [ "normal" ];
+    };
   };
 }

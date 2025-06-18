@@ -7,7 +7,6 @@
     jetbrains.webstorm
     lunarvim
     neovide
-    deno
     zed-editor-fhs
     vscode
 
@@ -15,12 +14,12 @@
     bun
     nodejs_22
     rustup
-    maven
 
     # openjdk
-    jdk17
-    libglvnd
-    libGLU
-    glfw
+    # jdk17
+    # libglvnd
+    # libGLU
+    # glfw
+    # maven
   ];
 }
