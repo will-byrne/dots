@@ -8,7 +8,7 @@
     [x] toolchain: use flakes in folder for "nix develop"
   [x] java?
 [] image tools:
-  [] comfyui
+  [x] comfyui (sepaeate flake can be downloaded to run it)
 [x] thunderbird:
   [] need to setup protonmail
 [] beeper?

@@ -13,6 +13,8 @@
     koreader
     kdePackages.kdenlive
     audacity
+    lmms
+    bitwig-studio
     musescore
     reaper
     gimp

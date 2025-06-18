@@ -1,5 +1,6 @@
 {
   imports = [
+    ./ai.nix
     ./browser.nix
     ./btop/btop.nix
     ./common.nix
