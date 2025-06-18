@@ -23,6 +23,5 @@
     rmpc
     deadbeef
     puddletag
-    asunder
   ];
 }

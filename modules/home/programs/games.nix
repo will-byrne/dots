@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    gargoyle
     beyond-all-reason
     #brogue does not work on wayland
     cataclysm-dda

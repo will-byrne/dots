@@ -1,16 +1,6 @@
 { pkgs, ... }:
 {
   programs = {
-    librewolf = {
-      enable = true;
-      policies = {
-        DownloadDirectory = "\${home}/downloads";
-        OfferToSaveLogins = false;
-        PromptForDownloadLocation = true;
-        DisableTelemetry = true;
-        DisplayBookmarksToolbar = "never";
-      };
-    };
     firefox = {
       enable = true;
       policies = {
@@ -24,8 +14,8 @@
   };
 
   home.packages = with pkgs; [
+    google-chrome
     chromium
     brave
-    tor-browser
   ];
 }

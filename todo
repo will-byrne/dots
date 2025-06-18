@@ -18,7 +18,7 @@
 [] catppuccin startpage
 
 [x] btop theme (kind of working but catppuccin/nix does not seem to be creating the theme file)
-[] remove old configs:
-  [] remove old ./home folder
-  [] go over the whole rep removing uneccesary things
-[] organise programs/common.nix
+[x] remove old configs:
+  [x] remove old ./home folder
+  [x] go over the whole rep removing uneccesary things
+[x] organise programs/common.nix

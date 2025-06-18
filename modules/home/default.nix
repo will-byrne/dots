@@ -26,10 +26,13 @@
   catppuccin = {
     enable = true;
     flavor = "macchiato";
+    accent = "pink";
     waybar.enable = false;
     vscode.enable = true;
     btop.enable = false;
     fuzzel.enable = true;
+    yazi.enable = true;
+    zathura.enable = true;
     gtk = {
       enable = true;
       flavor = "macchiato";
