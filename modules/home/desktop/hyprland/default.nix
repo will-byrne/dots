@@ -136,7 +136,7 @@
         "$mainMod, E, exec, $guiFM"
         "$mainMod SHIFT, E, exec, $terminal -e $tuiFM"
         "$mainMod, C, exec, code --ozone-platform-hint=wayland"
-        "$mainMod SHIFT, C, exec, neovide -- -u '~/git/LunarVim/init.lua'" # open neovide lunarvim
+        "$mainMod SHIFT, C, exec, neovide -- -u ${pkgs.lunarvim}/share/lvim/init.lua" # open neovide lunarvim
         "$mainMod, F, exec, $browser"
         "$mainMod SHIFT, F, exec, google-chrome-stable"
         "CTRL SHIFT, ESCAPE, exec, $terminal -e btop"
