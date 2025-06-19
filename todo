@@ -1,13 +1,21 @@
 [x] add hyprlock
 [x] add hypridle
 [] dunst
+[x] remove manual external dependencies:
+  [x] neovide-lunarvim
 [x] musescore:
-  [] other music apps?
+  [x] other music apps? (added lmms and bitwig)
 [] dev stuff:
+  [] build library for flakes for:
+    [] node
+    [] rust
+    [] java
+    [] godot?
+    [] go?
   [x] rust:
     [x] toolchain: use flakes in folder for "nix develop"
   [x] java?
-[] image tools:
+[x] image tools:
   [x] comfyui (sepaeate flake can be downloaded to run it)
 [x] thunderbird:
   [] need to setup protonmail
