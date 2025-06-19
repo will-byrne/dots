@@ -1,6 +1,6 @@
 [x] add hyprlock
 [x] add hypridle
-[] dunst
+[x] dunst
 [x] remove manual external dependencies:
   [x] neovide-lunarvim
 [x] musescore:
