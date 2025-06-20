@@ -30,7 +30,7 @@
                   ./modules/home
                   catppuccin.homeModules.catppuccin
                 ];
-                extraSpecialArgs = { inherit inputs; };
+                extraSpecialArgs = { inherit inputs; hostname = "p14nixos"; };
               };
             }
           ];
