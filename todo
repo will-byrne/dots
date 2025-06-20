@@ -18,11 +18,11 @@
 [x] image tools:
   [x] comfyui (sepaeate flake can be downloaded to run it)
 [x] thunderbird:
-  [] need to setup protonmail
+  [] protonmail-bridge
 [] beeper?
-[x] dropbox:
+[] dropbox:
   [x] only if can specify whitelist of files (can but its not great, use website for now)
-  [] try mistreal
+  [x] try maestral (just use the web app for now until i actually need it)
 [] catppuccin startpage
 
 [x] btop theme (kind of working but catppuccin/nix does not seem to be creating the theme file)
