@@ -1,10 +1,3 @@
-[x] add hyprlock
-[x] add hypridle
-[x] dunst
-[x] remove manual external dependencies:
-  [x] neovide-lunarvim
-[x] musescore:
-  [x] other music apps? (added lmms and bitwig)
 [] dev stuff:
   [] build library for flakes for:
     [] node
@@ -15,18 +8,6 @@
   [x] rust:
     [x] toolchain: use flakes in folder for "nix develop"
   [x] java?
-[x] image tools:
-  [x] comfyui (sepaeate flake can be downloaded to run it)
 [x] thunderbird:
   [] protonmail-bridge
-[] beeper?
-[] dropbox:
-  [x] only if can specify whitelist of files (can but its not great, use website for now)
-  [x] try maestral (just use the web app for now until i actually need it)
 [] catppuccin startpage
-
-[x] btop theme (kind of working but catppuccin/nix does not seem to be creating the theme file)
-[x] remove old configs:
-  [x] remove old ./home folder
-  [x] go over the whole rep removing uneccesary things
-[x] organise programs/common.nix
