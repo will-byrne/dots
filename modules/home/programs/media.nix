@@ -13,7 +13,7 @@
     koreader
     kdePackages.kdenlive
     audacity
-    lmms
+    #lmms #uninstalled because of https://github.com/NixOS/nixpkgs/issues/389149
     bitwig-studio
     musescore
     reaper
