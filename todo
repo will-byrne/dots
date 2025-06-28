@@ -22,4 +22,4 @@
       [x] amd drivers / config
   [x] home
     [x] wallpapers
-[] p10k.zsh needs to be moved to ~/p10k.zsh on rebuild
+[x] p10k.zsh needs to be moved to ~/p10k.zsh on rebuild
