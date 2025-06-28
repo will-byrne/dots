@@ -1,5 +1,6 @@
 { pkgs, hostname, lib, ... }:
 {
+  home.file.".config/zsh/.p10k.zsh".source = ./p10k.zsh;
   programs.zsh = {
     enable = true;
     syntaxHighlighting.enable = true;
@@ -37,9 +38,9 @@
       EDITOR = "lvim";
       LS_COLORS = "$(${pkgs.vivid}/bin/vivid generate catppuccin-macchiato)";
     };
-
+    
     initContent = lib.mkBefore ''
-      source ~/p10k.zsh
+      source ~/.config/zsh/.p10k.zsh
       eval "$(pay-respects zsh --alias)"
     '';
 
