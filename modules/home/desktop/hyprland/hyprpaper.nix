@@ -5,7 +5,7 @@
   hostname,
   ...
 }: let
-  wallpaper =if hostname == "p14nixos" then
+  wallpaper =if hostname == "p14" then
     pkgs.fetchurl {
       url = "https://raw.githubusercontent.com/zhichaoh/catppuccin-wallpapers/refs/heads/main/misc/rainbow-cat.png";
       hash = "sha256-WP+kQ7mgjpeekatDEPSP/XeDc5ZihCm+BxgqgwYDIEU=";

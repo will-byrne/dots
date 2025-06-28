@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, hostname, lib, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -53,7 +53,7 @@
 
     shellAliases = {
       vim = "nvim";
-      rebuild = "sudo nixos-rebuild switch --flake .#p14";
+      rebuild = "sudo nixos-rebuild switch --flake .#${hostname}";
        l = "eza -lh  --icons=auto";
       ls = "eza -1   --icons=auto";
       ll = "eza -lha --icons=auto --sort=name --group-directories-first";

@@ -18,6 +18,8 @@
     [x] users
     [x] hardware specific config moved to hosts/default.nix
       [x] tlp
+      [] fingerprint
       [x] amd drivers / config
   [x] home
     [x] wallpapers
+[] p10k.zsh needs to be moved to ~/p10k.zsh on rebuild

@@ -1,3 +1,4 @@
+{ hostname, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -6,5 +7,5 @@
     ../optional/laptop.nix
   ];
   
-  networking.hostName = "p14nixos";
+  networking.hostName = hostname;
 }
