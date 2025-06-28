@@ -2,9 +2,9 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../common/amd.nix
-    ../common/laptop.nix
-    ../common
+    ../optional/amd.nix
+    ../optional/fingerprint.nix
+    ../optional/laptop.nix
   ];
   
   networking.hostName = "p14nixos";
