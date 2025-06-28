@@ -18,7 +18,7 @@
     [x] users
     [x] hardware specific config moved to hosts/default.nix
       [x] tlp
-      [] fingerprint
+      [x] fingerprint
       [x] amd drivers / config
   [x] home
     [x] wallpapers
