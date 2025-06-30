@@ -73,6 +73,7 @@ tooltip {
 #cpu,
 #memory,
 #custom-spotify,
+#custom-weather,
 
 #modbackground {
   background: #1a1b26;
@@ -85,6 +86,12 @@ tooltip {
 
 #backlight {
   color: #91d7e3;
+  border-radius: 7px 7px 7px 7px;
+  margin-right: 5px;
+}
+
+#custom-weather {
+  color: #f5bde6;
   border-radius: 7px 7px 7px 7px;
   margin-right: 5px;
 }
