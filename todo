@@ -11,7 +11,7 @@
 [x] thunderbird:
   [] protonmail-bridge
 [x] catppuccin startpage (tried it and did not use it, it also has nothing to do with flake config so ticking as done)
-[] separate out the p14 config in prep for xps13/desktop
+[x] separate out the p14 config in prep for xps13/desktop
   [x] hosts
     [x] 1pass
     [x] catppuccin
@@ -22,4 +22,7 @@
       [x] amd drivers / config
   [x] home
     [x] wallpapers
+[] add hardware-condiguration.nix
+  [] desktop
+  [] xps13
 [x] p10k.zsh needs to be moved to ~/p10k.zsh on rebuild
