@@ -9,18 +9,6 @@
     neovide
     zed-editor-fhs
     vscode
-
-    # Languages
-    #bun
-    #nodejs_22
-    #rustup
-
-    # openjdk
-    # jdk17
-    # libglvnd
-    # libGLU
-    # glfw
-    # maven
   ];
 
   # add custom desktop entry for running LunarVim inside Neovide

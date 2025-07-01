@@ -141,7 +141,7 @@
         "$mainMod SHIFT, F, exec, google-chrome-stable"
         "CTRL SHIFT, ESCAPE, exec, $terminal -e btop"
 
-        # ROFI
+        # Fuzzel
         "$mainMod, A, exec, $menu"
 
         # Audio control

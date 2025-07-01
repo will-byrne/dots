@@ -5,7 +5,7 @@
       global = {
         width = "250";
         height = "(75,150)";
-        origin = "bottom-right";
+        origin = "top-right";
         offset = "(30, 30)";
         alignment = "center";
         notification_limit = 20;
@@ -31,13 +31,11 @@
       urgency_low = {
         background = "#24273a";
         foreground = "#cad3f5";
-        # frame_color = "#c0caf5";
       };
 
       urgency_normal = {
         background = "#24273a";
         foreground = "#cad3f5";
-        # frame_color = "#c0caf5";
       };
 
       urgency_critical = {

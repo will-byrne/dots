@@ -22,13 +22,6 @@
   environment.variables = {
     "VDPAU_DRIVER" = "radeonsi";
     "LIBVA_DRIVER_NAME" = "radeonsi";
-    LD_LIBRARY_PATH = with pkgs; lib.makeLibraryPath [
-      libGL
-      xorg.libXrandr
-      xorg.libXinerama
-      xorg.libXcursor
-      xorg.libXi
-    ];
   };
 
   # Most software has the HIP libraries hard-coded. Workaround:

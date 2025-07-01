@@ -30,4 +30,3 @@ in {
     };
   };
 }
-#https://www.alexotos.com/wp-content/uploads/2020/03/4k-wallpaper.jpg
