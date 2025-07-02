@@ -16,9 +16,8 @@
   "custom/weather": {
     "format": "{}°",
     "tooltip": true,
-    "interval": 3600,
-    "exec": "wttrbar --location burwell",
-    "location": "",
+    "interval": 60,
+    "exec": "wttrbar --location Burwell --observation-time --lang uk",
     "return-type": "json"
 },
 
