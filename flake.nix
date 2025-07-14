@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     catppuccin.url = "github:catppuccin/nix";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -11,7 +12,7 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, catppuccin, home-manager, ... }:
+    inputs@{ nixpkgs, catppuccin, nixos-hardware, home-manager, ... }:
     {
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
@@ -42,6 +43,7 @@
             ./hosts/p14
             ./modules
             catppuccin.nixosModules.catppuccin
+            nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen5
             home-manager.nixosModules.home-manager
             {
               home-manager = {
@@ -63,6 +65,7 @@
             ./hosts/xps13
             ./modules
             catppuccin.nixosModules.catppuccin
+            nixos-hardware.nixosModules.dell-xps-13-9370
             home-manager.nixosModules.home-manager
             {
               home-manager = {
