@@ -147,6 +147,8 @@
         # Audio control
         "$mainMod SHIFT, P, exec, pavucontrol"  
         ", XF86AudioMicMute , exec, pamixer --default-source -t" # mute mic
+        "$mainMod SHIFT, M , exec, pamixer --default-source -t" # mute mic (alt)
+        "$mainMod, M , exec, pamixer -t" # mute (alt)
         ", XF86AudioMute , exec, pamixer -t" # mute sound
         ", XF86AudioLowerVolume , exec, pamixer -d 5" 
         ", XF86AudioRaiseVolume , exec, pamixer -i 5"
