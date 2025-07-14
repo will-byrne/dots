@@ -138,7 +138,7 @@
         "$mainMod, C, exec, code --ozone-platform-hint=wayland"
         "$mainMod SHIFT, C, exec, neovide -- -u ${pkgs.lunarvim}/share/lvim/init.lua" # open neovide lunarvim
         "$mainMod, F, exec, $browser"
-        "$mainMod SHIFT, F, exec, google-chrome-stable"
+        "$mainMod SHIFT, F, exec, $browser --private-window"
         "CTRL SHIFT, ESCAPE, exec, $terminal -e btop"
 
         # Fuzzel
