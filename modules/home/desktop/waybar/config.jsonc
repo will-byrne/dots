@@ -17,7 +17,7 @@
     "format": "{}°",
     "tooltip": true,
     "interval": 60,
-    "exec": "wttrbar --location Burwell --observation-time --lang uk",
+    "exec": "wttrbar --location Burwell --observation-time",
     "return-type": "json"
 },
 
