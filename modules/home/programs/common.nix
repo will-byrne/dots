@@ -54,5 +54,7 @@
     gdu
     gparted
     nix-index
+    powerstat
+    powertop
   ];
 }
