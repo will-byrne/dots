@@ -10,6 +10,7 @@
         DisableTelemetry = true;
         DisplayBookmarksToolbar = "never";
       };
+      profiles.default.extensions.force = true;
     };
   };
 
