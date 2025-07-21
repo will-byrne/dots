@@ -8,6 +8,12 @@
         hide_cursor = true;
       };
 
+      auth = {
+        fingerprint = {
+          enabled = true;
+        };
+      };
+
       # BACKGROUND
       background = {
         monitor = "";
