@@ -28,7 +28,7 @@
     flavor = "macchiato";
     accent = "pink";
     waybar.enable = false;
-    vscode.enable = true;
+    vscode.profiles.default.enable = true;
     btop.enable = false;
     fuzzel.enable = true;
     yazi.enable = true;
