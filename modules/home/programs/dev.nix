@@ -9,6 +9,7 @@
     neovide
     zed-editor-fhs
     vscode
+    postman
   ];
 
   # add custom desktop entry for running LunarVim inside Neovide
