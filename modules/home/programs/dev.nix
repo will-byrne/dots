@@ -2,9 +2,9 @@
 {
   home.packages = with pkgs; [
     # IDES
-    #jetbrains.idea-community # currently broken 21/7/25
-    #jetbrains.rust-rover
-    #jetbrains.webstorm
+    jetbrains.idea-community
+    jetbrains.rust-rover
+    jetbrains.webstorm
     lunarvim
     neovide
     zed-editor-fhs

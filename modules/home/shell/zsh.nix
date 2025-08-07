@@ -1,4 +1,4 @@
-{ pkgs, hostname, lib, ... }:
+{ pkgs, config, hostname, lib, ... }:
 {
   home.file.".config/zsh/.p10k.zsh".source = ./p10k.zsh;
   programs.zsh = {
@@ -31,7 +31,7 @@
       }
     ];
 
-    dotDir = ".config/zsh";
+    dotDir = "${config.xdg.configHome}/zsh";
 
     sessionVariables = {
       TERMINAL = "kitty";

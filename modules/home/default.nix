@@ -33,12 +33,5 @@
     fuzzel.enable = true;
     yazi.enable = true;
     zathura.enable = true;
-    gtk = {
-      enable = true;
-      flavor = "macchiato";
-      accent = "pink";
-      size = "standard";
-      tweaks = [ "normal" ];
-    };
   };
 }

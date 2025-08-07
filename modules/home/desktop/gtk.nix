@@ -2,11 +2,11 @@
 {
   gtk = {
     enable = true;
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.catppuccin-papirus-folders.override {
-        flavor = "macchiato";
-        accent = "pink";
+    theme = {
+      name = "Catppuccin-GTK-Pink-Dark-Macchiato";
+      package = pkgs.magnetic-catppuccin-gtk.override {
+        tweaks = ["macchiato"];
+        accent = ["pink"];
       };
     };
     cursorTheme = {

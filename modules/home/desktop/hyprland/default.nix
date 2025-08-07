@@ -99,7 +99,7 @@
       env = [
         "XCURSOR_SIZE,24"
         "XCURSOR_THEME,Adwaita"
-        "GTK_THEME,catppuccin-macchiato-pink-standard+normal"
+        "GTK_THEME,Catppuccin-GTK-Pink-Dark-Macchiato"
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
