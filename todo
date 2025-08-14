@@ -1,3 +1,4 @@
+[] remove xps-13 from configs
 [] dev stuff:
   [] build library for flakes for:
     [] node
@@ -24,5 +25,4 @@
     [x] wallpapers
 [] add hardware-condiguration.nix
   [] desktop
-  [] xps13
 [x] p10k.zsh needs to be moved to ~/p10k.zsh on rebuild
