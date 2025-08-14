@@ -58,29 +58,6 @@
             }
           ];
         };
-        xps13 = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; hostname = "xps13"; };
-          system = "x86_64-linux";
-          modules = [
-            ./hosts/xps13
-            ./modules
-            catppuccin.nixosModules.catppuccin
-            nixos-hardware.nixosModules.dell-xps-13-9370
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.luna.imports = [
-                  ./modules/home
-                  catppuccin.homeModules.catppuccin
-                ];
-                extraSpecialArgs = { inherit inputs; hostname = "xps13"; };
-              };
-            }
-          ];
-        };
-
       };
   };
 }

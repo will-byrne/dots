@@ -18,7 +18,7 @@
     genericName = "Text Editor";
     comment = "Launch LunarVim in Neovide";
     exec = "neovide -- -u ${pkgs.lunarvim}/share/lvim/init.lua";
-    icon = "lvim";  # Or a custom icon path like "${./icons/lunarvim.svg}"
+    icon = "lvim";
     terminal = false;
     categories = [ "Utility" "TextEditor" ];
   };
