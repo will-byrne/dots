@@ -42,6 +42,8 @@
     initContent = lib.mkBefore ''
       source ~/.config/zsh/.p10k.zsh
       eval "$(pay-respects zsh --alias)"
+      # Enable extended globbing for HISTORY_IGNORE patterns
+      setopt EXTENDED_GLOB
     '';
 
     history = {
