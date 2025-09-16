@@ -56,7 +56,7 @@
 
     shellAliases = {
       vim = "nvim";
-      rebuild = "sudo nixos-rebuild switch --flake .#${hostname}";
+      rebuild = "sudo nixos-rebuild switch --flake .";
        l = "eza -lh  --icons=auto";
       ls = "eza -1   --icons=auto";
       ll = "eza -lha --icons=auto --sort=name --group-directories-first";
