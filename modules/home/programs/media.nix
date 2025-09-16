@@ -13,7 +13,7 @@
     koreader
     kdePackages.kdenlive
     audacity
-    #lmms
+    lmms
     bitwig-studio
     musescore
     reaper

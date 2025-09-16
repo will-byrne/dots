@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     gargoyle
-    #beyond-all-reason
+    beyond-all-reason
     cataclysm-dda
     endless-sky
     flare
