@@ -21,6 +21,8 @@
     polkit.enable = true;
   };
 
+  hardware.opentabletdriver.enable = true;
+
   zramSwap.enable = true;
 
   console.keyMap = "uk";
@@ -37,6 +39,8 @@
       "flakes"
     ];
   };
+
+  
 
   programs.steam = {
     enable = true;
