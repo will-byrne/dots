@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   # AMD GPU
-  hardware.amdgpu.amdvlk.enable = true;
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -12,11 +11,8 @@
       rocmPackages.clr
       rocmPackages.clr.icd
 
-      amdvlk
-
       libva
     ];
-    extraPackages32 = with pkgs; [ driversi686Linux.amdvlk ];
   };
 
   environment.variables = {
