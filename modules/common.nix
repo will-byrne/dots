@@ -28,19 +28,20 @@
   console.keyMap = "uk";
 
   nix = {
-    settings.auto-optimise-store = true;
+    settings = {
+      auto-optimise-store = true;
+      download-buffer-size = 500000000;
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+    };
     gc = {
       automatic = true;
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
-    settings.experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
   };
-
-  
 
   programs.steam = {
     enable = true;
