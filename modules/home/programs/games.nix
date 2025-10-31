@@ -12,7 +12,7 @@
     openttd
     osu-lazer-bin
     shattered-pixel-dungeon
-    warzone2100
+    #warzone2100
     xivlauncher
     zeroad-unwrapped
   ];
