@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    # gargoyle
+    gargoyle
     beyond-all-reason
     cataclysm-dda
     endless-sky
