@@ -7,13 +7,16 @@
     endless-sky
     flare
     hedgewars
+    lincity-ng
     luanti-client
     mindustry-wayland
     openttd
     osu-lazer-bin
     shattered-pixel-dungeon
-    #warzone2100
+    veloren
+    vvvvvv
     xivlauncher
+    #warzone2100
     zeroad-unwrapped
   ];
 }
