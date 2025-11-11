@@ -38,6 +38,7 @@
     gnused
     gnutar
     gawk
+    tt
     zstd
     gnupg
     zip
