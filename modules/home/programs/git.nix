@@ -1,10 +1,14 @@
 {
   programs.git = {
     enable = true;
-    userName = "Will Byrne";
-    userEmail = "will.alex.byrne@gmail.com";
-    aliases = {
-        co = "checkout";
+    settings = {
+      user = {
+        name = "Will Byrne";
+        email = "will.alex.byrne@gmail.com";
+      };
+      alias = {
+          co = "checkout";
+      };
     };
   };
 }
