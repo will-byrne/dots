@@ -2,6 +2,13 @@
 {
   services = {
     fwupd.enable = true;
+    ollama = {
+      enable = true;
+      loadModels = [ "llama3.2:1b" ];
+    };
+    open-webui = {
+      enable = true;
+    };
     pipewire = {
       enable = true;
       alsa.enable = true;
