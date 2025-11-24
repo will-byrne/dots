@@ -1,6 +1,10 @@
 {
   programs.git = {
     enable = true;
+    ignores = [
+      ".envrc"
+      ".direnv"
+    ];
     settings = {
       user = {
         name = "Will Byrne";
