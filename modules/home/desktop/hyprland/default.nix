@@ -130,6 +130,10 @@
         "$mainMod, backspace, exec, logout"
         "$mainMod, P, pseudo,"
         "$mainMod, U, togglesplit,"
+        "$mainMod, left, workspace, e-1"
+        "$mainMod, right, workspace, e+1"
+        "$mainMod SHIFT, left, movecurrentworkspacetomonitor, l"
+        "$mainMod SHIFT, right, movecurrentworkspacetomonitor, r"
 
         # Application shortcuts
         "$mainMod, T, exec, $terminal"

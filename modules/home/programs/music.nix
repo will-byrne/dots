@@ -21,7 +21,7 @@
     mpdscribble
     ncmpcpp
     rmpc
-    deadbeef
+    # deadbeef
     puddletag
   ];
 }
