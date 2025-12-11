@@ -20,6 +20,7 @@
     grim
     slurp
     wl-clipboard
+    cliphist
     pavucontrol
     pamixer
     playerctl

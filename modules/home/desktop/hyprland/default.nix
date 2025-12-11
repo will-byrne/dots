@@ -16,6 +16,7 @@
       exec-once = [
         "waybar"
         "mpdscribble"
+        "wl-paste  --type text --watch cliphist store"
       ];
 
       monitor = [ ",preferred,auto,1" ];
@@ -29,6 +30,12 @@
           natural_scroll = true;
         };
       };
+
+      # Per device overrides
+      device = [{
+        name = "cx-2.4g-wireless-receiver";
+        kb_layout = "us";
+      }];
 
       gestures = {
         gesture = "3, horizontal, workspace";
@@ -130,64 +137,37 @@
         "$mainMod, backspace, exec, logout"
         "$mainMod, P, pseudo,"
         "$mainMod, U, togglesplit,"
-        "$mainMod, left, workspace, e-1"
-        "$mainMod, right, workspace, e+1"
-        "$mainMod SHIFT, left, movecurrentworkspacetomonitor, l"
-        "$mainMod SHIFT, right, movecurrentworkspacetomonitor, r"
 
-        # Application shortcuts
-        "$mainMod, T, exec, $terminal"
-        "$mainMod, E, exec, $guiFM"
-        "$mainMod SHIFT, E, exec, $terminal -e $tuiFM"
-        "$mainMod, C, exec, code --ozone-platform-hint=wayland"
-        "$mainMod SHIFT, C, exec, neovide -- -u ${pkgs.lunarvim}/share/lvim/init.lua" # open neovide lunarvim
-        "$mainMod, F, exec, $browser"
-        "$mainMod SHIFT, F, exec, $browser --private-window"
-        "CTRL SHIFT, ESCAPE, exec, $terminal -e btop"
+        # Move workspace
+        "$mainMod CTRL, left, workspace, e-1"
+        "$mainMod CTRL, right, workspace, e+1"
+        "$mainMod CTRL, down, workspace, empty"
 
-        # Fuzzel
-        "$mainMod, A, exec, $menu"
+        # Move workspace to monitor
+        "$mainMod CTRL ALT, left, movecurrentworkspacetomonitor, l"
+        "$mainMod CTRL ALT, right, movecurrentworkspacetomonitor, r"
 
-        # Audio control
-        "$mainMod SHIFT, P, exec, pavucontrol"  
-        ", XF86AudioMicMute , exec, pamixer --default-source -t" # mute mic
-        "$mainMod SHIFT, M , exec, pamixer --default-source -t" # mute mic (alt)
-        "$mainMod, M , exec, pamixer -t" # mute (alt)
-        ", XF86AudioMute , exec, pamixer -t" # mute sound
-        ", XF86AudioLowerVolume , exec, pamixer -d 5" 
-        ", XF86AudioRaiseVolume , exec, pamixer -i 5"
-        "$mainMod, F9 , exec, playerctl play-pause"
-        "$mainMod, F10, exec, playerctl previous"
-        "$mainMod, F11, exec, playerctl next"
-        "$mainMod, F12, exec, playerctl stop"
-        "$mainMod ALT, M, exec, $terminal -e rmpc"
-        "$mainMod, Y, exec, ytmpv" # play yt video with mpd
-
-        # Brightness control
-        ", XF86MonBrightnessUp, exec, brightnessctl set +15%"
-        ", XF86MonBrightnessDown, exec, brightnessctl set 15%-" 
-
-        # Screenshot bindings
-        "$mainMod ALT, S, exec, grim - | tee ~/pictures/sc/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
-        "$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | tee ~/pictures/sc/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
+        # Special workspace (stratchpad)
+        "$mainMod ALT, s, movetoworkspacesilent, special"
+        "$mainMod, s, togglespecialworkspace"
 
         # Focus movement with vim keys
-        "$mainMod, h, movefocus, l"
-        "$mainMod, l, movefocus, r"
-        "$mainMod, k, movefocus, u"
-        "$mainMod, j, movefocus, d"
+        "$mainMod, left, movefocus, l"
+        "$mainMod, right, movefocus, r"
+        "$mainMod, up, movefocus, u"
+        "$mainMod, down, movefocus, d"
 
         # Swap windows
-        "$mainMod SHIFT, h, movewindow, l"
-        "$mainMod SHIFT, l, movewindow, r"
-        "$mainMod SHIFT, k, movewindow, u"
-        "$mainMod SHIFT, j, movewindow, d"
+        "$mainMod SHIFT CTRL, left, movewindow, l"
+        "$mainMod SHIFT CTRL, right, movewindow, r"
+        "$mainMod SHIFT CTRL, up, movewindow, u"
+        "$mainMod SHIFT CTRL, down, movewindow, d"
 
         # Resize Windows
-        "$mainMod ALT, l, resizeactive, 30 0"
-        "$mainMod ALT, h, resizeactive, -30 0"
-        "$mainMod ALT, k, resizeactive, 0 -30"
-        "$mainMod ALT, j, resizeactive, 0 30"
+        "$mainMod SHIFT, right, resizeactive, 30 0"
+        "$mainMod SHIFT, left, resizeactive, -30 0"
+        "$mainMod SHIFT, up, resizeactive, 0 -30"
+        "$mainMod SHIFT, down, resizeactive, 0 30"
 
         # Workspace switching
         "$mainMod, 1, workspace, 1"
@@ -213,6 +193,43 @@
         "$mainMod SHIFT, 8, movetoworkspace, 8"
         "$mainMod SHIFT, 9, movetoworkspace, 9"
         "$mainMod SHIFT, 0, movetoworkspace, 10"
+
+        # Application shortcuts
+        "$mainMod, T, exec, $terminal"
+        "$mainMod, E, exec, $guiFM"
+        "$mainMod SHIFT, E, exec, $terminal -e $tuiFM"
+        "$mainMod, C, exec, code --ozone-platform-hint=wayland"
+        "$mainMod SHIFT, C, exec, neovide -- -u ${pkgs.lunarvim}/share/lvim/init.lua" # open neovide lunarvim
+        "$mainMod, F, exec, $browser"
+        "$mainMod SHIFT, F, exec, $browser --private-window"
+        "CTRL SHIFT, ESCAPE, exec, $terminal -e btop"
+
+        # Fuzzel
+        "$mainMod, A, exec, $menu"
+        "$mainMod, V, exec, cliphist list | $menu --dmenu --with-nth 2 | cliphist decode | wl-copy"
+
+        # Audio control
+        "$mainMod SHIFT, P, exec, pavucontrol"  
+        ", XF86AudioMicMute , exec, pamixer --default-source -t" # mute mic
+        "$mainMod SHIFT, M , exec, pamixer --default-source -t" # mute mic (alt)
+        "$mainMod, M , exec, pamixer -t" # mute (alt)
+        ", XF86AudioMute , exec, pamixer -t" # mute sound
+        ", XF86AudioLowerVolume , exec, pamixer -d 5" 
+        ", XF86AudioRaiseVolume , exec, pamixer -i 5"
+        "$mainMod, F9 , exec, playerctl play-pause"
+        "$mainMod, F10, exec, playerctl previous"
+        "$mainMod, F11, exec, playerctl next"
+        "$mainMod, F12, exec, playerctl stop"
+        "$mainMod ALT, M, exec, $terminal -e rmpc"
+        "$mainMod, Y, exec, ytmpv" # play yt video with mpd
+
+        # Brightness control
+        ", XF86MonBrightnessUp, exec, brightnessctl set +15%"
+        ", XF86MonBrightnessDown, exec, brightnessctl set 15%-" 
+
+        # Screenshot bindings
+        "$mainMod ALT, S, exec, grim - | tee ~/pictures/sc/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
+        "$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | tee ~/pictures/sc/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
 
         # Workspace scroll
         "$mainMod, mouse_down, workspace, e+1"
