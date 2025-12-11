@@ -4,7 +4,7 @@
     ./hyprpaper.nix
     ./hyprlock.nix
     ./hypridle.nix
-    # ./hyprsunset.nix
+    ./hyprsunset.nix
     ./hyprpolkit.nix
   ];
 
