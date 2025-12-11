@@ -4,7 +4,9 @@
     ./hyprpaper.nix
     ./hyprlock.nix
     ./hypridle.nix
-    ];
+    # ./hyprsunset.nix
+    ./hyprpolkit.nix
+  ];
 
   wayland.windowManager.hyprland = {
     enable = true;
