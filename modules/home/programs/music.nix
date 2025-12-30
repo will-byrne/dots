@@ -21,6 +21,7 @@
     mpdscribble
     ncmpcpp
     rmpc
+    musikcube
     puddletag
   ];
 }
