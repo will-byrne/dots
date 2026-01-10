@@ -25,7 +25,11 @@ in {
       ];
 
       wallpaper = [
-        ",${builtins.toString wallpaperSwitch}"
+        {
+          monitor = "";
+          fit_mode = "fit";
+          path = "${builtins.toString wallpaperSwitch}";
+        }
       ];
     };
   };
