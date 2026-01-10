@@ -2,12 +2,12 @@
 {
   home.packages = with pkgs; [
     # IDES
-    jetbrains.idea-community
+    jetbrains.idea-oss
     jetbrains.rust-rover
     jetbrains.webstorm
     lunarvim
     neovide
-    zed-editor-fhs
+    # zed-editor-fhs
     vscode
     postman
   ];

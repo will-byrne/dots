@@ -17,7 +17,7 @@
     pyright
     nixd
     deadnix
-    nixfmt-rfc-style
+    nixfmt
     lua-language-server
     stylua
     markdownlint-cli

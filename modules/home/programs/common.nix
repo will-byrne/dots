@@ -7,8 +7,8 @@
     immersed
 
     # files
-    xfce.thunar-volman
-    xfce.tumbler
+    thunar-volman
+    tumbler
     ffmpegthumbnailer
     file-roller
 
