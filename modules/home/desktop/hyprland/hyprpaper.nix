@@ -19,6 +19,7 @@ in {
     enable = true;
     settings = {
       ipc = "on";
+      splash = false;
       preload = [
         (builtins.toString wallpaperCat)
         (builtins.toString wallpaperSwitch)

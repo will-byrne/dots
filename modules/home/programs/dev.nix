@@ -7,7 +7,7 @@
     jetbrains.webstorm
     lunarvim
     neovide
-    # zed-editor-fhs
+    zed-editor-fhs
     vscode
     postman
   ];

@@ -17,10 +17,10 @@
       jack.enable = true;
       wireplumber.enable = true;
     };
-    # printing = { # TODO reactivate when cups is fixed
-    #   enable = true; 
-    #   drivers = [ pkgs.cnijfilter2 ];
-    # };
+    printing = { # TODO reactivate when cups is fixed
+      enable = true; 
+      drivers = [ pkgs.cnijfilter2 ];
+    };
     devmon.enable = true;
     gvfs.enable = true;
     udisks2.enable = true;
