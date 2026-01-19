@@ -17,7 +17,7 @@
       jack.enable = true;
       wireplumber.enable = true;
     };
-    printing = { # TODO reactivate when cups is fixed
+    printing = {
       enable = true; 
       drivers = [ pkgs.cnijfilter2 ];
     };
