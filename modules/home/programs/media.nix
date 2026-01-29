@@ -11,7 +11,7 @@
     obsidian
     calibre
     koreader
-    kdePackages.kdenlive
+    # kdePackages.kdenlive
     audacity
     lmms
     bitwig-studio
