@@ -118,9 +118,7 @@
         "SHELL,zsh"
       ];
 
-      windowrule = [ ];
-
-      windowrulev2 = [ "noblur,title:^()$,class:^()$" ];
+      windowrule = [ "no_blur on, match:title ^()$, match:class ^()$" ];
 
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
