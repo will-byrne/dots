@@ -1,6 +1,7 @@
 {
   imports = [
     ./ai.nix
+    ./astrophotography.nix
     ./browser.nix
     ./btop/btop.nix
     ./common.nix
