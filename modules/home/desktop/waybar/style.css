@@ -74,6 +74,7 @@ tooltip {
 #memory,
 #custom-spotify,
 #custom-weather,
+#custom-power,
 
 #modbackground {
   background: #1a1b26;
@@ -135,6 +136,12 @@ tooltip {
 #tray {
   border-radius: 7px;
   margin-right: 5px;
+}
+
+#custom-power {
+  border-radius: 7px;
+  margin-right: 5px;
+  color: #ee99a0;
 }
 
 #workspaces {
