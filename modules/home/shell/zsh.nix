@@ -5,6 +5,7 @@
     enable = true;
     syntaxHighlighting.enable = true;
     autosuggestion.enable  = true;
+    autocd = true;
 
     oh-my-zsh = {
       enable = true;
@@ -44,6 +45,7 @@
       eval "$(pay-respects zsh --alias)"
       # Enable extended globbing for HISTORY_IGNORE patterns
       setopt EXTENDED_GLOB
+      pokemon-colorscripts --no-title -r 1,3,6
     '';
 
     history = {

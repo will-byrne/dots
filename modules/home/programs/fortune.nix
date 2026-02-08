@@ -9,7 +9,7 @@
     ponysay
     pokemonsay
     cowsay
-    pokemon-colorscripts-mac
+    pokemon-colorscripts
   ];
   home.file.".config/fortunes" = {
     source = ./fortunes;
