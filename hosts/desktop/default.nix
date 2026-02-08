@@ -10,7 +10,7 @@
   services.udev.extraRules = ''
     KERNEL=="hwmon*", MODE="0644"
   '';
-
+  networking.firewall.allowedTCPPorts = [ 5001 ];
   hardware.graphics = {
     enable = true;
     enable32Bit = true;

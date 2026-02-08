@@ -21,7 +21,13 @@
         "wl-paste  --type text --watch cliphist store"
       ];
 
-      monitor = [ ",preferred,auto,1" ];
+      monitor = [ 
+        ",preferred,auto,1"
+        "DP-1, 3840x1600@120, auto, 1, bitdepth, 10, cm, hdr, vrr, 1"
+        "DP-3, 3840x1100, auto, 1.666, transform, 3"
+      ];
+
+      workspace = [ "9, monitor:DP-3" ];
 
       input = {
         kb_layout = "gb";
