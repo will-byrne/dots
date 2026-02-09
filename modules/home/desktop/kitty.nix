@@ -9,6 +9,7 @@
       enable_audio_bell = false;
       font_size = "9.0";
       window_padding_width = 25;
+      cursor_trail = 1;
     };
   };
 }
