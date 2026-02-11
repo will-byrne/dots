@@ -79,9 +79,9 @@
       docker-compose = "docker compose";
       oops = "fuck";
       umatrix = "unimatrix -a -f -s 95";
-      poke70 = "clear && fortune ~/.config/fortunes/70maxims | pokemonsay";
-      pokelord = "clear && fortune ~/.config/fortunes/overlord | pokemonsay";
-      pokeloveless = "clear && fortune ~/.config/fortunes/loveless | pokemonsay";
+      poke70 = "clear && fortune ~/.config/fortunes/70maxims | pokemonsay -N";
+      pokelord = "clear && fortune ~/.config/fortunes/overlord | pokemonsay -N";
+      pokeloveless = "clear && fortune ~/.config/fortunes/loveless | pokemonsay -N";
       luna70 = "clear && fortune ~/.config/fortunes/70maxims | ponysay -f luna";
       lunalord = "clear && fortune ~/.config/fortunes/overlord | ponysay -f luna";
       lunaloveless = "clear && fortune ~/.config/fortunes/loveless | ponysay -f luna";
