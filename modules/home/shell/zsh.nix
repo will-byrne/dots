@@ -42,7 +42,7 @@
     
     initContent = lib.mkBefore ''
       source ~/.config/zsh/.p10k.zsh
-      eval "$(pay-respects zsh --alias)"
+      eval "$(pay-respects zsh)"
       # Enable extended globbing for HISTORY_IGNORE patterns
       setopt EXTENDED_GLOB
       pokemon-colorscripts --no-title -r 1,3,6
@@ -59,6 +59,7 @@
     shellAliases = {
       vim = "nvim";
       rebuild = "sudo nixos-rebuild switch --flake .";
+      f = "$(pay-respects zsh)";
        l = "eza -lh  --icons=auto";
       ls = "eza -1   --icons=auto";
       ll = "eza -lha --icons=auto --sort=name --group-directories-first";
@@ -77,7 +78,6 @@
       dcd = "docker compose down";
       dcdvr = "docker compose down --volumes --remove-orphans";
       docker-compose = "docker compose";
-      oops = "fuck";
       umatrix = "unimatrix -a -f -s 95";
       poke70 = "clear && fortune ~/.config/fortunes/70maxims | pokemonsay -N";
       pokelord = "clear && fortune ~/.config/fortunes/overlord | pokemonsay -N";
