@@ -30,12 +30,6 @@
           ",preferred,auto,1"
         ])
       ];
-    
-    # [ 
-    #     ",preferred,auto,1"
-    #     "DP-1, 3840x1600@120, auto, 1, cm, hdr, vrr, 3, bitdepth, 10"
-    #     "DP-3, 3840x1100, auto, 1.666, transform, 3"
-    #   ];
 
       workspace = lib.mkMerge [
         (lib.mkIf (hostname== "desktop") [
@@ -51,9 +45,6 @@
         ])
         (lib.mkIf (hostname == "p14") [])
       ];
-      # [
-      #   "9, monitor:DP-3"
-      # ];
 
       input = {
         kb_layout = "gb";
