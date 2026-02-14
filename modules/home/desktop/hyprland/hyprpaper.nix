@@ -2,7 +2,6 @@
   inputs,
   pkgs,
   config,
-  hostname,
   ...
 }: let
   wallpaperCat = pkgs.fetchurl {

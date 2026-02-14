@@ -1,4 +1,4 @@
-{ pkgs, config, hostname, lib, ... }:
+{ pkgs, config, lib, ... }:
 {
   home.file.".config/zsh/.p10k.zsh".source = ./p10k.zsh;
   programs.zsh = {

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, hostname, lib, ... }:
 {
   imports = [
     ./hyprpaper.nix
@@ -21,13 +21,39 @@
         "wl-paste  --type text --watch cliphist store"
       ];
 
-      monitor = [ 
-        ",preferred,auto,1"
-        "DP-1, 3840x1600@120, auto, 1, bitdepth, 10, cm, hdr, vrr, 1"
-        "DP-3, 3840x1100, auto, 1.666, transform, 3"
+      monitor = lib.mkMerge [
+        (lib.mkIf (hostname == "desktop") [
+          "DP-1, 3840x1600@120, auto, 1, cm, hdr, vrr, 3, bitdepth, 10"
+          "DP-3, 3840x1100, auto, 1.666, transform, 3"
+        ])
+        (lib.mkIf (hostname == "p14") [
+          ",preferred,auto,1"
+        ])
       ];
+    
+    # [ 
+    #     ",preferred,auto,1"
+    #     "DP-1, 3840x1600@120, auto, 1, cm, hdr, vrr, 3, bitdepth, 10"
+    #     "DP-3, 3840x1100, auto, 1.666, transform, 3"
+    #   ];
 
-      workspace = [ "9, monitor:DP-3" ];
+      workspace = lib.mkMerge [
+        (lib.mkIf (hostname== "desktop") [
+          "1, monitor:DP-1"
+          "2, monitor:DP-1"
+          "3, monitor:DP-1"
+          "4, monitor:DP-1"
+          "5, monitor:DP-1"
+          "6, monitor:DP-1"
+          "7, monitor:DP-1"
+          "8, monitor:DP-1"
+          "9, monitor:DP-3"
+        ])
+        (lib.mkIf (hostname == "p14") [])
+      ];
+      # [
+      #   "9, monitor:DP-3"
+      # ];
 
       input = {
         kb_layout = "gb";
