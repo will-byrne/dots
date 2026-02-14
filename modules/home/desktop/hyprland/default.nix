@@ -15,10 +15,15 @@
     settings = {
       xwayland.force_zero_scaling = true;
       
-      exec-once = [
-        "waybar"
-        "mpdscribble"
-        "wl-paste  --type text --watch cliphist store"
+      exec-once = lib.mkMerge [
+        [
+          "waybar"
+          "mpdscribble"
+          "wl-paste  --type text --watch cliphist store"
+        ]
+        (lib.mkIf (hostname== "desktop") [
+          "[workspace 9 silent; fullscreen]$terminal --class -e btop"
+        ])
       ];
 
       monitor = lib.mkMerge [
@@ -148,7 +153,9 @@
         "SHELL,zsh"
       ];
 
-      windowrule = [ "no_blur on, match:title ^()$, match:class ^()$" ];
+      windowrule = [ 
+        "no_blur on, match:title ^()$, match:class ^()$"
+      ];
 
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
