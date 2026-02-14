@@ -26,8 +26,7 @@ in {
       ipc = "on";
       splash = false;
       preload = [
-        (builtins.toString wallpaperCat)
-        (builtins.toString wallpaperSwitch)
+        (builtins.toString selectedWallpaper)
       ];
 
 
