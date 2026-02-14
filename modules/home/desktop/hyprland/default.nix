@@ -23,8 +23,8 @@
 
       monitor = lib.mkMerge [
         (lib.mkIf (hostname == "desktop") [
-          "DP-1, 3840x1600@120, auto, 1, vrr, 1, bitdepth, 10"
-          "DP-2, 3840x1100, auto, 1.666, transform, 3"
+          "DP-1, 3840x1600@120, 0x0, 1, vrr, 1, bitdepth, 10"
+          "DP-2, 3840x1100, 3840x0, 2, transform, 3"
         ])
         (lib.mkIf (hostname == "p14") [
           ",preferred,auto,1"
