@@ -23,8 +23,8 @@
 
       monitor = lib.mkMerge [
         (lib.mkIf (hostname == "desktop") [
-          "DP-1, 3840x1600@120, auto, 1, cm, hdr, vrr, 3, bitdepth, 10"
-          "DP-3, 3840x1100, auto, 1.666, transform, 3"
+          "DP-3, 3840x1600@120, auto, 1, cm, hdr, vrr, 3, bitdepth, 10"
+          "DP-1, 3840x1100, auto, 1.666, transform, 3"
         ])
         (lib.mkIf (hostname == "p14") [
           ",preferred,auto,1"
@@ -39,15 +39,15 @@
 
       workspace = lib.mkMerge [
         (lib.mkIf (hostname== "desktop") [
-          "1, monitor:DP-1"
-          "2, monitor:DP-1"
-          "3, monitor:DP-1"
-          "4, monitor:DP-1"
-          "5, monitor:DP-1"
-          "6, monitor:DP-1"
-          "7, monitor:DP-1"
-          "8, monitor:DP-1"
-          "9, monitor:DP-3"
+          "1, monitor:DP-3"
+          "2, monitor:DP-3"
+          "3, monitor:DP-3"
+          "4, monitor:DP-3"
+          "5, monitor:DP-3"
+          "6, monitor:DP-3"
+          "7, monitor:DP-3"
+          "8, monitor:DP-3"
+          "9, monitor:DP-1"
         ])
         (lib.mkIf (hostname == "p14") [])
       ];
