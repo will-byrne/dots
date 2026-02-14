@@ -57,10 +57,16 @@
       };
 
       # Per device overrides
-      device = [{
-        name = "cx-2.4g-wireless-receiver";
-        kb_layout = "us";
-      }];
+      device = [
+        {
+          name = "cx-2.4g-wireless-receiver";
+          kb_layout = "us";
+        }
+        {
+          name = "ilitek-------ilitek-touch";
+          enabled = false;
+        }
+      ];
 
       gestures = {
         gesture = "3, horizontal, workspace";
