@@ -47,4 +47,21 @@
 
   hardware.amdgpu.initrd.enable = true;
   networking.hostName = hostname;
+
+  # ComfyUI service with AMD ROCm GPU support
+  services.comfyui = {
+    enable = true;
+    gpuSupport = "rocm";
+    enableManager = true;
+    port = 8188;
+    user = "luna";
+    listenAddress = "127.0.0.1";
+    dataDir = "/home/luna/comfyui-data";
+    openFirewall = false;
+    extraArgs = [
+      "--disable-xformers"
+    ];
+  };
+
+  systemd.services.comfyui.wantedBy = lib.mkForce [];  # Don't auto-start on boot
 }

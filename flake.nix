@@ -5,6 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     catppuccin.url = "github:catppuccin/nix";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    comfyui-nix.url = "github:utensils/comfyui-nix";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -12,7 +13,7 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, catppuccin, nixos-hardware, home-manager, ... }:
+    inputs@{ nixpkgs, catppuccin, nixos-hardware, comfyui-nix, home-manager, ... }:
     {
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
@@ -21,6 +22,7 @@
           modules = [
             ./hosts/desktop
             ./modules
+            comfyui-nix.nixosModules.default
             catppuccin.nixosModules.catppuccin
             home-manager.nixosModules.home-manager
             {
