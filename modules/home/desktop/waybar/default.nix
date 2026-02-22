@@ -1,4 +1,4 @@
-{ pkgs, ...}: {
+{ pkgs, hostname, ...}: {
   programs.waybar = {
     enable = true;
     settings = [
@@ -79,6 +79,7 @@
 
         "temperature" = {
           format = " {temperatureC}°C";
+          hwmon-path = if hostname == "desktop" then "/sys/class/hwmon/hwmon3/temp1_input" else if hostname == "p14" then "/sys/class/hwmon/hwmon5/temp1_input" else null;
         };
 
         "memory" = {
