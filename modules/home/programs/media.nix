@@ -9,7 +9,7 @@
 
   home.packages = with pkgs; [
     obsidian
-    calibre
+    # calibre
     koreader
     audacity
     lmms

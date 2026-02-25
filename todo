@@ -1,2 +1,5 @@
-[] add hardware-condiguration.nix
-  [] desktop
+Disabled
+  Not building:
+    - ncmpcpp
+    - calibre
+    - zeroad-unwrapped
