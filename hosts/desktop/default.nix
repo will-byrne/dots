@@ -55,9 +55,9 @@
     enableManager = true;
     port = 8188;
     user = "luna";
-    listenAddress = "127.0.0.1";
+    listenAddress = "0.0.0.0";
     dataDir = "/home/luna/comfyui-data";
-    openFirewall = false;
+    openFirewall = true;
     extraArgs = [
       "--disable-xformers"
     ];
