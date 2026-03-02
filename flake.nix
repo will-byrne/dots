@@ -18,10 +18,10 @@
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; hostname = "desktop"; };
-          system = "x86_64-linux";
           modules = [
             ./hosts/desktop
             ./modules
+            { nixpkgs.hostPlatform = "x86_64-linux"; }
             comfyui-nix.nixosModules.default
             catppuccin.nixosModules.catppuccin
             home-manager.nixosModules.home-manager
@@ -40,10 +40,10 @@
         };
         p14 = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; hostname = "p14"; };
-          system = "x86_64-linux";
           modules = [
             ./hosts/p14
             ./modules
+            { nixpkgs.hostPlatform = "x86_64-linux"; }
             catppuccin.nixosModules.catppuccin
             nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen5
             home-manager.nixosModules.home-manager
