@@ -61,6 +61,15 @@
     extraArgs = [
       "--disable-xformers"
     ];
+    customNodes = {
+      # Fetch from GitHub (pinned version)
+      ComfyUI-Impact-Pack = pkgs.fetchFromGitHub {
+        owner = "ltdrdata";
+        repo = "ComfyUI-Impact-Pack";
+        rev = "6a517ebe06fea2b74fc41b3bd089c0d7173eeced";
+        hash = "sha256-BBHW3t122z+FC/VaD6MPp8l/ER9nEs3dJTcFU3Qeskg=";  # nix-prefetch-github ltdrdata ComfyUI-Impact-Pack --rev v1.0.0
+      };
+    };
   };
 
   systemd.services.comfyui.wantedBy = lib.mkForce [];  # Don't auto-start on boot
