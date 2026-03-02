@@ -176,9 +176,9 @@
         "$mainMod, U, togglesplit,"
 
         # Move workspace
-        "$mainMod CTRL, left, workspace, e-1"
-        "$mainMod CTRL, right, workspace, e+1"
-        "$mainMod CTRL, down, workspace, empty"
+        "$mainMod SHIFT CTRL, left, workspace, e-1"
+        "$mainMod SHIFT CTRL, right, workspace, e+1"
+        "$mainMod SHIFT CTRL, down, workspace, empty"
 
         # Move workspace to monitor
         "$mainMod CTRL ALT, left, movecurrentworkspacetomonitor, l"
@@ -195,10 +195,10 @@
         "$mainMod, down, movefocus, d"
 
         # Swap windows
-        "$mainMod SHIFT CTRL, left, movewindow, l"
-        "$mainMod SHIFT CTRL, right, movewindow, r"
-        "$mainMod SHIFT CTRL, up, movewindow, u"
-        "$mainMod SHIFT CTRL, down, movewindow, d"
+        "$mainMod CTRL, left, movewindow, l"
+        "$mainMod CTRL, right, movewindow, r"
+        "$mainMod CTRL, up, movewindow, u"
+        "$mainMod CTRL, down, movewindow, d"
 
         # Resize Windows
         "$mainMod SHIFT, right, resizeactive, 30 0"
