@@ -19,6 +19,5 @@
     gimp
     qbittorrent
     vlc
-    libreoffice
   ];
 }

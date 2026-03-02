@@ -19,7 +19,7 @@
   home.packages = with pkgs; [
     mpc
     mpdscribble
-    # ncmpcpp
+    ncmpcpp
     rmpc
     musikcube
     puddletag

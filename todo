@@ -1,5 +1,3 @@
 Disabled
   Not building:
-    - ncmpcpp
     - calibre
-    - zeroad-unwrapped
