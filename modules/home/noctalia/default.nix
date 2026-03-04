@@ -30,6 +30,12 @@
             id = "Launcher";
           }
           {
+            focusedColor = "primary";
+            id = "Workspace";
+            occupiedColor = "tertiary";
+            
+          }
+          {
             colorName = "tertiary";
             hideWhenIdle = true;
             id = "AudioVisualizer";
