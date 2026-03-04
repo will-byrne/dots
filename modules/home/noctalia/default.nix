@@ -1,4 +1,4 @@
-{ ... }:
+{ hostname, lib, ... }:
 {
   programs.noctalia-shell = {
     enable = true;
@@ -6,20 +6,23 @@
     settings = {
       # only explicitly override non-default values
       settingsVersion = 54;
+      
+      nightLight = {
+        enabled = true;
+        autoSchedule = true;
+      };
 
+      templates = {
+        activeTemplates = [];
+        enableUserTheming = false;
+      };
+      
       bar = {
-        # monitor list is non-empty (default is [])
-        monitors = [ "eDP-1" ];
-        nightLight = {
-          enabled = true;
-          autoSchedule = true;
-        };
-
-        templates = {
-          activeTemplates = [];
-          enableUserTheming = false;
-        };
-
+        monitors = lib.mkMerge [
+          []
+          (lib.mkIf (hostname== "desktop") ["DP-1"])
+        ];
+        
         widgets.left = [
           {
             colorizeSystemIcon = "tertiary";
