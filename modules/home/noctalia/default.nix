@@ -114,6 +114,9 @@
             showPowerProfiles = true;
           }
           {
+            id = "plugin:keybind-cheatsheet";
+          }
+          {
             compactMode = true;
             diskPath = "/";
             iconColor = "secondary";
@@ -196,6 +199,10 @@
             sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
           };
           pomodoro = {
+            enabled = true;
+            sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+          };
+          keybind-cheatsheet = {
             enabled = true;
             sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
           };
