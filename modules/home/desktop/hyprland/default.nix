@@ -2,9 +2,9 @@
 {
   imports = [
     ./hyprpaper.nix
-    ./hyprlock.nix
+    # ./hyprlock.nix
     ./hypridle.nix
-    ./hyprsunset.nix
+    # ./hyprsunset.nix
     ./hyprpolkit.nix
   ];
 
@@ -78,8 +78,8 @@
       };
 
       general = {
-        gaps_in = 3;
-        gaps_out = 8;
+        gaps_in = 5;
+        gaps_out = 10;
         border_size = 2;
         "col.active_border" = "rgba(ca9ee6ff) rgba(f2d5cfff) 45deg";
         "col.inactive_border" = "rgba(b4befecc) rgba(6c7086cc) 45deg";
@@ -96,12 +96,14 @@
       };
 
       decoration = {
-        rounding = 10;
+        rounding = 20;
+        rounding_power = 2;
         blur = {
           enabled = true;
           special = true;
-          size = 6;
-          passes = 3;
+          size = 3;
+          passes = 2;
+          vibrancy = 0.1696;
           new_optimizations = true;
           ignore_opacity = true;
           xray = false;
@@ -112,6 +114,13 @@
           render_power = 3;
           color = "rgba(1a1a1aee)";
         };
+      };
+      layerrule = {
+        name = "noctalia";
+        "match:namespace" = "noctalia-background-.*$";
+        ignore_alpha = 0.5;
+        blur = true;
+        blur_popups = true;
       };
 
       animations = {
@@ -163,13 +172,15 @@
       "$tuiFM" = "yazi";
       "$menu" = "fuzzel";
       "$browser" = "firefox";
+      "$ipc" = "noctalia-shell ipc call";
 
       bind = [
         # Window / Session actions
         "$mainMod, Q, killactive,"
         "$mainMod, W, togglefloating"
         "$mainMod, G, togglegroup"
-        "$mainMod, L, exec, hyprlock"
+        # "$mainMod, L, exec, hyprlock"
+        "$mainMod, L, exec, $ipc lockScreen lock"
         "ALT SHIFT, return, fullscreen"
         "$mainMod, backspace, exec, logout"
         "$mainMod, P, pseudo,"
@@ -242,17 +253,24 @@
         "CTRL SHIFT, ESCAPE, exec, $terminal -e btop"
 
         # Fuzzel
-        "$mainMod, A, exec, $menu"
+        # "$mainMod, A, exec, $menu"
+        "$mainMod, A, exec, $ipc launcher toggle"
+        "$mainMod, Z, exec, $ipc controlCenter toggle"
+        "$mainMod, comma, exec, $ipc settings toggle"
         "$mainMod, V, exec, cliphist list | $menu --dmenu --with-nth 2 | cliphist decode | wl-copy"
 
         # Audio control
         "$mainMod SHIFT, P, exec, pavucontrol"  
-        ", XF86AudioMicMute , exec, pamixer --default-source -t" # mute mic
+        # ", XF86AudioMicMute , exec, pamixer --default-source -t" # mute mic
         "$mainMod SHIFT, M , exec, pamixer --default-source -t" # mute mic (alt)
         "$mainMod, M , exec, pamixer -t" # mute (alt)
-        ", XF86AudioMute , exec, pamixer -t" # mute sound
-        ", XF86AudioLowerVolume , exec, pamixer -d 5" 
-        ", XF86AudioRaiseVolume , exec, pamixer -i 5"
+        # ", XF86AudioMute , exec, pamixer -t" # mute sound
+        # ", XF86AudioLowerVolume , exec, pamixer -d 5" 
+        # ", XF86AudioRaiseVolume , exec, pamixer -i 5"
+        ", XF86AudioMicMute , exec, $ipc volume muteInput" # mute mic
+        ", XF86AudioMute , exec, $ipc volume muteOutput" # mute sound
+        ", XF86AudioRaiseVolume , exec, $ipc volume increase"
+        ", XF86AudioLowerVolume , exec, $ipc volume decrease"
         "$mainMod, F9 , exec, playerctl play-pause"
         "$mainMod, F10, exec, playerctl previous"
         "$mainMod, F11, exec, playerctl next"
@@ -261,8 +279,10 @@
         "$mainMod, Y, exec, ytmpv" # play yt video with mpd
 
         # Brightness control
-        ", XF86MonBrightnessUp, exec, brightnessctl set +15%"
-        ", XF86MonBrightnessDown, exec, brightnessctl set 15%-" 
+        # ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
+        # ", XF86MonBrightnessDown, exec, brightnessctl set 5%-" 
+        ", XF86MonBrightnessUp, exec, $ipc brightness increase"
+        ", XF86MonBrightnessDown, exec, $ipc brightness decrease"
 
         # Screenshot bindings
         "$mainMod ALT, S, exec, grim - | tee ~/pictures/sc/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"

@@ -7,7 +7,7 @@
     ./gtk.nix
     ./hyprland
     ./kitty.nix
-    ./waybar
+    # ./waybar
   ];
 
   services = {

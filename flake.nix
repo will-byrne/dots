@@ -6,6 +6,15 @@
     catppuccin.url = "github:catppuccin/nix";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     comfyui-nix.url = "github:utensils/comfyui-nix";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.noctalia-qs.follows = "noctalia-qs";
+    };
+    noctalia-qs = {
+      url = "github:noctalia-dev/noctalia-qs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -13,7 +22,7 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, catppuccin, nixos-hardware, comfyui-nix, home-manager, ... }:
+    inputs@{ nixpkgs, catppuccin, nixos-hardware, comfyui-nix, noctalia, noctalia-qs, home-manager, ... }:
     {
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
@@ -32,6 +41,7 @@
                 users.luna.imports = [
                   ./modules/home
                   catppuccin.homeModules.catppuccin
+                  noctalia.homeModules.default
                 ];
                 extraSpecialArgs = { inherit inputs; hostname = "desktop"; };
               };
@@ -54,6 +64,7 @@
                 users.luna.imports = [
                   ./modules/home
                   catppuccin.homeModules.catppuccin
+                  noctalia.homeModules.default
                 ];
                 extraSpecialArgs = { inherit inputs; hostname = "p14"; };
               };

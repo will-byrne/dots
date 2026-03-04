@@ -3,6 +3,7 @@
     ./desktop
     ./programs
     ./shell
+    ./noctalia
   ];
 
   home = {
