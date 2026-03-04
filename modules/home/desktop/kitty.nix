@@ -1,5 +1,5 @@
 {pkgs, lib, ...}: {
-  programs.kitty = lib.mkForce {
+  programs.kitty = {
     enable = true;
     settings = {
       font_familly = "IosevkaTerm Nerd Font";
@@ -11,5 +11,8 @@
       window_padding_width = 25;
       cursor_trail = 1;
     };
+    extraConfig = ''
+      include themes/noctalia.conf
+    '';
   };
 }

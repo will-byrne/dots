@@ -12,8 +12,57 @@
         autoSchedule = true;
       };
 
+      colorSchemes = {
+        predefinedScheme = "Catppuccin";
+      };
+
       templates = {
-        activeTemplates = [];
+        activeTemplates = [
+          {
+            enabled = true;
+            id = "kitty";
+          }
+          {
+            enabled = true;
+            id = "code";
+          }
+          {
+            enabled = true;
+            id = "qt";
+          }
+          {
+            enabled = true;
+            id = "hyprland";
+          }
+          {
+            enabled = true;
+            id = "gtk";
+          }
+          {
+            enabled = true;
+            id = "fuzzel";
+          }
+          {
+            enabled = true;
+            id = "foot";
+          }
+          {
+            enabled = true;
+            id = "btop";
+          }
+          {
+            enabled = true;
+            id = "cava";
+          }
+          {
+            enabled = true;
+            id = "zathura";
+          }
+          {
+            enabled = true;
+            id = "yazi";
+          }
+        ];
         enableUserTheming = false;
       };
       

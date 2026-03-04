@@ -3,11 +3,8 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-GTK-Pink-Dark-Macchiato";
-      package = pkgs.magnetic-catppuccin-gtk.override {
-        tweaks = ["macchiato"];
-        accent = ["pink"];
-      };
+      name = "adw-gtk3-dark";
+      package = pkgs.adw-gtk3;
     };
     cursorTheme = {
       name = "Catppuccin Cursors";
@@ -22,6 +19,8 @@
   };
 
   home.packages = with pkgs; [
+    # adw-gtk3
+    nwg-look
     gtk-engine-murrine
   ];
 }

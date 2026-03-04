@@ -31,8 +31,9 @@
     waybar.enable = false;
     vscode.profiles.default.enable = true;
     btop.enable = false;
-    fuzzel.enable = true;
-    yazi.enable = true;
-    zathura.enable = true;
+    kitty.enable = false;
+    fuzzel.enable = false;
+    yazi.enable = false;
+    zathura.enable = false;
   };
 }

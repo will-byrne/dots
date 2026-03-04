@@ -1,4 +1,6 @@
 {
+  xdg.configFile."foot/foot.ini".force = true;
+
   programs.foot = {
     enable = true;
     settings = {

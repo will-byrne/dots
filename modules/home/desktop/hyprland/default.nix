@@ -227,6 +227,8 @@ let
 
 in
 {
+  xdg.configFile."hypr/hyprland.conf".force = true;
+
   imports = [
     ./hyprpaper.nix
     # ./hyprlock.nix
@@ -379,7 +381,7 @@ in
       env = [
         "XCURSOR_SIZE,24"
         "XCURSOR_THEME,Adwaita"
-        "GTK_THEME,Catppuccin-GTK-Pink-Dark-Macchiato"
+        "GTK_THEME,adw-gtk3-dark"
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"

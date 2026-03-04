@@ -11,6 +11,7 @@ in {
     };
   };
   xdg.configFile = {
+    "btop/btop.conf".force = true;
     "btop/themes/catppuccin_macchiato.theme".source = theme;
   };
 }
