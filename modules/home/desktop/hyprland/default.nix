@@ -1,4 +1,231 @@
 { pkgs, hostname, lib, ... }:
+let
+  mkBind = combo: action: desc: { inherit combo action desc; };
+
+  keybindSections = [
+
+    # 1. Noctalia Shell
+    {
+      id = 1;
+      name = "Noctalia Shell";
+      binds = [
+        (mkBind "$mainMod, F1" "exec, $ipc plugin:keybind-cheatsheet toggle" "Toggle keybind cheatsheet")
+        (mkBind "$mainMod, L" "exec, $ipc lockScreen lock" "Lock screen")
+        (mkBind "$mainMod, A" "exec, $ipc launcher toggle" "Toggle launcher")
+        (mkBind "$mainMod, Z" "exec, $ipc controlCenter toggle" "Toggle control center")
+        (mkBind "$mainMod, comma" "exec, $ipc settings toggle" "Toggle settings")
+        (mkBind "$mainMod, M" "exec, $ipc volume muteOutput" "Mute output")
+        (mkBind ", XF86AudioMicMute" "exec, $ipc volume muteInput" "Mute mic")
+        (mkBind ", XF86AudioMute" "exec, $ipc volume muteOutput" "Mute sound")
+        (mkBind ", XF86AudioRaiseVolume" "exec, $ipc volume increase" "Volume up")
+        (mkBind ", XF86AudioLowerVolume" "exec, $ipc volume decrease" "Volume down")
+        (mkBind ", XF86MonBrightnessUp" "exec, $ipc brightness increase" "Brightness up")
+        (mkBind ", XF86MonBrightnessDown" "exec, $ipc brightness decrease" "Brightness down")
+      ];
+    }
+
+    # 2. Window / Session
+    {
+      id = 2;
+      name = "Window / Session actions";
+      binds = [
+        (mkBind "$mainMod, Q" "killactive" "Close window")
+        (mkBind "$mainMod, W" "togglefloating" "Toggle floating")
+        (mkBind "$mainMod, G" "togglegroup" "Toggle grouping")
+        (mkBind "ALT SHIFT, return" "fullscreen" "Toggle fullscreen")
+        (mkBind "$mainMod, backspace" "exec, logout" "Logout")
+        (mkBind "$mainMod, P" "pseudo" "Toggle pseudotile")
+        (mkBind "$mainMod, U" "togglesplit" "Toggle split")
+      ];
+    }
+
+    # 3. Move workspace
+    {
+      id = 3;
+      name = "Move workspace focus";
+      binds = [
+        (mkBind "$mainMod SHIFT CTRL, left" "workspace, e-1" "Workspace left")
+        (mkBind "$mainMod SHIFT CTRL, right" "workspace, e+1" "Workspace right")
+        (mkBind "$mainMod SHIFT CTRL, down" "workspace, empty" "New empty workspace")
+      ];
+    }
+
+    # 4. Move workspace to monitor
+    {
+      id = 4;
+      name = "Move workspace to monitor";
+      binds = [
+        (mkBind "$mainMod CTRL ALT, left" "movecurrentworkspacetomonitor, l" "Move workspace left monitor")
+        (mkBind "$mainMod CTRL ALT, right" "movecurrentworkspacetomonitor, r" "Move workspace right monitor")
+      ];
+    }
+
+    # 5. Special workspace
+    {
+      id = 5;
+      name = "Special workspace";
+      binds = [
+        (mkBind "$mainMod SHIFT, s" "movetoworkspacesilent, special" "Move to special workspace")
+        (mkBind "$mainMod, s" "togglespecialworkspace" "Toggle special workspace")
+      ];
+    }
+
+    # 6. Focus movement
+    {
+      id = 6;
+      name = "Focus movement";
+      binds = [
+        (mkBind "$mainMod, left" "movefocus, l" "Focus left")
+        (mkBind "$mainMod, right" "movefocus, r" "Focus right")
+        (mkBind "$mainMod, up" "movefocus, u" "Focus up")
+        (mkBind "$mainMod, down" "movefocus, d" "Focus down")
+      ];
+    }
+
+    # 7. Swap windows
+    {
+      id = 7;
+      name = "Swap windows";
+      binds = [
+        (mkBind "$mainMod CTRL, left" "movewindow, l" "Swap left")
+        (mkBind "$mainMod CTRL, right" "movewindow, r" "Swap right")
+        (mkBind "$mainMod CTRL, up" "movewindow, u" "Swap up")
+        (mkBind "$mainMod CTRL, down" "movewindow, d" "Swap down")
+      ];
+    }
+
+    # 8. Resize
+    {
+      id = 8;
+      name = "Resize windows";
+      binds = [
+        (mkBind "$mainMod SHIFT, right" "resizeactive, 30 0" "Resize right")
+        (mkBind "$mainMod SHIFT, left" "resizeactive, -30 0" "Resize left")
+        (mkBind "$mainMod SHIFT, up" "resizeactive, 0 -30" "Resize up")
+        (mkBind "$mainMod SHIFT, down" "resizeactive, 0 30" "Resize down")
+      ];
+    }
+
+    # 9. Workspace switching
+    {
+      id = 9;
+      name = "Workspace switching";
+      binds =
+        (builtins.genList (i:
+          mkBind "$mainMod, ${toString (i + 1)}"
+                "workspace, ${toString (i + 1)}"
+                "Switch to workspace ${toString (i + 1)}"
+        ) 9)
+        ++ [
+          (mkBind "$mainMod, 0" "workspace, 10" "Switch to workspace 10")
+          (mkBind "$mainMod, TAB" "workspace, previous" "Previous workspace")
+        ];
+    }
+
+    # 10. Move to workspace
+    {
+      id = 10;
+      name = "Move window to workspace";
+      binds =
+        (builtins.genList (i:
+          mkBind "$mainMod SHIFT, ${toString (i + 1)}"
+                "movetoworkspace, ${toString (i + 1)}"
+                "Move to workspace ${toString (i + 1)}"
+        ) 9)
+        ++ [
+          (mkBind "$mainMod SHIFT, 0" "movetoworkspace, 10" "Move to workspace 10")
+        ];
+    }
+
+    # 11. Applications
+    {
+      id = 11;
+      name = "Applications";
+      binds = [
+        (mkBind "$mainMod, T" "exec, $terminal" "Open terminal")
+        (mkBind "$mainMod, E" "exec, $guiFM" "Open GUI file manager")
+        (mkBind "$mainMod SHIFT, E" "exec, $terminal -e $tuiFM" "Open TUI file manager")
+        (mkBind "$mainMod, C" "exec, code --ozone-platform-hint=wayland" "Open VSCode")
+        (mkBind "$mainMod SHIFT, C" "exec, neovide -- -u ${pkgs.lunarvim}/share/lvim/init.lua" "Open LunarVim GUI")
+        (mkBind "$mainMod, F" "exec, $browser" "Open browser")
+        (mkBind "$mainMod SHIFT, F" "exec, $browser --private-window" "Browser private")
+        (mkBind "CTRL SHIFT, ESCAPE" "exec, $terminal -e btop" "System monitor")
+      ];
+    }
+
+    # 12. Clipboard
+    {
+      id = 12;
+      name = "Clipboard";
+      binds = [
+        (mkBind "$mainMod, V"
+          "exec, cliphist list | $menu --dmenu --with-nth 2 | cliphist decode | wl-copy"
+          "Clipboard history")
+      ];
+    }
+
+    # 13. Audio
+    {
+      id = 13;
+      name = "Audio control";
+      binds = [
+        (mkBind "$mainMod SHIFT, P" "exec, pavucontrol" "Audio control panel")
+        (mkBind "$mainMod SHIFT, M" "exec, pamixer --default-source -t" "Mute mic")
+        (mkBind "$mainMod, M" "exec, pamixer -t" "Mute output")
+        (mkBind "$mainMod, F9" "exec, playerctl play-pause" "Play/Pause")
+        (mkBind "$mainMod, F10" "exec, playerctl previous" "Previous track")
+        (mkBind "$mainMod, F11" "exec, playerctl next" "Next track")
+        (mkBind "$mainMod, F12" "exec, playerctl stop" "Stop playback")
+        (mkBind "$mainMod ALT, M" "exec, $terminal -e rmpc" "Open MPD client")
+        (mkBind "$mainMod, Y" "exec, ytmpv" "Play YouTube via MPD")
+      ];
+    }
+
+    # 14. Screenshots
+    {
+      id = 14;
+      name = "Screenshots";
+      binds = [
+        (mkBind "$mainMod ALT, S"
+          "exec, grim - | tee ~/pictures/sc/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
+          "Fullscreen screenshot")
+        (mkBind "$mainMod SHIFT, S"
+          "exec, grim -g \"$(slurp)\" - | tee ~/pictures/sc/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
+          "Selection screenshot")
+      ];
+    }
+
+    # 15. Workspace scroll
+    {
+      id = 15;
+      name = "Workspace scroll";
+      binds = [
+        (mkBind "$mainMod, mouse_down" "workspace, e+1" "Scroll forward")
+        (mkBind "$mainMod, mouse_up" "workspace, e-1" "Scroll backward")
+      ];
+    }
+  ];
+
+  mouseBinds = [
+    (mkBind "$mainMod, mouse:272" "movewindow" "Move window")
+    (mkBind "$mainMod, mouse:273" "resizewindow" "Resize window")
+  ];
+
+  renderSection = section: ''
+    # ${toString section.id}. ${section.name}
+    ${lib.concatMapStrings (b:
+      "bind = ${b.combo}, ${b.action} #\"${b.desc}\"\n"
+    ) section.binds}
+  '';
+
+  renderMouse = ''
+    # 16. Mouse bindings
+    ${lib.concatMapStrings (b:
+      "bindm = ${b.combo}, ${b.action} #\"${b.desc}\"\n"
+    ) mouseBinds}
+  '';
+
+in
 {
   imports = [
     ./hyprpaper.nix
@@ -174,136 +401,11 @@
       "$browser" = "firefox";
       "$ipc" = "noctalia-shell ipc call";
 
-      bind = [
-        # 1. Noctalia Shell
-        "$mainMod, F1, exec, $ipc plugin:keybind-cheatsheet toggle # Toggle keybind cheatsheet" # Toggle keybind cheatsheet
-        "$mainMod, L, exec, $ipc lockScreen lock # Lock screen with noctalia-shell" # Lock screen with noctalia-shell
-        "$mainMod, A, exec, $ipc launcher toggle # Toggle noctalia-shell launcher" # Toggle noctalia-shell launcher
-        "$mainMod, Z, exec, $ipc controlCenter toggle # Toggle noctalia-shell control center" # Toggle noctalia-shell control center
-        "$mainMod, comma, exec, $ipc settings toggle # Toggle noctalia-shell settings" # Toggle noctalia-shell settings
-        "$mainMod, M , exec, $ipc volume muteOutput # mute (alt)" # mute (alt)
-        ", XF86AudioMicMute , exec, $ipc volume muteInput # mute mic" # mute mic
-        ", XF86AudioMute , exec, $ipc volume muteOutput # mute sound" # mute sound
-        ", XF86AudioRaiseVolume , exec, $ipc volume increase # Increase volume" # Increase volume
-        ", XF86AudioLowerVolume , exec, $ipc volume decrease # Decrease volume" # Decrease volume
-        ", XF86MonBrightnessUp, exec, $ipc brightness increase # Increase brightness" # Increase brightness
-        ", XF86MonBrightnessDown, exec, $ipc brightness decrease # Decrease brightness " # Decrease brightness 
-
-
-        # 2. Window / Session actions
-        "$mainMod, Q, killactive, #Close window" #Close window
-        "$mainMod, W, togglefloating # Toggle floating/tiled" # Toggle floating/tiled
-        "$mainMod, G, togglegroup # Toggle window grouping" # Toggle window grouping
-        # "$mainMod, L, exec, hyprlock"
-        "ALT SHIFT, return, fullscreen # Toggle fullscreen (alt shift to avoid conflict with fuzzel)" # Toggle fullscreen (alt shift to avoid conflict with fuzzel)
-        "$mainMod, backspace, exec, logout # Logout" # Logout
-        "$mainMod, P, pseudo, # Toggle pseudotiling" # Toggle pseudotiling
-        "$mainMod, U, togglesplit, # Toggle split/unsplit in stack layout" # Toggle split/unsplit in stack layout
-
-        # 3. Move workspace
-        "$mainMod SHIFT CTRL, left, workspace, e-1 # Focus workspace left" # Focus workspace left
-        "$mainMod SHIFT CTRL, right, workspace, e+1 # Focus workspace right" # Focus workspace right
-        "$mainMod SHIFT CTRL, down, workspace, empty # Focus new empty workspace" # Focus new empty workspace
-
-        # 4. Move workspace to monitor
-        "$mainMod CTRL ALT, left, movecurrentworkspacetomonitor, l # Move workspace to monitor left" # Move workspace to monitor left
-        "$mainMod CTRL ALT, right, movecurrentworkspacetomonitor, r # Move workspace to monitor right" # Move workspace to monitor right
-
-        # 5. Special workspace (stratchpad)
-        "$mainMod ALT, s, movetoworkspacesilent, special # Move focused window to special workspace" # Move focused window to special workspace
-        "$mainMod, s, togglespecialworkspace # Toggle special workspace (show/hide)" # Toggle special workspace (show/hide)
-
-        # 6. Focus movement with arrow keys
-        "$mainMod, left, movefocus, l # Focus left" # Focus left
-        "$mainMod, right, movefocus, r # Focus right" # Focus right
-        "$mainMod, up, movefocus, u # Focus up" # Focus up
-        "$mainMod, down, movefocus, d # Focus down" # Focus down
-
-        # 7. Swap windows
-        "$mainMod CTRL, left, movewindow, l # Swap current window with left" # Swap current window with left
-        "$mainMod CTRL, right, movewindow, r # Swap current window with right" # Swap current window with right
-        "$mainMod CTRL, up, movewindow, u # Swap current window with up" # Swap current window with up
-        "$mainMod CTRL, down, movewindow, d # Swap current window with down" # Swap current window with down
-
-        # 8. Resize Windows
-        "$mainMod SHIFT, right, resizeactive, 30 0 # Resize active window right" # Resize active window right
-        "$mainMod SHIFT, left, resizeactive, -30 0 # Resize active window left" # Resize active window left
-        "$mainMod SHIFT, up, resizeactive, 0 -30 # Resize active window up" # Resize active window up
-        "$mainMod SHIFT, down, resizeactive, 0 30 # Resize active window down" # Resize active window down
-
-        # 9. Workspace switching
-        "$mainMod, 1, workspace, 1 # Switch to workspace 1" # Switch to workspace 1
-        "$mainMod, 2, workspace, 2 # Switch to workspace 2" # Switch to workspace 2
-        "$mainMod, 3, workspace, 3 # Switch to workspace 3" # Switch to workspace 3
-        "$mainMod, 4, workspace, 4 # Switch to workspace 4" # Switch to workspace 4
-        "$mainMod, 5, workspace, 5 # Switch to workspace 5" # Switch to workspace 5
-        "$mainMod, 6, workspace, 6 # Switch to workspace 6" # Switch to workspace 6
-        "$mainMod, 7, workspace, 7 # Switch to workspace 7" # Switch to workspace 7
-        "$mainMod, 8, workspace, 8 # Switch to workspace 8" # Switch to workspace 8
-        "$mainMod, 9, workspace, 9 # Switch to workspace 9" # Switch to workspace 9
-        "$mainMod, 0, workspace, 10 # Switch to workspace 10" # Switch to workspace 10
-        "$mainMod, TAB, workspace, previous # jump to last used workspace" # jump to last used workspace
-
-        # 10. Move windows to workspaces
-        "$mainMod SHIFT, 1, movetoworkspace, 1 # Move focused window to workspace 1" # Move focused window to workspace 1
-        "$mainMod SHIFT, 2, movetoworkspace, 2 # Move focused window to workspace 2" # Move focused window to workspace 2
-        "$mainMod SHIFT, 3, movetoworkspace, 3 # Move focused window to workspace 3" # Move focused window to workspace 3
-        "$mainMod SHIFT, 4, movetoworkspace, 4 # Move focused window to workspace 4" # Move focused window to workspace 4
-        "$mainMod SHIFT, 5, movetoworkspace, 5 # Move focused window to workspace 5" # Move focused window to workspace 5
-        "$mainMod SHIFT, 6, movetoworkspace, 6 # Move focused window to workspace 6" # Move focused window to workspace 6
-        "$mainMod SHIFT, 7, movetoworkspace, 7 # Move focused window to workspace 7" # Move focused window to workspace 7
-        "$mainMod SHIFT, 8, movetoworkspace, 8 # Move focused window to workspace 8" # Move focused window to workspace 8
-        "$mainMod SHIFT, 9, movetoworkspace, 9 # Move focused window to workspace 9" # Move focused window to workspace 9
-        "$mainMod SHIFT, 0, movetoworkspace, 10 # Move focused window to workspace 10" # Move focused window to workspace 10
-
-        # 11. Application shortcuts
-        "$mainMod, T, exec, $terminal # Open terminal" # Open terminal
-        "$mainMod, E, exec, $guiFM # Open GUI file manager" # Open GUI file manager
-        "$mainMod SHIFT, E, exec, $terminal -e $tuiFM # Open TUI file manager in terminal" # Open TUI file manager in terminal
-        "$mainMod, C, exec, code --ozone-platform-hint=wayland # Open VSCode with Wayland support" # Open VSCode with Wayland support
-        "$mainMod SHIFT, C, exec, neovide -- -u ${pkgs.lunarvim}/share/lvim/init.lua # Open neovide lunarvim" # Open neovide lunarvim
-        "$mainMod, F, exec, $browser # Open web browser" # Open web browser
-        "$mainMod SHIFT, F, exec, $browser --private-window # Open web browser in private mode" # Open web browser in private mode
-        "CTRL SHIFT, ESCAPE, exec, $terminal -e btop # Open btop system monitor in terminal" # Open btop system monitor in terminal
-
-        # 12. Fuzzel
-        # "$mainMod, A, exec, $menu"
-        "$mainMod, V, exec, cliphist list | $menu --dmenu --with-nth 2 | cliphist decode | wl-copy # Select from clipboard history" # Select from clipboard history
-
-        # 13. Audio control
-        "$mainMod SHIFT, P, exec, pavucontrol # Open audio control panel" # Open audio control panel
-        # ", XF86AudioMicMute , exec, pamixer --default-source -t" # mute mic
-        "$mainMod SHIFT, M , exec, pamixer --default-source -t # Mute mic (alt)" # Mute mic (alt)
-        "$mainMod, M , exec, pamixer -t # Mute sound (alt)" # Mute sound (alt)
-        # ", XF86AudioMute , exec, pamixer -t" # mute sound
-        # ", XF86AudioLowerVolume , exec, pamixer -d 5" 
-        # ", XF86AudioRaiseVolume , exec, pamixer -i 5"
-        "$mainMod, F9 , exec, playerctl play-pause # Play/Pause" # Play/Pause
-        "$mainMod, F10, exec, playerctl previous # Previous track" # Previous track
-        "$mainMod, F11, exec, playerctl next # Next track" # Next track
-        "$mainMod, F12, exec, playerctl stop # Stop playback" # Stop playback
-        "$mainMod ALT, M, exec, $terminal -e rmpc # Open mpd client in terminal" # Open mpd client in terminal
-        "$mainMod, Y, exec, ytmpv # Play yt video with mpd" # Play yt video with mpd
-
-        # Brightness control
-        # ", XF86MonBrightnessUp, exec, brightnessctl set +5%"y
-        # ", XF86MonBrightnessDown, exec, brightnessctl set 5%-" 
-        
-        # 14. Screenshot bindings
-        "$mainMod ALT, S, exec, grim - | tee ~/pictures/sc/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy # Fullscreen screenshot" # Fullscreen screenshot
-        "$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | tee ~/pictures/sc/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy # Select area to screenshot" # Select area to screenshot
-
-        # 15. Workspace scroll
-        "$mainMod, mouse_down, workspace, e+1 # Scroll workspace forward" # Scroll workspace forward
-        "$mainMod, mouse_up, workspace, e-1 # Scroll workspace backward" # Scroll workspace backward
-      ];
-
-      # 16.Mouse bindings
-      bindm = [
-        # 16.Mouse bindings
-        "$mainMod, mouse:272, movewindow # Move window" # Move window
-        "$mainMod, mouse:273, resizewindow # Resize window" # Resize window
-      ];
+      extraConfig =
+        "\n"
+        + lib.concatMapStrings renderSection keybindSections
+        + "\n"
+        + renderMouse;
     };
   };
 
