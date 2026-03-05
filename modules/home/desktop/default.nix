@@ -11,7 +11,8 @@
   ];
 
   services = {
-    network-manager-applet.enable = true;
+    # Unnecessary when using noctalia?
+    # network-manager-applet.enable = true;
   };
 
   home.packages = with pkgs; [

@@ -194,6 +194,12 @@
             usePadding = false;
           }
           {
+            displayMode = "alwaysShow";
+            iconColor = "secondary";
+            id = "Network";
+            textColor = "secondary";
+          }
+          {
             blacklist = [];
             chevronColor = "none";
             colorizeIcons = false;
