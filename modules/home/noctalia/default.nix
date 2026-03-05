@@ -149,6 +149,13 @@
             visualizerType = "linear";
           }
           {
+            displayMode = "alwaysShow";
+            iconColor = "secondary";
+            id = "Volume";
+            middleClickCommand = "pwvucontrol || pavucontrol";
+            textColor = "secondary";
+          }
+          {
             displayMode = "onhover";
             iconColor = "secondary";
             id = "Brightness";
