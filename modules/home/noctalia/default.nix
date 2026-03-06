@@ -28,6 +28,10 @@
           }
           {
             enabled = true;
+            id = "zed";
+          }
+          {
+            enabled = true;
             id = "qt";
           }
           {
@@ -162,7 +166,7 @@
           }
           {
             deviceNativePath = "__default__";
-            displayMode = "graphic-clean";
+            displayMode = "graphic";
             hideIfIdle = false;
             hideIfNotDetected = true;
             id = "Battery";
@@ -171,6 +175,7 @@
           }
           {
             id = "plugin:keybind-cheatsheet";
+            modKeyVariable = "$mainMod";
           }
           {
             compactMode = true;
