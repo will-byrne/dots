@@ -19,7 +19,6 @@
   };
 
   home.packages = with pkgs; [
-    # adw-gtk3
     nwg-look
     gtk-engine-murrine
   ];
