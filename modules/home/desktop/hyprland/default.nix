@@ -146,7 +146,7 @@ let
         (mkBind "$mainMod, E" "exec, $guiFM" "Open GUI file manager")
         (mkBind "$mainMod SHIFT, E" "exec, $terminal -e $tuiFM" "Open TUI file manager")
         (mkBind "$mainMod, C" "exec, code --ozone-platform-hint=wayland" "Open VSCode")
-        (mkBind "$mainMod SHIFT, C" "exec, neovide -- -u ${pkgs.lunarvim}/share/lvim/init.lua" "Open LunarVim GUI")
+        (mkBind "$mainMod SHIFT, C" "exec, neovide" "Open Neovide")
         (mkBind "$mainMod, F" "exec, $browser" "Open browser")
         (mkBind "$mainMod SHIFT, F" "exec, $browser --private-window" "Browser private")
         (mkBind "CTRL SHIFT, ESCAPE" "exec, $terminal -e btop" "System monitor")
@@ -158,9 +158,8 @@ let
       id = 12;
       name = "Clipboard";
       binds = [
-        (mkBind "$mainMod, V"
-          "exec, cliphist list | $menu --dmenu --with-nth 2 | cliphist decode | wl-copy"
-          "Clipboard history")
+        # (mkBind "$mainMod, V" "exec, cliphist list | $menu --dmenu --with-nth 2 | cliphist decode | wl-copy" "Clipboard history")
+        (mkBind "$mainMod, V" "exec, $ipc launcher clipboard" "Clipboard history")
       ];
     }
 
@@ -248,7 +247,7 @@ in
         [
           "waybar"
           "mpdscribble"
-          "wl-paste  --type text --watch cliphist store"
+          # "wl-paste  --type text --watch cliphist store"
         ]
         (lib.mkIf (hostname== "desktop") [
           "[workspace 9 silent; fullscreen]$terminal --class -e btop"

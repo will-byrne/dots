@@ -237,6 +237,12 @@
         enableLockScreenCountdown = true;
         lockScreenCountdownDuration = 10000;
       };
+      appLauncher = {
+        enableClipboardHistory = true;
+        autoPasteClipboard = true;
+        clipboardWatchTextCommand = "wl-paste --type text --watch cliphist store";
+        clipboardWatchImageCommand = "wl-paste --type image --watch cliphist store";
+      };
 
       # location & weather configuration
       location = {
