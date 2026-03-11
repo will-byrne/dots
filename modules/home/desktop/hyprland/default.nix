@@ -21,6 +21,7 @@ let
         (mkBind ", XF86AudioLowerVolume" "exec, $ipc volume decrease" "Volume down")
         (mkBind ", XF86MonBrightnessUp" "exec, $ipc brightness increase" "Brightness up")
         (mkBind ", XF86MonBrightnessDown" "exec, $ipc brightness decrease" "Brightness down")
+        (mkBind ", switch:on:Lid Switch" "exec, $ipc sessionMenu lockAndSuspend" "Lock screen and suspend on lid close")
       ];
     }
 
@@ -229,7 +230,7 @@ in
   xdg.configFile."hypr/hyprland.conf".force = true;
 
   imports = [
-    ./hyprpaper.nix
+    # ./hyprpaper.nix
     # ./hyprlock.nix
     ./hypridle.nix
     # ./hyprsunset.nix
@@ -255,11 +256,11 @@ in
       ];
 
       monitor = lib.mkMerge [
-        (lib.mkIf (hostname == "desktop") [
+        (lib.mkIf (hostname == "desktop") [ # DP-1 is the main monitor 3840/1600, DP-2 is the secondary
           "DP-1, 3840x1600@120, 0x0, 1, vrr, 1, bitdepth, 10"
           "DP-2, 3840x1100, 3840x0, 2, transform, 3"
         ])
-        (lib.mkIf (hostname == "p14") [
+        (lib.mkIf (hostname == "p14") [ # eDP-1 is the built-in display 1920/1200
           ",preferred,auto,1"
         ])
       ];

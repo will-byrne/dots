@@ -3,16 +3,16 @@
     enable = true;
     settings = {
       general = {
-        before_sleep_cmd = "hyprlock";
+        before_sleep_cmd = "noctalia-shell ipc call lockScreen lock";
         after_sleep_cmd = "hyprctl dispatch dpms on";
         ignore_dbus_inhibit = false;
-        lock_cmd = "hyprlock";
+        lock_cmd = "noctalia-shell ipc call lockScreen lock";
       };
 
       listener = [
         {
           timeout = 300;
-          on-timeout = "hyprlock";
+          on-timeout = "noctalia-shell ipc call lockScreen lock";
         }
         {
           timeout = 600;
