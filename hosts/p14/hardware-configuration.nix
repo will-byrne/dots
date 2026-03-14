@@ -17,6 +17,7 @@
       "amdgpu"
       "iommu=soft"
   ];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.extraModulePackages = [ ];
   #boot.resumeDevice = "/dev/disk/by-partlabel/Swap";
 
