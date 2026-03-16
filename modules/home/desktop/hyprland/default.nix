@@ -387,7 +387,7 @@ in
         "XDG_SESSION_DESKTOP,Hyprland"
         "GDK_BACKEND,wayland,x11,*"
         "TERMINAL,kitty"
-        "EDITOR,lvim"
+        "EDITOR,nvim"
         "SHELL,zsh"
       ];
 

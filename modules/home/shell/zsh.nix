@@ -36,7 +36,7 @@
 
     sessionVariables = {
       TERMINAL = "kitty";
-      EDITOR = "lvim";
+      EDITOR = "nvim";
       LS_COLORS = "$(${pkgs.vivid}/bin/vivid generate catppuccin-macchiato)";
     };
     
