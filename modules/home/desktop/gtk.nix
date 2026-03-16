@@ -11,6 +11,7 @@
       package = pkgs.catppuccin-cursors.macchiatoPink;
       size = 24;
     };
+    gtk4.enable= false;
   };
   # xdg.configFile = {
   #   "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
