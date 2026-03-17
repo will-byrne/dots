@@ -2,6 +2,7 @@
 {
   services = {
     upower.enable = true;
+    power-profiles-daemon.enable = true;
     fwupd.enable = true;
     ollama = {
       enable = true;
