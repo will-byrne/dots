@@ -25,6 +25,8 @@
       noto-fonts-color-emoji
       sarasa-gothic
       twitter-color-emoji
+      nerd-fonts.fira-code
+      nerd-fonts.fira-mono
       nerd-fonts.iosevka
       nerd-fonts.iosevka-term
       nerd-fonts.jetbrains-mono

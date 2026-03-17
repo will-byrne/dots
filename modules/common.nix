@@ -50,7 +50,6 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
   programs.thunar.enable = true;
-  services.blueman.enable = true;
 
   system.stateVersion = "25.05"; # Did you read the comment?
 

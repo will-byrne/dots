@@ -22,6 +22,7 @@
     devmon.enable = true;
     gvfs.enable = true;
     udisks2.enable = true;
+    blueman.enable = true;
     displayManager = {
       enable = true;
       defaultSession = "hyprland";

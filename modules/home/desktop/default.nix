@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ./dunst.nix
+    # ./dunst.nix
     ./foot.nix
     ./fuzzel.nix
     ./gtk.nix
