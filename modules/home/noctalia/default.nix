@@ -286,6 +286,7 @@
       wallpaper = {
         enabled = true;
         directory = "/home/luna/pictures/wallpapers";
+        automationEnabled = true;
       };
     };
   };

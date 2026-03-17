@@ -7,7 +7,7 @@
   "astrotheme": { "branch": "main", "commit": "cf0e65a7b3ce2f830b052f4da937729eee1e7a7d" },
   "astroui": { "branch": "main", "commit": "4943abbd42674b43249313afe83b91065a40e4be" },
   "better-escape.nvim": { "branch": "master", "commit": "199dcc2643dec5d8dbdab4ec672cf405224dcb3b" },
-  "blink.cmp": { "branch": "main", "commit": "539053d87740e357a96fb304c9a4da2ef27b3576" },
+  "blink.cmp": { "branch": "main", "commit": "451168851e8e2466bc97ee3e026c3dcb9141ce07" },
   "blink.compat": { "branch": "main", "commit": "2ed6d9a28b07fa6f3bface818470605f8896408c" },
   "catppuccin": { "branch": "main", "commit": "384f304c8b04664c9e0091fbfb3923c5f97c1bcf" },
   "cmp-dap": { "branch": "master", "commit": "ea92773e84c0ad3288c3bc5e452ac91559669087" },
