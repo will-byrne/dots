@@ -280,6 +280,10 @@ in
         (lib.mkIf (hostname == "p14") [])
       ];
 
+      misc = {
+        disable_splash_rendering = true;
+      };
+
       input = {
         kb_layout = "gb";
         kb_options = "caps:escape";
