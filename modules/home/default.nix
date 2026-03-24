@@ -36,4 +36,5 @@
     yazi.enable = false;
     zathura.enable = false;
   };
+  xdg.userDirs.setSessionVariables = true;
 }

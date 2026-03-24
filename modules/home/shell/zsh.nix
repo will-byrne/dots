@@ -60,6 +60,7 @@
       vim = "nvim";
       rebuild = "sudo nixos-rebuild switch --flake .";
       f = "$(pay-respects zsh)";
+      lg = "lazygit";
        l = "eza -lh  --icons=auto";
       ls = "eza -1   --icons=auto";
       ll = "eza -lha --icons=auto --sort=name --group-directories-first";
