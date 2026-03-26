@@ -21,6 +21,7 @@
     docker
 
     # cli
+    cava
     unimatrix
     cbonsai
     eza
