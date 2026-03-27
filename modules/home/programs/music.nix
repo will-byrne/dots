@@ -23,6 +23,7 @@
     rmpc
     audacious
     audacious-plugins
+    feishin
     musikcube
     puddletag
   ];
