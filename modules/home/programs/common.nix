@@ -22,6 +22,7 @@
 
     # cli
     cava
+    taskwarrior3
     unimatrix
     cbonsai
     eza

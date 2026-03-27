@@ -21,6 +21,8 @@
     mpdscribble
     ncmpcpp
     rmpc
+    audacious
+    audacious-plugins
     musikcube
     puddletag
   ];
