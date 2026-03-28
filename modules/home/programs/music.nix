@@ -21,6 +21,7 @@
     mpdscribble
     ncmpcpp
     rmpc
+    euphonica
     audacious
     audacious-plugins
     feishin
