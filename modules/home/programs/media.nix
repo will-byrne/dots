@@ -17,7 +17,6 @@
     musescore
     reaper
     gimp
-    qbittorrent
     vlc
   ];
 }

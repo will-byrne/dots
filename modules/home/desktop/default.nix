@@ -2,8 +2,7 @@
 {
   imports = [
     # ./dunst.nix
-    ./foot.nix
-    ./fuzzel.nix
+    # ./fuzzel.nix
     ./gtk.nix
     ./hyprland
     ./kitty.nix

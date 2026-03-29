@@ -29,7 +29,6 @@
     pay-respects
     distrobox
     yt-dlp
-    gallery-dl
     ffmpeg-full
     ripgrep
     jq

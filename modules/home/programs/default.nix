@@ -1,6 +1,5 @@
 {
   imports = [
-    ./ai.nix
     ./astrophotography.nix
     ./browser.nix
     ./btop/btop.nix
@@ -17,7 +16,7 @@
     ./mpv.nix
     ./music.nix
     ./neovim
-    ./xdg.nix
+    # ./xdg.nix
     ./yazi.nix
     ./zathura.nix
   ];
