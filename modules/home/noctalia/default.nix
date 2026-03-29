@@ -199,6 +199,12 @@
             usePadding = false;
           }
           {
+            displayMode = "onhover";
+            iconColor = "secondary";
+            id = "Bluetooth";
+            textColor = "secondary";
+          }
+          {
             displayMode = "alwaysShow";
             iconColor = "secondary";
             id = "Network";
