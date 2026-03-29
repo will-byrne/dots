@@ -77,11 +77,11 @@
     },
     "nixos-hardware": {
       "locked": {
-        "lastModified": 1774567711,
-        "narHash": "sha256-uVlOHBvt6Vc/iYNJXLPa4c3cLXwMllOCVfAaLAcphIo=",
+        "lastModified": 1774777275,
+        "narHash": "sha256-qogBiYFq8hZusDPeeKRqzelBAhZvREc7Cl+qlewGUCg=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "3f6f874dfc34d386d10e434c48ad966c4832243e",
+        "rev": "b8f81636927f1af0cca812d22c876bad0a883ccd",
         "type": "github"
       },
       "original": {
@@ -159,9 +159,7 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "noctalia-qs": [
-          "noctalia-qs"
-        ]
+        "noctalia-qs": "noctalia-qs"
       },
       "locked": {
         "lastModified": 1774807148,
@@ -180,17 +178,18 @@
     "noctalia-qs": {
       "inputs": {
         "nixpkgs": [
+          "noctalia",
           "nixpkgs"
         ],
         "systems": "systems",
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1774625568,
-        "narHash": "sha256-k/1eM1e7IZo4qFXY6e8EEDaSR8DIHUoTVplxeiGfY24=",
+        "lastModified": 1774734782,
+        "narHash": "sha256-rq/8sJPI8wD4P3CXSyvW/dPuAa+qXGdqzAKM3eunZ+4=",
         "owner": "noctalia-dev",
         "repo": "noctalia-qs",
-        "rev": "c08a0c522371db506a9952da92593149a9341ddd",
+        "rev": "8e216ba101d761b8a71f359246941d50e22bad3f",
         "type": "github"
       },
       "original": {
@@ -206,8 +205,7 @@
         "home-manager": "home-manager",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_3",
-        "noctalia": "noctalia",
-        "noctalia-qs": "noctalia-qs"
+        "noctalia": "noctalia"
       }
     },
     "systems": {
@@ -228,6 +226,7 @@
     "treefmt-nix": {
       "inputs": {
         "nixpkgs": [
+          "noctalia",
           "noctalia-qs",
           "nixpkgs"
         ]
