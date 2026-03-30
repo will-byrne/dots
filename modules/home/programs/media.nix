@@ -20,9 +20,5 @@
     vlc
     krita
     oneko #move
-    kando # move
-    wtfutil #move
-    lolcat
-    sl
   ];
 }

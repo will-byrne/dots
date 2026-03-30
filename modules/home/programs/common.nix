@@ -5,6 +5,7 @@
     discord
     signal-desktop
     immersed
+    kando
 
     # files
     thunar-volman
@@ -25,6 +26,9 @@
     taskwarrior3
     unimatrix
     cbonsai
+    lolcat
+    sl
+    wtfutil
     eza
     pay-respects
     distrobox
