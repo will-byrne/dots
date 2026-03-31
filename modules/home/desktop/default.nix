@@ -5,7 +5,6 @@
     # ./fuzzel.nix
     ./gtk.nix
     ./hyprland
-    ./kitty.nix
     # ./waybar
   ];
 

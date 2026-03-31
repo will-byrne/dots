@@ -12,6 +12,7 @@
     ./gaming.nix
     ./git.nix
     ./imv.nix
+    ./kitty.nix
     ./media.nix
     ./mpv.nix
     ./music.nix
