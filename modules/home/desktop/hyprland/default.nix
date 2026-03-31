@@ -301,6 +301,10 @@ in
           kb_layout = "us";
         }
         {
+          name = "by-tech-gaming-keyboard";
+          kb_layout = "us";
+        }
+        {
           name = "ilitek-------ilitek-touch";
           enabled = false;
         }
