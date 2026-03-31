@@ -67,6 +67,6 @@
       udiskie
       udisks
     ];
-    variables.EDITOR = "vim";
+    variables.EDITOR = "nvim";
   };
 }
