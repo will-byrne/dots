@@ -65,6 +65,8 @@
       ls = "eza -1   --icons=auto";
       ll = "eza -lha --icons=auto --sort=name --group-directories-first";
       ld = "eza -lhD --icons=auto'";
+      pg = "cd ~/git/playground/";
+      dots = "cd ~/dots";
       vc = "code --disable-gpu";
       dps = "docker ps";
       wdps = "watch 'docker ps'";
