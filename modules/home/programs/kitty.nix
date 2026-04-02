@@ -7,7 +7,7 @@
       italic_font = "auto";
       bold_italic_font = "auto";
       enable_audio_bell = false;
-      font_size = "9.0";
+      font_size = "11.0";
       window_padding_width = 25;
       cursor_trail = 1;
     };
