@@ -8,7 +8,7 @@
       astroui
       astrocore
       astrolsp
-      astrotheme
+      astrotheme 
     ];
   };
   home.file = {
