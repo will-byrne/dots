@@ -6,6 +6,7 @@
     catppuccin.url = "github:catppuccin/nix";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     comfyui-nix.url = "github:utensils/comfyui-nix";
+    neve.url = "github:will-byrne/neve";
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,11 +18,22 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, catppuccin, nixos-hardware, comfyui-nix, noctalia, home-manager, ... }:
+    inputs@{
+      nixpkgs,
+      catppuccin,
+      nixos-hardware,
+      comfyui-nix,
+      noctalia,
+      home-manager,
+      ...
+    }:
     {
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; hostname = "desktop"; };
+          specialArgs = {
+            inherit inputs;
+            hostname = "desktop";
+          };
           modules = [
             ./hosts/desktop
             ./modules
@@ -38,13 +50,19 @@
                   catppuccin.homeModules.catppuccin
                   noctalia.homeModules.default
                 ];
-                extraSpecialArgs = { inherit inputs; hostname = "desktop"; };
+                extraSpecialArgs = {
+                  inherit inputs;
+                  hostname = "desktop";
+                };
               };
             }
           ];
         };
         p14 = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; hostname = "p14"; };
+          specialArgs = {
+            inherit inputs;
+            hostname = "p14";
+          };
           modules = [
             ./hosts/p14
             ./modules
@@ -61,11 +79,14 @@
                   catppuccin.homeModules.catppuccin
                   noctalia.homeModules.default
                 ];
-                extraSpecialArgs = { inherit inputs; hostname = "p14"; };
+                extraSpecialArgs = {
+                  inherit inputs;
+                  hostname = "p14";
+                };
               };
             }
           ];
         };
       };
-  };
+    };
 }
