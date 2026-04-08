@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   services = {
     upower.enable = true;
@@ -34,4 +34,6 @@
       };
     };
   };
+  systemd.services.ollama.wantedBy = lib.mkForce [];  # Don't auto-start on boot
+  systemd.services.ollama-model-loader.wantedBy = lib.mkForce [];  # Don't auto-start on boot
 }
