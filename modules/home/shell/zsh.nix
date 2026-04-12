@@ -64,7 +64,7 @@
        l = "eza -lh  --icons=auto";
       ls = "eza -1   --icons=auto";
       ll = "eza -lha --icons=auto --sort=name --group-directories-first";
-      ld = "eza -lhD --icons=auto'";
+      ld = "eza -lhD --icons=auto";
       pg = "cd ~/git/playground/";
       nv = "cd ~/git/neve";
       dots = "cd ~/dots";
@@ -98,7 +98,7 @@
       lunalordwatch="while true ; do lunalord;  sleep 30 ; done";
       lunalovelesswatch="while true ; do lunaloveless;  sleep 30 ; done";
       starwars = "telnet towel.blinkenlights.nl";
-      rwb = "pkill waybar && hyprctl dispatch exec waybar";
+      # rwb = "pkill waybar && hyprctl dispatch exec waybar"; not using waybar at the moment
     };
 
     profileExtra = ''
