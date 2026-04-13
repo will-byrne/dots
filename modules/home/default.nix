@@ -1,4 +1,4 @@
-{ catppuccin, ... }:{
+{ ... }:{
   imports = [
     ./desktop
     ./programs
@@ -11,6 +11,7 @@
       TERMINAL = "kitty";
       EDITOR = "nvim";
       SHELL = "zsh";
+      QT_QPA_PLATFORMTHEME = "gtk3";
     };
     stateVersion = "25.05";
   };
