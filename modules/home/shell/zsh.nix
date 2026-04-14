@@ -68,6 +68,7 @@
       pg = "cd ~/git/playground/";
       nv = "cd ~/git/neve";
       dots = "cd ~/dots";
+      blog = "cd ~/git/will-byrne.github.io";
       vc = "code --disable-gpu";
       dps = "docker ps";
       wdps = "watch 'docker ps'";
