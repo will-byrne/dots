@@ -14,6 +14,7 @@
     audacity
     lmms
     musescore
+    ardour
     gimp
     vlc
     krita
