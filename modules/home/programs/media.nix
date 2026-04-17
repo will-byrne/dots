@@ -13,7 +13,6 @@
     koreader
     audacity
     lmms
-    bitwig-studio
     musescore
     reaper
     gimp
