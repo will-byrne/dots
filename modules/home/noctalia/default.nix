@@ -2,7 +2,6 @@
 {
   programs.noctalia-shell = {
     enable = true;
-    systemd.enable = true;
     settings = {
       # only explicitly override non-default values
       settingsVersion = 54;

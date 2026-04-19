@@ -248,6 +248,7 @@ in
         [
           "waybar"
           "mpdscribble"
+          "noctalia-shell"
           # "wl-paste  --type text --watch cliphist store"
         ]
         (lib.mkIf (hostname== "desktop") [
