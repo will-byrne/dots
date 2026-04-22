@@ -5,6 +5,7 @@
     discord
     signal-desktop
     immersed
+    catppuccinifier-gui
 
     # files
     thunar-volman
@@ -49,6 +50,7 @@
     unzip
     p7zip
     glow
+    catppuccinifier-cli
 
     # system info
     btop
