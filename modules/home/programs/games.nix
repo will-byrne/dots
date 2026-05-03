@@ -18,5 +18,6 @@
     xivlauncher
     warzone2100
     zeroad-unwrapped
+    xivlauncher
   ];
 }
