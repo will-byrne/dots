@@ -2,10 +2,12 @@
 {
   home.packages = with pkgs; [
     # packages that don't need configuration
+    # social
     discord
     signal-desktop
+
+    # VR
     immersed
-    catppuccinifier-gui
 
     # files
     thunar-volman
