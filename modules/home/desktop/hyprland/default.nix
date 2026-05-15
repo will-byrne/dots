@@ -239,6 +239,7 @@ in
 
   wayland.windowManager.hyprland = {
     enable = true;
+    configType = "hyprlang";
     xwayland.enable = true;
 
     settings = {
@@ -292,6 +293,9 @@ in
         sensitivity = 0.0;
         touchpad = {
           natural_scroll = true;
+        };
+        tablet = {
+          output = "DP-1";
         };
       };
 
