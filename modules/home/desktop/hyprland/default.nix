@@ -36,7 +36,6 @@ let
         (mkBind "ALT SHIFT, return" "fullscreen" "Toggle fullscreen")
         (mkBind "$mainMod, backspace" "exec, logout" "Logout")
         (mkBind "$mainMod, P" "pseudo" "Toggle pseudotile")
-        (mkBind "$mainMod, U" "togglesplit" "Toggle split")
       ];
     }
 
@@ -387,7 +386,6 @@ in
       };
 
       dwindle = {
-        pseudotile = true;
         preserve_split = true;
       };
 
