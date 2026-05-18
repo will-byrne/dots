@@ -73,5 +73,8 @@
       udisks
     ];
     variables.EDITOR = "nvim";
+    pathsToLink = [
+      "/share/hypr"
+    ];
   };
 }
