@@ -14,12 +14,18 @@ hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(ipc .. " launcher toggle"), { descrip
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(ipc .. " controlCenter toggle"), { description = "Toggle control center" })
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(ipc .. " settings toggle"), { description = "Toggle settings" })
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(ipc .. " volume muteOutput"), { description = "Mute output" })
-hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd(ipc .. "volume muteInput"), { description = "Mute mic" })
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. "volume muteOutput"), { description = "Mute sound" })
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. "volume increase"), { description = "Volume up" })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. "volume decrease"), { description = "Volume down" })
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. "brightness increase"), { description = "Brightness up" })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. "brightness decrease"), { description = "Brightness down" })
+hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd(ipc .. " volume muteInput"),
+  { description = "Mute mic", locked = true, repeating = true })
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. " volume muteOutput"),
+  { description = "Mute sound", locked = true, repeating = true })
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. " volume increase"),
+  { description = "Volume up", locked = true, repeating = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. " volume decrease"),
+  { description = "Volume down", locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. " brightness increase"),
+  { description = "Brightness up", locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. " brightness decrease"),
+  { description = "Brightness down", locked = true, repeating = true })
 hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd(ipc .. "sessionMenu lockAndSuspend"),
   { description = "Lock screen and suspend on lid close" })
 
@@ -81,7 +87,7 @@ end
 -- 11. Applications
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal), { description = "Open terminal" })
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(guiFM), { description = "Open GUI file manager" })
-hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd(terminal .. " -e $tuiFM"), { description = "Open TUI file manager" })
+hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd(terminal .. " -e " .. tuiFM), { description = "Open TUI file manager" })
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("code --ozone-platform-hint=wayland"), { description = "Open VSCode" })
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("neovide"), { description = "Open Neovide" })
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(browser), { description = "Open browser" })
@@ -95,7 +101,6 @@ hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(ipc .. " launcher clipboard"), { desc
 -- 13. Audio
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("pavucontrol"), { description = "Audio control panel" })
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("pamixer --default-source -t"), { description = "Mute mic" })
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("pamixer -t"), { description = "Mute output" })
 hl.bind(mainMod .. " + F9", hl.dsp.exec_cmd("playerctl play-pause"), { description = "Play/Pause" })
 hl.bind(mainMod .. " + F10", hl.dsp.exec_cmd("playerctl previous"), { description = "Previous track" })
 hl.bind(mainMod .. " + F11", hl.dsp.exec_cmd("playerctl next"), { description = "Next track" })
