@@ -14,20 +14,13 @@ hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(ipc .. " launcher toggle"), { descrip
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(ipc .. " controlCenter toggle"), { description = "Toggle control center" })
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(ipc .. " settings toggle"), { description = "Toggle settings" })
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(ipc .. " volume muteOutput"), { description = "Mute output" })
-hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd(ipc .. " volume muteInput"),
-  { description = "Mute mic", locked = true, repeating = true })
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. " volume muteOutput"),
-  { description = "Mute sound", locked = true, repeating = true })
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. " volume increase"),
-  { description = "Volume up", locked = true, repeating = true })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. " volume decrease"),
-  { description = "Volume down", locked = true, repeating = true })
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. " brightness increase"),
-  { description = "Brightness up", locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. " brightness decrease"),
-  { description = "Brightness down", locked = true, repeating = true })
-hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd(ipc .. "sessionMenu lockAndSuspend"),
-  { description = "Lock screen and suspend on lid close" })
+hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd(ipc .. " volume muteInput"), { description = "Mute mic", locked = true, repeating = true })
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. " volume muteOutput"), { description = "Mute sound", locked = true, repeating = true })
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. " volume increase"), { description = "Volume up", locked = true, repeating = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. " volume decrease"), { description = "Volume down", locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. " brightness increase"), { description = "Brightness up", locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. " brightness decrease"), { description = "Brightness down", locked = true, repeating = true })
+hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd(ipc .. "sessionMenu lockAndSuspend"), { description = "Lock screen and suspend on lid close" })
 
 -- 2. Window / Session
 hl.bind(mainMod .. " + Q", hl.dsp.window.close(), { description = "Close window" })
@@ -44,14 +37,11 @@ hl.bind(mainMod .. " + SHIFT + CTRL + down", hl.dsp.focus({ workspace = "empty" 
   { description = "New empty workspace" })
 
 -- 4. Move workspace to monitor
-hl.bind(mainMod .. " + CTRL + ALT + left", hl.dsp.workspace.move({ monitor = "l" }),
-  { description = "Move workspace left monitor" })
-hl.bind(mainMod .. " + CTRL + ALT + right", hl.dsp.workspace.move({ monitor = "r" }),
-  { description = "Move workspace right monitor" })
+hl.bind(mainMod .. " + CTRL + ALT + left", hl.dsp.workspace.move({ monitor = "l" }), { description = "Move workspace left monitor" })
+hl.bind(mainMod .. " + CTRL + ALT + right", hl.dsp.workspace.move({ monitor = "r" }), { description = "Move workspace right monitor" })
 
 -- 5. Special workspace
-hl.bind(mainMod .. " + SHIFT + s", hl.dsp.window.move({ workspace = "special:magic" }),
-  { description = "Move to special workspace" })
+hl.bind(mainMod .. " + SHIFT + s", hl.dsp.window.move({ workspace = "special:magic" }), { description = "Move to special workspace" })
 hl.bind(mainMod .. " + s", hl.dsp.workspace.toggle_special("magic"), { description = "Toggle special workspace" })
 
 -- 6. Focus movement
@@ -92,8 +82,7 @@ hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("code --ozone-platform-hint=wayland")
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("neovide"), { description = "Open Neovide" })
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(browser), { description = "Open browser" })
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.exec_cmd(browser .. " --private-window"), { description = "Browser private" })
-hl.bind(mainMod .. " + CTRL + SHIFT + ESCAPE", hl.dsp.exec_cmd(terminal .. " -e btop"),
-  { description = "System monitor" })
+hl.bind(mainMod .. " + CTRL + SHIFT + ESCAPE", hl.dsp.exec_cmd(terminal .. " -e btop"), { description = "System monitor" })
 
 -- 12. Clipboard
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(ipc .. " launcher clipboard"), { description = "Clipboard history" })
@@ -109,12 +98,8 @@ hl.bind(mainMod .. " + ALT + M", hl.dsp.exec_cmd(terminal .. "-e rmpc"), { descr
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("ytmpv"), { description = "Play YouTube via MPD" })
 
 --14. Screenshots
-hl.bind(mainMod .. " + ALT + S",
-  hl.dsp.exec_cmd("grim - | tee ~/pictures/sc/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"),
-  { description = "Fullscreen screenshot" })
-hl.bind(mainMod .. " + SHIFT + S",
-  hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | tee ~/pictures/sc/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"),
-  { description = "Selection screenshot" })
+hl.bind(mainMod .. " + ALT + S", hl.dsp.exec_cmd("grim - | tee ~/pictures/sc/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"), { description = "Fullscreen screenshot" })
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | tee ~/pictures/sc/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"), { description = "Selection screenshot" })
 
 -- 15. Mouse Binds
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true, description = "Move Window" })
