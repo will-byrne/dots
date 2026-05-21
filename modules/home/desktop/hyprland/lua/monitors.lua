@@ -1,8 +1,4 @@
-local f = io.open("/etc/hostname", "r")
-if not f then return nil end
-local h = f:read("*l")
-
-if h == "desktop" then
+if Hostname == "desktop" then
   hl.monitor({
     output = "DP-1",
     position = "0x0",

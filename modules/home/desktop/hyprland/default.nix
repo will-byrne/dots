@@ -1,10 +1,7 @@
 { pkgs, hostname, lib, ... }: {
   
   imports = [
-    # ./hyprpaper.nix
-    # ./hyprlock.nix
     ./hypridle.nix
-    # ./hyprsunset.nix
     ./hyprpolkit.nix
   ];
 
