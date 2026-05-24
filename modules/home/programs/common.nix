@@ -2,6 +2,8 @@
 {
   home.packages = with pkgs; [
     # packages that don't need configuration
+    lmstudio
+
     # social
     discord
     signal-desktop
