@@ -13,8 +13,8 @@
     openttd
     osu-lazer-bin
     shattered-pixel-dungeon
-    veloren
-    vvvvvv
+    # veloren
+    # vvvvvv
     xivlauncher
     warzone2100
     zeroad-unwrapped

@@ -1,5 +1,6 @@
 Disabled
   Not building:
+  veloren
 
 To Install / Configure:
   Jellyfin
@@ -10,3 +11,6 @@ Trying packages:
   Taskwarrior3
   feishin
   euphonica
+
+Misc:
+  Remove unused games
