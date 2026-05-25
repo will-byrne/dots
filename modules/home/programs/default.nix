@@ -9,7 +9,6 @@
     ./email.nix
     ./fortune.nix
     ./games.nix
-    ./gaming.nix
     ./git.nix
     ./imv.nix
     ./kitty.nix
