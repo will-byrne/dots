@@ -27,6 +27,7 @@
   
   catppuccin = {
     enable = true;
+    autoEnable = true;
     flavor = "macchiato";
     accent = "pink";
     waybar.enable = false;
