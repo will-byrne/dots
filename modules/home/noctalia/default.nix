@@ -15,6 +15,10 @@
         predefinedScheme = "Catppuccin";
       };
 
+      ui = {
+        fontDefault = "Lexend";
+      };
+
       templates = {
         activeTemplates = [
           {
