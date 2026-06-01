@@ -20,6 +20,7 @@
     fontDir.enable = true;
 
     packages = with pkgs; [
+      lexend
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
