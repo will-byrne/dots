@@ -2,7 +2,7 @@
   programs.kitty = {
     enable = true;
     settings = {
-      font_familly = "IosevkaTerm Nerd Font";
+      font_familly = "FiraMono Nerd Font";
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
