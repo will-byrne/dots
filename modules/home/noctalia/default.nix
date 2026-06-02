@@ -17,6 +17,7 @@
 
       ui = {
         fontDefault = "Lexend";
+        fontFixed = "FiraMono Nerd Font";
       };
 
       templates = {
