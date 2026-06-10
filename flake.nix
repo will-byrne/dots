@@ -8,7 +8,7 @@
     comfyui-nix.url = "github:utensils/comfyui-nix";
     neve.url = "github:will-byrne/neve";
     noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
+      url = "github:noctalia-dev/noctalia-shell/legacy-v4";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
