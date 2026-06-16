@@ -45,6 +45,11 @@
     "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
   ];
 
+  environment.systemPackages = with pkgs; [
+    rocmPackages.rocminfo
+    rocmPackages.rocm-smi
+  ];
+
   hardware.amdgpu.initrd.enable = true;
   networking.hostName = hostname;
 

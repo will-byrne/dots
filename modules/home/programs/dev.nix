@@ -8,5 +8,7 @@
     neovide
     zed-editor-fhs
     vscode
+    claude-code
+    llmfit
   ];
 }
