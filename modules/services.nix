@@ -16,6 +16,17 @@
       pulse.enable = true;
       jack.enable = true;
       wireplumber.enable = true;
+      extraConfig.pipewire."99-clock-rates" = {
+        "context.properties" = {
+          "default.clock.allowed-rates" = [
+            44100
+            88200
+            176400
+            48000
+            96000
+          ];
+        };
+      };
     };
     printing = {
       enable = true;
@@ -35,6 +46,6 @@
       };
     };
   };
-  systemd.services.ollama.wantedBy = lib.mkForce [];  # Don't auto-start on boot
-  systemd.services.ollama-model-loader.wantedBy = lib.mkForce [];  # Don't auto-start on boot
+  systemd.services.ollama.wantedBy = lib.mkForce [ ]; # Don't auto-start on boot
+  systemd.services.ollama-model-loader.wantedBy = lib.mkForce [ ]; # Don't auto-start on boot
 }
