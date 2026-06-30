@@ -6,7 +6,7 @@
     fwupd.enable = true;
     ollama = {
       enable = true;
-      package = pkgs.ollama-rocm;
+      package = pkgs.ollama-vulkan;
       loadModels = [ "llama3.2:1b" ];
     };
     pipewire = {
