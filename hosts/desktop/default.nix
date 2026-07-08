@@ -1,10 +1,17 @@
-{ hostname, lib, pkgs, ... }:
+{
+  hostname,
+  lib,
+  pkgs,
+  ...
+}:
 {
   imports = [
     ./hardware-configuration.nix
     ../optional/amd.nix
   ];
   services.xserver.videoDrivers = [ "amdgpu" ];
+
+  boot.kernelParams = [ "video=3840x1600@60" ];
 
   # Needed so users can read hwmon without sudo
   services.udev.extraRules = ''
@@ -30,20 +37,21 @@
 
   hardware.amdgpu.opencl.enable = true;
 
-  systemd.tmpfiles.rules = 
-  let
-    rocmEnv = pkgs.symlinkJoin {
-      name = "rocm-combined";
-      paths = with pkgs.rocmPackages; [
-        rocblas
-        rocm-smi
-        hipblas
-        clr
-      ];
-    };
-  in [
-    "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
-  ];
+  systemd.tmpfiles.rules =
+    let
+      rocmEnv = pkgs.symlinkJoin {
+        name = "rocm-combined";
+        paths = with pkgs.rocmPackages; [
+          rocblas
+          rocm-smi
+          hipblas
+          clr
+        ];
+      };
+    in
+    [
+      "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
+    ];
 
   environment.systemPackages = with pkgs; [
     rocmPackages.rocminfo
@@ -72,10 +80,10 @@
         owner = "ltdrdata";
         repo = "ComfyUI-Impact-Pack";
         rev = "6a517ebe06fea2b74fc41b3bd089c0d7173eeced";
-        hash = "sha256-BBHW3t122z+FC/VaD6MPp8l/ER9nEs3dJTcFU3Qeskg=";  # nix-prefetch-github ltdrdata ComfyUI-Impact-Pack --rev v1.0.0
+        hash = "sha256-BBHW3t122z+FC/VaD6MPp8l/ER9nEs3dJTcFU3Qeskg="; # nix-prefetch-github ltdrdata ComfyUI-Impact-Pack --rev v1.0.0
       };
     };
   };
 
-  systemd.services.comfyui.wantedBy = lib.mkForce [];  # Don't auto-start on boot
+  systemd.services.comfyui.wantedBy = lib.mkForce [ ]; # Don't auto-start on boot
 }
