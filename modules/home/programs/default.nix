@@ -15,7 +15,7 @@
     ./media.nix
     ./mpv.nix
     ./music.nix
-    ./neovim
+    ./neve.nix
     ./yazi.nix
     ./zathura.nix
   ];
