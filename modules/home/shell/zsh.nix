@@ -1,10 +1,15 @@
-{ pkgs, config, lib, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 {
   home.file.".config/zsh/.p10k.zsh".source = ./p10k.zsh;
   programs.zsh = {
     enable = true;
     syntaxHighlighting.enable = true;
-    autosuggestion.enable  = true;
+    autosuggestion.enable = true;
     autocd = true;
 
     oh-my-zsh = {
@@ -39,7 +44,7 @@
       EDITOR = "nvim";
       LS_COLORS = "$(${pkgs.vivid}/bin/vivid generate catppuccin-macchiato)";
     };
-    
+
     initContent = lib.mkBefore ''
       source ~/.config/zsh/.p10k.zsh
       eval "$(pay-respects zsh)"
@@ -53,7 +58,11 @@
       save = 1000000;
       extended = true;
       ignoreDups = true;
-      ignorePatterns = [ "cd *" "steam-run *" "ls *" ];
+      ignorePatterns = [
+        "cd *"
+        "steam-run *"
+        "ls *"
+      ];
     };
 
     shellAliases = {
@@ -61,7 +70,7 @@
       rebuild = "sudo nixos-rebuild switch --flake .";
       f = "$(pay-respects zsh)";
       lg = "lazygit";
-       l = "eza -lh  --icons=auto";
+      l = "eza -lh  --icons=auto";
       ls = "eza -1   --icons=auto";
       ll = "eza -lha --icons=auto --sort=name --group-directories-first";
       ld = "eza -lhD --icons=auto";
@@ -95,16 +104,17 @@
       poke70watch = "while true ; do poke70;  sleep 30 ; done";
       pokelordwatch = "while true ; do pokelord;  sleep 30 ; done";
       pokelovelesswatch = "while true ; do pokeloveless;  sleep 30 ; done";
-      luna70watch="while true ; do luna70;  sleep 30 ; done";
-      lunalordwatch="while true ; do lunalord;  sleep 30 ; done";
-      lunalovelesswatch="while true ; do lunaloveless;  sleep 30 ; done";
+      luna70watch = "while true ; do luna70;  sleep 30 ; done";
+      lunalordwatch = "while true ; do lunalord;  sleep 30 ; done";
+      lunalovelesswatch = "while true ; do lunaloveless;  sleep 30 ; done";
       starwars = "telnet towel.blinkenlights.nl";
       # rwb = "pkill waybar && hyprctl dispatch exec waybar"; not using waybar at the moment
     };
 
     profileExtra = ''
-      if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-        Hyprland
+      # Only autostart if on TTY1 and NOT spawned by a display manager or systemd session
+      if [[ -z "$DISPLAY" ]] && [[ -z "$WAYLAND_DISPLAY" ]] && [[ "$(tty)" = "/dev/tty1" ]] && [[ -z "$XDG_SESSION_TYPE" ]]; then
+        exec uwsm start hyprland-uwsm.desktop
       fi
     '';
   };

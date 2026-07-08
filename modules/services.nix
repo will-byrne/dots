@@ -36,16 +36,30 @@
     gvfs.enable = true;
     udisks2.enable = true;
     blueman.enable = true;
-    displayManager = {
+    displayManager.ly = {
       enable = true;
-      defaultSession = "hyprland";
-      sddm = {
-        enable = true;
-        wayland.enable = true;
-        package = pkgs.kdePackages.sddm;
+      settings = {
+        animation = "dur_file"; # Options: "matrix", "fire", or "none"
+        dur_file_path = "/etc/ly/blackhole.dur";
+        bigclock = true;
+        clock = "%F %R"; # Displays date and time at the top
+        save = true; # Remembers your username and last session choice
+        wayland_spec = true; # Crucial for routing UWSM environment handoffs
+        # --- CATPPUCCIN MACCHIATO COLOR THEME ---
+
+        # Transparent Background (Let's the animation render cleanly)
+        bg = "0x00000000";
+        box_bg = "0x00000000";
+
+        # Foreground Elements (Catppuccin Macchiato Text: #cad3f5)
+        fg = "0x40cad3f5";
+
+        # Box Border & Focus Highlights (Catppuccin Macchiato Pink: #f5bde6)
+        box_fg = "0x40f5bde6";
       };
     };
   };
+  environment.etc."ly/blackhole.dur".source = ./blackhole-smooth.dur;
   systemd.services.ollama.wantedBy = lib.mkForce [ ]; # Don't auto-start on boot
   systemd.services.ollama-model-loader.wantedBy = lib.mkForce [ ]; # Don't auto-start on boot
 }

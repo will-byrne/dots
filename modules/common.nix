@@ -5,14 +5,14 @@
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
   };
-  
+
   security = {
     doas = {
       enable = true;
       wheelNeedsPassword = true;
       extraRules = [
         {
-          users = ["luna"];
+          users = [ "luna" ];
           keepEnv = true;
           persist = true;
         }
@@ -58,7 +58,7 @@
   system.stateVersion = "25.05"; # Did you read the comment?
 
   systemd.packages = with pkgs; [ lact ];
-  systemd.services.lactd.wantedBy = ["multi-user.target"];
+  systemd.services.lactd.wantedBy = [ "multi-user.target" ];
 
   # home-manager.backupFileExtension = "backup";
   environment = {
@@ -71,6 +71,10 @@
       usbutils
       udiskie
       udisks
+      (pkgs.catppuccin-sddm.override {
+        flavor = "macchiato";
+        accent = "pink";
+      })
     ];
     variables.EDITOR = "nvim";
     pathsToLink = [
