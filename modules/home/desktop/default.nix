@@ -1,17 +1,9 @@
 { pkgs, ... }:
 {
   imports = [
-    # ./dunst.nix
-    # ./fuzzel.nix
     ./gtk.nix
     ./hyprland
-    # ./waybar
   ];
-
-  services = {
-    # Unnecessary when using noctalia?
-    # network-manager-applet.enable = true;
-  };
 
   home.packages = with pkgs; [
     libnotify

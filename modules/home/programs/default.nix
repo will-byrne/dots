@@ -2,7 +2,7 @@
   imports = [
     ./astrophotography.nix
     ./browser.nix
-    ./btop/btop.nix
+    ./btop.nix
     ./common.nix
     ./dev.nix
     ./direnv.nix
