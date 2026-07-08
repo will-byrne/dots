@@ -31,6 +31,7 @@
       nerd-fonts.iosevka
       nerd-fonts.iosevka-term
       nerd-fonts.jetbrains-mono
+      nerd-fonts.symbols-only
     ];
   };
 

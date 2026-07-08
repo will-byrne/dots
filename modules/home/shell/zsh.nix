@@ -5,7 +5,6 @@
   ...
 }:
 {
-  home.file.".config/zsh/.p10k.zsh".source = ./p10k.zsh;
   programs.zsh = {
     enable = true;
     syntaxHighlighting.enable = true;
@@ -30,11 +29,11 @@
           sha256 = "0z6i9wjjklb4lvr7zjhbphibsyx51psv50gm07mbb0kj9058j6kc";
         };
       }
-      {
-        name = "zsh-powerlevel10k";
-        src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/";
-        file = "powerlevel10k.zsh-theme";
-      }
+      # {
+      #   name = "zsh-powerlevel10k";
+      #   src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/";
+      #   file = "powerlevel10k.zsh-theme";
+      # }
     ];
 
     dotDir = "${config.xdg.configHome}/zsh";
@@ -46,7 +45,6 @@
     };
 
     initContent = lib.mkBefore ''
-      source ~/.config/zsh/.p10k.zsh
       eval "$(pay-respects zsh)"
       # Enable extended globbing for HISTORY_IGNORE patterns
       setopt EXTENDED_GLOB

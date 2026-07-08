@@ -1,4 +1,5 @@
-{ ... }:{
+{ ... }:
+{
   imports = [
     ./desktop
     ./programs
@@ -24,7 +25,7 @@
 
   services.udiskie.enable = true;
   programs.home-manager.enable = true;
-  
+
   catppuccin = {
     enable = true;
     autoEnable = true;
@@ -37,6 +38,7 @@
     fuzzel.enable = false;
     yazi.enable = false;
     zathura.enable = false;
+    starship.enable = true;
   };
   xdg.userDirs.setSessionVariables = true;
 }
