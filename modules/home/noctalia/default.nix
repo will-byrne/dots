@@ -256,7 +256,7 @@
 
       # location & weather configuration
       location = {
-        name = "Burwell, UK";
+        name = "Burwell, Cambridgeshire";
         weatherEnabled = true;
         weatherShowEffects = true;
         showCalendarEvents = true;
