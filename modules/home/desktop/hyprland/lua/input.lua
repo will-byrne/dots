@@ -17,7 +17,8 @@ hl.gesture({
 })
 hl.config({
   input = {
-    kb_layout    = "gb",
+    kb_layout    = "gb,gb",
+    kb_variant   = ",dvorak",
     kb_options   = "caps:escape",
     follow_mouse = 1,
     sensitivity  = 0.0,

@@ -14,6 +14,8 @@ hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(ipc .. " launcher toggle"), { descrip
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(ipc .. " controlCenter toggle"), { description = "Toggle control center" })
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(ipc .. " settings toggle"), { description = "Toggle settings" })
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(ipc .. " volume muteOutput"), { description = "Mute output" })
+hl.bind(mainMod .. " + SHIFT + K", hl.dsp.exec_cmd("hyprctl switchxkblayout current next"),
+  { description = "Toggle keyboard layout" })
 hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd(ipc .. " volume muteInput"),
   { description = "Mute mic", locked = true, repeating = true })
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. " volume muteOutput"),
@@ -67,21 +69,21 @@ hl.bind(mainMod .. " + CTRL + up", hl.dsp.window.move({ direction = "u" }), { de
 hl.bind(mainMod .. " + CTRL + down", hl.dsp.window.move({ direction = "d" }), { description = "Swap down" })
 
 -- 8. Resize
-hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.resize({ x = 30, y = 0 }), { description = "Resize right" })
-hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.resize({ x = -30, y = 0 }), { description = "Resize left" })
-hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.resize({ x = 0, y = -30 }), { description = "Resize up" })
-hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.resize({ x = 0, y = 30 }), { description = "Resize down" })
+hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.resize({ x = 30, y = 0, relative = true }), { description = "Resize right" })
+hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.resize({ x = -30, y = 0, relative = true }), { description = "Resize left" })
+hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.resize({ x = 0, y = -30, relative = true }), { description = "Resize up" })
+hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.resize({ x = 0, y = 30, relative = true }), { description = "Resize down" })
 
 -- 9. Workspace switching
-for i = 1, 10 do
+for i = 1, 9 do
   local key = i % 10 -- 10 maps to key 0
-  hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
+  hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }), { description = "Swap to workspace: " .. key })
 end
 
 -- 10. Move to workspace
-for i = 1, 10 do
+for i = 1, 9 do
   local key = i % 10 -- 10 maps to key 0
-  hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
+  hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }), { description = "Move window to workspace: " .. key })
 end
 
 -- 11. Applications
