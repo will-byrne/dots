@@ -5,10 +5,8 @@
     mindustry-wayland
     openttd
     osu-lazer-bin
-    # veloren
-    # vvvvvv
-    xivlauncher
+    veloren
+    vvvvvv
     protonplus
-    faugus-launcher
   ];
 }
