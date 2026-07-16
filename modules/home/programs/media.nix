@@ -13,7 +13,7 @@
     koreader
     audacity
     lmms
-    # musescore
+    musescore
     ardour
     gimp
     vlc
