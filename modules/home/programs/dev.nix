@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     # IDES
-    jetbrains.idea-oss
+    jetbrains.idea
     jetbrains.rust-rover
     jetbrains.webstorm
     neovide
