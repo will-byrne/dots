@@ -1,6 +1,6 @@
 local mainMod = "SUPER";
 local terminal = "kitty";
-local guiFM = "thunar";
+local guiFM = "pcmanfm";
 local tuiFM = "yazi";
 local menu = "fuzzel";
 local browser = "firefox";

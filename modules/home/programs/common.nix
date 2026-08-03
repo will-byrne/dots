@@ -12,7 +12,6 @@
     immersed
 
     # files
-    thunar-volman
     tumbler
     ffmpegthumbnailer
     file-roller
