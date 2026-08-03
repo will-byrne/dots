@@ -12,6 +12,7 @@
     immersed
 
     # files
+    pcmanfm
     tumbler
     ffmpegthumbnailer
     file-roller
