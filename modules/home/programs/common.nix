@@ -54,7 +54,7 @@
     unzip
     p7zip
     glow
-    catppuccinifier-cli
+    reddit-tui
 
     # system info
     btop
