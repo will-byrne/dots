@@ -85,11 +85,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1785791193,
-        "narHash": "sha256-Ce9PgOgiJPK1ubFx6NoCWlu14dVjUDw8AdJrmLkgQpg=",
+        "lastModified": 1787321015,
+        "narHash": "sha256-O5W/tIf9aJDyQN0hP1pFFiHI/QQYjrxqCCf3J4gEl+E=",
         "owner": "will-byrne",
         "repo": "neve",
-        "rev": "3e3df53715fc5acd77abebab39e584346d1974d5",
+        "rev": "00e419c16c47a1314a06f537df176bf9e0f5a369",
         "type": "github"
       },
       "original": {
