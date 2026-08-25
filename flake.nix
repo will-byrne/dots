@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     catppuccin.url = "github:catppuccin/nix";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    # comfyui-nix.url = "github:utensils/comfyui-nix";
+    comfyui-nix.url = "github:utensils/comfyui-nix";
     neve.url = "github:will-byrne/neve";
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell/legacy-v4";
@@ -22,7 +22,7 @@
       nixpkgs,
       catppuccin,
       nixos-hardware,
-      # comfyui-nix,
+      comfyui-nix,
       noctalia,
       home-manager,
       ...
@@ -38,7 +38,7 @@
             ./hosts/desktop
             ./modules
             { nixpkgs.hostPlatform = "x86_64-linux"; }
-            # comfyui-nix.nixosModules.default
+            comfyui-nix.nixosModules.default
             catppuccin.nixosModules.catppuccin
             home-manager.nixosModules.home-manager
             {
