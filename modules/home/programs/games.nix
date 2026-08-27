@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     gargoyle
-    mindustry-wayland
+    # mindustry-wayland
     openttd
     osu-lazer-bin
     veloren
