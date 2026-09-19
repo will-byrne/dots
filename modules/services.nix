@@ -58,34 +58,6 @@
         box_fg = "0x40f5bde6";
       };
     };
-    syncthing = {
-      enable = true;
-      openDefaultPorts = true;
-      dataDir = "/home/luna/syncthing";
-      configDir = "/home/luna/.config/syncthing";
-      user = "luna";
-      key = "/home/luna/.keys/key.pem";
-      cert = "/home/luna/.keys/cert.pem";
-      settings = {
-        folders = {
-          music = {
-            path = "/home/luna/music";
-            versioning = {
-              type = "simple";
-              params = {
-                keep = 2;
-                cleanoutDays = 10;
-              };
-            };
-            devices = [];
-          };
-        };
-        options = {
-          globalAnnounceEnabled = false;
-          relaysEnabled = false;
-        };
-      };
-    };
   };
   environment.etc."ly/blackhole.dur".source = ./blackhole-smooth.dur;
   systemd.services.ollama.wantedBy = lib.mkForce [ ]; # Don't auto-start on boot
